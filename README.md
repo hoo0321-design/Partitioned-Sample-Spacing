@@ -6,6 +6,7 @@ This code accompanies the manuscript:
 
 **"Nonparametric Estimation of Joint Entropy through Partitioned Sample-Spacing Method"**    
 See manuscript for full theoretical details. 
+[![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
 💻 Installation & Usage
 1. Prerequisites
@@ -13,11 +14,11 @@ See manuscript for full theoretical details.
 Ensure the following software and libraries are installed.
 
 R Environment (Tested on R ≥ 4.0)
-# Install required R packages
+Install required R packages
 install.packages(c("tidyverse", "ggrepel", "scales", "stringr", "mvtnorm", "FNN", "fastICA", "RWeka", "e1071"))
 
 Python Environment (For kNN baselines)
-# Install required Python libraries
+Install required Python libraries
 pip install numpy scipy pandas matplotlib scikit-learn
 
 
@@ -35,11 +36,11 @@ Rscript PSS/run_pss_gamma.R
 kNN Baselines:
 python KNN/run_knn_mvn_n.py
 python KNN/run_knn_gamma_corr.py
-# ... (Run other experiment scripts in KNN/ folder as needed)
+... (Run other experiment scripts in KNN/ folder as needed)
 
 CADEE:
 Rscript CADEE/run_cadee_mvn.R
-# ...
+...
 
 Step 2: Generate Figures (Important!)
 
@@ -50,6 +51,7 @@ Collect Data: Move ALL .csv output files generated from the simulations (PSS, KN
 Run Script: Execute the plotting script.
 
 Rscript run_plots.R
+
 
 
 3. Real Data Experiments (Figure 6)
@@ -73,7 +75,8 @@ ICA Experiment: Refer to the ICA/ directory and run ica_pss.R.
 ├── uci_energy.R    # Feature selection experiment script (UCI Appliances Energy)
 └── README.md       # Project documentation
 
-## 📁 Folder Details
+
+## 📂 Folder Details
 
 ### **PSS/**
 Contains the core implementation of the Partitioned Sample-Spacing (PSS) estimator.
@@ -133,8 +136,3 @@ To generate the plots (Figures 2, 3, and 4), use the provided R script `run_plot
 Project documentation, structure overview, usage instructions, and references.
 
 
-📄 Paper
-This repository accompanies the paper:
-
-**Nonparametric Estimation of Joint Entropy through Partitioned Sample-Spacing Method**  
-**arXiv:** https://arxiv.org/abs/2511.13602
