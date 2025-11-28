@@ -4,7 +4,7 @@
 This repository contains the full implementation of the **Partitioned Sample-Spacing (PSS) estimator**, along with comparison baselines (KNN, CADEE) and real-world experiments (ICA, UCI Energy feature selection).  
 This code accompanies the manuscript:
 
-**"Nonparametric Estimation of Joint Entropy through Partitioned Sample-Spacing Method"**    
+**"Nonparametric Estimation of Joint Entropy via Partitioned Sample-Spacing"**    
 See manuscript for full theoretical details. 
 [![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
