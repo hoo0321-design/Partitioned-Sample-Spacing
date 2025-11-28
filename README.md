@@ -133,7 +133,7 @@ To generate the plots (Figures 2, 3, and 4), use the provided R script `run_plot
 Project documentation, structure overview, usage instructions, and references.
 
 
-## 📄 Paper
+📄 Paper
 This repository accompanies the paper:
 
 **Nonparametric Estimation of Joint Entropy through Partitioned Sample-Spacing Method**  
