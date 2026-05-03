@@ -1,5 +1,5 @@
 # ============================================================
-# CADEE (Recursive Copula Splitting) 
+# CADEE (Recursive Copula Splitting)
 #   copulasH_R(X, range = NULL, level = 0, params = list())
 # ============================================================
 
@@ -8,22 +8,22 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
   storage.mode(xs) <- "double"
   n <- nrow(xs); D <- ncol(xs)
   if (n == 0L) return(0)
-  
+
   p <- .cadee_defaults(D)
   if (length(params)) p[names(params)] <- params
-  
+
   # D==1 or too small: sum of 1D marginals
   if (D == 1L) return(.H1_marginal(xs[,1], range = if (is.null(range)) NULL else range[,1], p))
   if (n < p$minSamplesToProcessCopula) return(.sum_marginals(xs, range, p))
-  
+
   # rank-transform to U(0,1) + sum of marginal entropies
   tr <- .rank_transform_and_H1(xs, range, p)
   H1s <- tr$H1s
   ys  <- tr$ys   # n x D in (0,1)
-  
+
   # build dependence adjacency via p-values (+ 2D refinement)
   dep <- .dependence_mask(ys, p)   # logical D x D
-  
+
   # if graph splits into ≥2 connected components → recurse per block
   comps <- .connected_components(dep)
   if (length(comps) >= 2L) {
@@ -37,10 +37,10 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
     }
     return(H)
   }
-  
+
   # small again? stop at marginals
   if (n < p$minSamplesToProcessCopula) return(H1s)
-  
+
   # choose a split dimension: most correlated overall (R^2 sum)
   R <- suppressWarnings(stats::cor(ys, method = "pearson")) # Pearson on ranks == Spearman on xs
   R2 <- R^2; diag(R2) <- 0
@@ -52,7 +52,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
   } else {
     largeDims[(level %% length(largeDims)) + 1L]
   }
-  
+
   # recursive equal partitions along chosen dim
   nparts <- p$numberOfPartitionsPerDim
   Hparts <- numeric(nparts)
@@ -128,7 +128,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
   }
   isCorr <- (P < p$pValuesForIndependence)
   diag(isCorr) <- FALSE
-  
+
   # refine undecided pairs via coarse 2D entropy proxy on [0,1]^2
   undec <- which(!isCorr, arr.ind = TRUE)
   if (nrow(undec)) {
@@ -213,6 +213,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
   if (is.null(range)) .H1_spacings(x[ord], p) else .H1_bins(x[ord], p, range)
 }
 
+if (FALSE) {
 # ========================== USAGE EXAMPLE ==========================
 # set.seed(42)
  X <- matrix(rnorm(2000), ncol = 5)
@@ -221,71 +222,71 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
  params <- list(numberOfPartitionsPerDim = 3L)
  H_tuned <- copulasH_R(X, params = params)
  H
- 
- 
+
+
  # True entropy of MVN
  true_entropy_mvn <- function(Sigma) {
    d <- ncol(Sigma)
    0.5 * log((2 * pi * exp(1))^d * det(Sigma))
  }
- 
+
  # Wrapper for CADEE
  cadee_entropy <- function(X) {
-   copulasH_R(X)   
+   copulasH_R(X)
  }
- 
+
  # Empirical MSE experiment with correlation
  empirical_mse_cadee <- function(nrep = 100L, n = 500L, d = 5L, rho = 0.5) {
    #Covariance matrix
    Sigma <- matrix(rho, d, d); diag(Sigma) <- 1
    mu <- rep(0, d)
-   
+
    trueH <- true_entropy_mvn(Sigma)
    est <- numeric(nrep); time <- numeric(nrep)
-   
+
    for (r in seq_len(nrep)) {
      X <- MASS::mvrnorm(n, mu = mu, Sigma = Sigma)
      t0 <- proc.time()[3]
      est[r] <- cadee_entropy(X)
-     
+
      time[r] <- proc.time()[3] - t0
    }
-   
+
    bias <- mean(est) - trueH
    var  <- mean((est - mean(est))^2)
    rmse  <- sqrt(mean((est - trueH)^2))
-   
+
    list(true = trueH, mean_est = mean(est),
         bias = bias, var = var, rmse = rmse,time_mean=mean(time))
  }
- 
+
  # ================= USAGE ==================
  set.seed(123)
  res <- empirical_mse_cadee(nrep = 100, n = 30000, d = 10 , rho = 0)
  print(res)
- 
- 
- 
+
+
+
  #==============================================================================
  #  CADEE on Gaussian-copula Multivariate Gamma
  #    H_true = sum_j H(Gamma(shape_j, scale_j)) + 0.5 * log det(R)
  #==============================================================================
- 
+
  # --- 0) Libraries -------------------------------------------------------------
  pkgs <- c("MASS","dplyr","knitr")
  to_install <- pkgs[!sapply(pkgs, requireNamespace, quietly=TRUE)]
  if (length(to_install)) install.packages(to_install, repos="https://cloud.r-project.org")
  library(MASS); library(dplyr); library(knitr)
- 
+
  # --- 1) Helpers ---------------------------------------------------------------
  equicorr <- function(d, rho) { R <- matrix(rho, d, d); diag(R) <- 1; R }
  is_posdef <- function(M) { ei <- eigen(M, symmetric=TRUE, only.values=TRUE)$values; all(ei>0) }
- 
+
  # Gamma entropy (shape=k, scale=theta) in nats
  gamma_entropy <- function(shape, scale) {
    shape + log(scale) + lgamma(shape) + (1 - shape) * digamma(shape)
  }
- 
+
  # True H: sum of Gamma entropies + 0.5 * log det(R)
  true_entropy_gamma_gausscop <- function(d, rho, shape=2, scale=1) {
    if (length(shape)==1) shape <- rep(shape, d)
@@ -295,7 +296,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
    0.5 * as.numeric(determinant(R, logarithm=TRUE)$modulus) +
      sum(mapply(gamma_entropy, shape, scale))
  }
- 
+
  # Sampler: Z~N(0,R), U=Phi(Z), X_j=QGamma(U_j; shape_j, scale_j)
  rmgamma_gausscop <- function(n, d, rho, shape=2, scale=1) {
    if (length(shape)==1) shape <- rep(shape, d)
@@ -307,7 +308,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
    for (j in 1:d) X[, j] <- qgamma(U[, j], shape=shape[j], scale=scale[j])
    X
  }
- 
+
  # CADEE wrapper (논문 기본값 반영)
  cadee_entropy <- function(X, cadee_params=list()) {
    defaults <- list(
@@ -322,7 +323,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
    if (length(cadee_params)) defaults[names(cadee_params)] <- cadee_params
    copulasH_R(X, params = defaults)
  }
- 
+
  # Empirical MSE
  empirical_mse_cadee_gamma <- function(nrep=50, n=5000, d=5, rho=0.5,
                                        shape=2, scale=1, cadee_params=list()) {
@@ -332,7 +333,7 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
      X <- rmgamma_gausscop(n, d, rho, shape, scale)
      t0 <- proc.time()[3]
      est[r] <- cadee_entropy(X, cadee_params)
-     
+
      time[r] <- proc.time()[3] - t0
    }
    list(true=Htrue, mean_est=mean(est),
@@ -340,13 +341,14 @@ copulasH_R <- function(xs, range = NULL, level = 0L, params = list()) {
         rmse=sqrt(mean((est-Htrue)^2)),
         time_mean=mean(time), time_med=median(time))
  }
- 
+
  # --- 2) Run (example) --------------------------------------------------------
  set.seed(123)
  res_gamma <- empirical_mse_cadee_gamma(
    nrep=100, n=30000, d=20, rho=0, shape=0.4, scale=0.3
  )
  print(res_gamma)
- 
- 
- 
+
+
+
+}

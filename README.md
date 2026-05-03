@@ -1,11 +1,11 @@
-# PSS: Partitioned Sample-Spacing Estimator  
+# PSS: Partitioned Sample-Spacing Estimator
 *A nonparametric estimator for multivariate joint entropy and mutual information*
 
-This repository contains the full implementation of the **Partitioned Sample-Spacing (PSS) estimator**, along with comparison baselines (KNN, CADEE) and real-world experiments (ICA, UCI Energy feature selection).  
+This repository contains the full implementation of the **Partitioned Sample-Spacing (PSS) estimator**, along with comparison baselines (KNN, CADEE) and real-world experiments (ICA, UCI Energy feature selection).
 This code accompanies the manuscript:
 
-**"Nonparametric Estimation of Joint Entropy via Partitioned Sample-Spacing"**    
-See manuscript for full theoretical details. 
+**"Nonparametric Estimation of Joint Entropy via Partitioned Sample-Spacing"**
+See manuscript for full theoretical details.
 [![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
 💻 Installation & Usage
@@ -32,6 +32,10 @@ Execute the simulation scripts in each directory to generate the result data (.c
 PSS (Proposed):
 Rscript PSS/run_pss_mvn.R
 Rscript PSS/run_pss_gamma.R
+
+NeurIPS revision diagnostics:
+Rscript PSS/run_pss_regime_diagnostics.R --quick
+Rscript PSS/run_pss_regime_diagnostics.R --full
 
 kNN Baselines:
 python KNN/run_knn_mvn_n.py
@@ -84,6 +88,7 @@ Contains the core implementation of the Partitioned Sample-Spacing (PSS) estimat
 - **pss_entropy.R**: Main function for the PSS joint entropy estimator.
 - **run_pss_gamma.R**: Computes RMSE and runtime under the multivariate Gamma distribution with varying sample size ($N$), dimension ($d$), and correlation ($\rho$), using the optimal $\ell$ that minimizes RMSE.
 - **run_pss_mvn.R**: Computes RMSE and runtime under the multivariate Normal distribution with varying sample size ($N$), dimension ($d$), and correlation ($\rho$), using the optimal $\ell$ that minimizes RMSE.
+- **run_pss_regime_diagnostics.R**: NeurIPS-oriented simulation driver for oracle-vs-CV tuning, Normal/Gamma/Beta/Lognormal Gaussian-copula families, and occupancy/skipped-point diagnostics. Results are written to `results/pss_diagnostics/`.
 
 ### **KNN/**
 Implements $k$-Nearest-Neighbor ($k$NN) based baseline entropy estimators (KL, KSG, etc.).
@@ -134,5 +139,4 @@ To generate the plots (Figures 2, 3, and 4), use the provided R script `run_plot
 
 ### **README.md**
 Project documentation, structure overview, usage instructions, and references.
-
 

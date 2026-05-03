@@ -15,11 +15,10 @@ library(dplyr)
 library(knitr)
 
 # --- 2) Load the CADEE function ----------------------------------------------
-# This script requires the `copulasH_R` function to be defined beforehand.
-# You may paste the full function definition below, or load it from a separate file:
-#   source("copulasH_R_function.R")
+cadee_source <- if (file.exists("CADEE/CADEE.R")) "CADEE/CADEE.R" else "CADEE.R"
+source(cadee_source)
 if (!exists("copulasH_R")) {
-  stop("Missing function: `copulasH_R`. Please define it or load it via source().")
+  stop("Missing function: `copulasH_R` after sourcing CADEE.R.")
 }
 
 # --- 3) Shared simulation utilities ------------------------------------------
@@ -39,14 +38,14 @@ true_entropy_mvn <- function(Sigma) {
 run_setting_cadee_mvn <- function(n, d, rho, n_reps) {
   # Construct equicorrelated covariance matrix
   Sigma <- matrix(rho, d, d); diag(Sigma) <- 1
-  
+
   # Analytical true entropy
   H_true <- true_entropy_mvn(Sigma)
-  
+
   # Initialize storage
   estimates <- numeric(n_reps)
   times <- numeric(n_reps)
-  
+
   # Monte Carlo repetitions
   for (i in seq_len(n_reps)) {
     X <- MASS::mvrnorm(n, mu = rep(0, d), Sigma = Sigma)
@@ -54,10 +53,10 @@ run_setting_cadee_mvn <- function(n, d, rho, n_reps) {
     estimates[i] <- copulasH_R(X)
     times[i] <- (proc.time() - t0)[["elapsed"]]
   }
-  
+
   # Compute RMSE over repetitions
   rmse <- sqrt(mean((estimates - H_true)^2))
-  
+
   # Return unified result format
   data.frame(
     Distribution     = "Normal",
@@ -174,7 +173,7 @@ cat("============================================================\n")
 d_rho      <- 5
 n_rho      <- 20000
 rho_values <- c(0.0, 0.3, 0.8)
-n_reps     <- 50  
+n_reps     <- 50
 
 sim_grid_rho <- expand.grid(
   rho = rho_values,
@@ -189,11 +188,11 @@ print(sim_grid_rho)
 results_list_rho <- lapply(seq_len(nrow(sim_grid_rho)), function(i) {
   params <- sim_grid_rho[i, ]
   cat(sprintf("\nRunning CADEE (rho=%.1f, d=%d, n=%d) ...\n", params$rho, params$d, params$n))
-  
+
   run_setting_cadee_mvn(
-    n = params$n, 
-    d = params$d, 
-    rho = params$rho, 
+    n = params$n,
+    d = params$d,
+    rho = params$rho,
     n_reps = n_reps
   )
 })
