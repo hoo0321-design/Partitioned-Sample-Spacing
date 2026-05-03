@@ -45,6 +45,7 @@ family_label <- function(family) {
     gamma = "Gamma",
     beta = "Beta",
     lognormal = "Lognormal",
+    laplace = "Laplace",
     family
   )
 }
@@ -57,7 +58,7 @@ l_grid_for_d <- function(d, mode) {
 }
 
 make_config_grid <- function(mode) {
-  families <- c("normal", "gamma", "beta", "lognormal")
+  families <- c("normal", "gamma", "beta", "lognormal", "laplace")
   if (mode == "quick") {
     return(expand.grid(
       family = families,

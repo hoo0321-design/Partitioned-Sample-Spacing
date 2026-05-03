@@ -192,10 +192,19 @@ entropy_lognormal_margin <- function(meanlog, sdlog) {
   meanlog + log(sdlog) + 0.5 * log(2 * pi * exp(1))
 }
 
+entropy_laplace_margin <- function(scale) {
+  1 + log(2 * scale)
+}
+
+qlaplace <- function(u, scale) {
+  ifelse(u < 0.5, scale * log(2 * u), -scale * log(2 * (1 - u)))
+}
+
 true_entropy_gaussian_copula <- function(d, rho, family,
                                          shape = 0.4, scale = 0.3,
                                          shape1 = 0.5, shape2 = 2,
-                                         meanlog = 0, sdlog = 1) {
+                                         meanlog = 0, sdlog = 1,
+                                         laplace_scale = 1 / sqrt(2)) {
   family <- tolower(family)
   R <- equicorr_matrix(d, rho)
   if (!is_posdef(R)) stop("Equicorrelation matrix is not positive definite.")
@@ -207,6 +216,7 @@ true_entropy_gaussian_copula <- function(d, rho, family,
     gamma = entropy_gamma_margin(shape, scale),
     beta = entropy_beta_margin(shape1, shape2),
     lognormal = entropy_lognormal_margin(meanlog, sdlog),
+    laplace = entropy_laplace_margin(laplace_scale),
     stop("Unsupported family: ", family)
   )
 
@@ -217,6 +227,7 @@ simulate_gaussian_copula <- function(n, d, rho, family,
                                      shape = 0.4, scale = 0.3,
                                      shape1 = 0.5, shape2 = 2,
                                      meanlog = 0, sdlog = 1,
+                                     laplace_scale = 1 / sqrt(2),
                                      u_clip = 1e-12) {
   family <- tolower(family)
   R <- equicorr_matrix(d, rho)
@@ -232,6 +243,7 @@ simulate_gaussian_copula <- function(n, d, rho, family,
     gamma = qgamma(U, shape = shape, scale = scale),
     beta = qbeta(U, shape1 = shape1, shape2 = shape2),
     lognormal = qlnorm(U, meanlog = meanlog, sdlog = sdlog),
+    laplace = qlaplace(U, scale = laplace_scale),
     stop("Unsupported family: ", family)
   )
   matrix(X, nrow = n, ncol = d)

@@ -38,6 +38,15 @@ Rscript PSS/run_pss_regime_diagnostics.R --quick
 Rscript PSS/run_pss_regime_diagnostics.R --full
 Rscript PSS/plot_pss_regime_diagnostics.R --mode=full --rho=0.5
 
+NeurIPS anchor-grid all-estimator experiments (Normal/Gamma/Beta/Lognormal/Laplace):
+python experiments/anchor_grid/make_anchor_grid_datasets.py
+Rscript experiments/anchor_grid/run_pss_cadee.R --base-dir=results/anchor_grid_all_estimators_YYYYMMDD_HHMMSS
+python experiments/anchor_grid/run_knn_um.py --base-dir results/anchor_grid_all_estimators_YYYYMMDD_HHMMSS
+python experiments/anchor_grid/plot_anchor_grid_results.py --base-dir results/anchor_grid_all_estimators_YYYYMMDD_HHMMSS
+
+Or run the full pipeline:
+bash experiments/anchor_grid/run_all.sh
+
 kNN Baselines:
 python KNN/run_knn_mvn_n.py
 python KNN/run_knn_gamma_corr.py
@@ -76,6 +85,7 @@ ICA Experiment: Refer to the ICA/ directory and run ica_pss.R.
 ├── ICA/            # ICA experiment code (UCI EEG Eye-State dataset)
 ├── KNN/            # Python implementations of kNN baselines (KL, KSG, UM-kNN)
 ├── PSS/            # Core source code for the proposed PSS estimator
+├── experiments/    # NeurIPS-revision synthetic experiment drivers
 ├── run_plots.R     # R script to reproduce simulation plots (Figures 2, 3, and 4)
 ├── uci_energy.R    # Feature selection experiment script (UCI Appliances Energy)
 └── README.md       # Project documentation
@@ -89,8 +99,11 @@ Contains the core implementation of the Partitioned Sample-Spacing (PSS) estimat
 - **pss_entropy.R**: Main function for the PSS joint entropy estimator.
 - **run_pss_gamma.R**: Computes RMSE and runtime under the multivariate Gamma distribution with varying sample size ($N$), dimension ($d$), and correlation ($\rho$), using the optimal $\ell$ that minimizes RMSE.
 - **run_pss_mvn.R**: Computes RMSE and runtime under the multivariate Normal distribution with varying sample size ($N$), dimension ($d$), and correlation ($\rho$), using the optimal $\ell$ that minimizes RMSE.
-- **run_pss_regime_diagnostics.R**: NeurIPS-oriented simulation driver for oracle-vs-CV tuning, Normal/Gamma/Beta/Lognormal Gaussian-copula families, and occupancy/skipped-point diagnostics. Results are written to `results/pss_diagnostics/`.
+- **run_pss_regime_diagnostics.R**: NeurIPS-oriented simulation driver for oracle-vs-CV tuning, Normal/Gamma/Beta/Lognormal/Laplace Gaussian-copula families, and occupancy/skipped-point diagnostics. Results are written to `results/pss_diagnostics/`.
 - **plot_pss_regime_diagnostics.R**: Generates paper-ready plots from the diagnostic CSVs, including CV-vs-oracle RMSE gap, empirical convergence, occupancy/skipped-point diagnostics, selected partition counts, and CV objective curves.
+
+### **experiments/anchor_grid/**
+Contains the compact all-estimator synthetic comparison used for the NeurIPS revision. It generates shared datasets from Normal, Gamma, Beta, Lognormal, and Laplace Gaussian-copula models; runs PSS, CADEE, KL, KSG, trained UM-tKL, and trained UM-tKSG; and writes the paper-style `N scaling`, `d scaling`, and `rho scaling` plots to `plots/`.
 
 ### **KNN/**
 Implements $k$-Nearest-Neighbor ($k$NN) based baseline entropy estimators (KL, KSG, etc.).
