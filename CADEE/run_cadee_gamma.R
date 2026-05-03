@@ -15,11 +15,10 @@ library(dplyr)
 library(knitr)
 
 # --- 2) Load the CADEE function ----------------------------------------------
-# This script requires the `copulasH_R` function to be defined beforehand.
-# You may paste the full function code below or load it from an external file:
-#   source("copulasH_R_function.R")
+cadee_source <- if (file.exists("CADEE/CADEE.R")) "CADEE/CADEE.R" else "CADEE.R"
+source(cadee_source)
 if (!exists("copulasH_R")) {
-  stop("Missing function: `copulasH_R`. Please define it or load it via source().")
+  stop("Missing function: `copulasH_R` after sourcing CADEE.R.")
 }
 
 # --- 3) Shared simulation utilities ------------------------------------------
@@ -52,19 +51,19 @@ rmgamma_gausscop <- function(n, d, rho, shape, scale) {
 #' @return       Data frame with averaged evaluation time and RMSE
 run_setting_cadee_gamma <- function(n, d, rho, n_reps, shape, scale) {
   H_true <- true_entropy_gamma_gausscop(d, rho, shape, scale)
-  
+
   estimates <- numeric(n_reps)
   times <- numeric(n_reps)
-  
+
   for (i in seq_len(n_reps)) {
     X <- rmgamma_gausscop(n, d, rho, shape, scale)
     t0 <- proc.time()
     estimates[i] <- copulasH_R(X)
     times[i] <- (proc.time() - t0)[["elapsed"]]
   }
-  
+
   rmse <- sqrt(mean((estimates - H_true)^2))
-  
+
   data.frame(
     Distribution     = "Gamma",
     Dimensions       = d,
@@ -107,9 +106,9 @@ results_list_n <- lapply(seq_len(nrow(sim_grid_n)), function(i) {
   params <- sim_grid_n[i, ]
   cat(sprintf("Running CADEE Gamma (n=%d, d=%d, rho=%.1f) ...\n", params$n, params$d, params$rho))
   run_setting_cadee_gamma(
-    n = params$n, d = params$d, rho = params$rho, 
-    n_reps = sim_params_n$n_reps, 
-    shape  = sim_params_n$shape, 
+    n = params$n, d = params$d, rho = params$rho,
+    n_reps = sim_params_n$n_reps,
+    shape  = sim_params_n$shape,
     scale  = sim_params_n$scale
   )
 })
@@ -157,7 +156,7 @@ results_list_d <- lapply(seq_len(nrow(sim_grid_d)), function(i) {
   params <- sim_grid_d[i, ]
   cat(sprintf("\nRunning CADEE Gamma (d=%d, n=%d, rho=%.1f) ...\n", params$d, params$n, params$rho))
   run_setting_cadee_gamma(
-    n = params$n, d = params$d, rho = params$rho, 
+    n = params$n, d = params$d, rho = params$rho,
     n_reps = sim_params_d$n_reps,
     shape  = sim_params_d$shape,
     scale  = sim_params_d$scale
@@ -191,7 +190,7 @@ sim_params_rho <- list(
   n       = 50000,
   d       = 7,
   rho     = c(0.0, 0.1, 0.3,0.8),
-  n_reps  = 100,  
+  n_reps  = 100,
   shape   = 0.4,
   scale   = 0.3
 )
@@ -209,11 +208,11 @@ print(sim_grid_rho)
 results_list_rho <- lapply(seq_len(nrow(sim_grid_rho)), function(i) {
   params <- sim_grid_rho[i, ]
   cat(sprintf("\nRunning CADEE Gamma (rho=%.1f, d=%d, n=%d) ...\n", params$rho, params$d, params$n))
-  
+
   run_setting_cadee_gamma(
-    n = params$n, 
-    d = params$d, 
-    rho = params$rho, 
+    n = params$n,
+    d = params$d,
+    rho = params$rho,
     n_reps = sim_params_rho$n_reps,
     shape = sim_params_rho$shape,
     scale = sim_params_rho$scale
