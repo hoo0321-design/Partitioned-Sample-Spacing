@@ -444,8 +444,15 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
   }))
 
   feasible_table <- cv_table[cv_table$feasible, , drop = FALSE]
+  fallback_mode <- FALSE
   selection_rule <- if (selection_mode == "stable_coverage") {
-    "stable_coverage_constrained"
+    if (stable_coverage_min > 0 && stable_coverage_penalty == 0) {
+      "stable_coverage_constrained"
+    } else if (stable_coverage_min > 0) {
+      "stable_coverage_penalty_constrained"
+    } else {
+      "stable_coverage_penalty"
+    }
   } else {
     "coverage_occupancy_constrained"
   }
@@ -457,6 +464,7 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
         drop = FALSE
       ]
       selection_rule <- "fallback_max_stable_coverage"
+      fallback_mode <- TRUE
     } else {
       feasible_table <- cv_table[
         order(-cv_table$cv_coverage, -cv_table$stable_cell_fraction, cv_table$cv_score, cv_table$ell),
@@ -464,11 +472,16 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
         drop = FALSE
       ]
       selection_rule <- "fallback_max_coverage_occupancy"
+      fallback_mode <- TRUE
     }
   }
 
-  best <- feasible_table[order(feasible_table$cv_score, feasible_table$ell), ][1, ]
-  if (one_se_rule && nrow(feasible_table) > 1L && is.finite(best$cv_score_se)) {
+  best <- if (fallback_mode) {
+    feasible_table[1, , drop = FALSE]
+  } else {
+    feasible_table[order(feasible_table$cv_score, feasible_table$ell), , drop = FALSE][1, , drop = FALSE]
+  }
+  if (!fallback_mode && one_se_rule && nrow(feasible_table) > 1L && is.finite(best$cv_score_se)) {
     threshold <- best$cv_score + best$cv_score_se
     one_se_candidates <- feasible_table[
       feasible_table$cv_score <= threshold,
@@ -486,11 +499,30 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
     cv_table = cv_table,
     selection_rule = selection_rule,
     selection_mode = selection_mode,
+    fallback_mode = fallback_mode,
     coverage_min = coverage_min,
     occupancy_min = occupancy_min,
     occupancy_fraction_min = occupancy_fraction_min,
     stable_coverage_min = stable_coverage_min,
     stable_coverage_penalty = stable_coverage_penalty
+  )
+}
+
+select_l_via_sc_cv_pss <- function(data, l_range, n_folds = 3,
+                                   tau = 0.99,
+                                   occupancy_min = 10,
+                                   one_se_rule = FALSE,
+                                   seed = 42) {
+  select_l_via_cv_pss(
+    data,
+    l_range = l_range,
+    n_folds = n_folds,
+    occupancy_min = occupancy_min,
+    stable_coverage_min = tau,
+    stable_coverage_penalty = 0,
+    selection_mode = "stable_coverage",
+    one_se_rule = one_se_rule,
+    seed = seed
   )
 }
 

@@ -12,6 +12,18 @@ if(!require(class)) install.packages("class")
 library(dplyr); library(ggplot2); library(FNN); library(caret); 
 library(class); library(tidyr); library(e1071)
 
+script_file <- grep("^--file=", commandArgs(FALSE), value = TRUE)
+script_dir <- if (length(script_file)) {
+  dirname(normalizePath(sub("^--file=", "", script_file[[1]]), mustWork = FALSE))
+} else {
+  getwd()
+}
+pss_source <- file.path(script_dir, "PSS", "PSS_entropy.R")
+if (!file.exists(pss_source)) {
+  pss_source <- file.path("PSS", "PSS_entropy.R")
+}
+source(pss_source)
+
 set.seed(42)
 
 # ==============================================================================
@@ -19,8 +31,18 @@ set.seed(42)
 # ==============================================================================
 url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00374/energydata_complete.csv"
 
-cat("Downloading Appliances Energy dataset (approx. 2.5MB)...\n")
-data <- read.csv(url)
+out_dir <- file.path("results", "uci_energy_feature_selection_latest")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+data_cache <- file.path(out_dir, "energydata_complete.csv")
+
+if (file.exists(data_cache)) {
+  cat("Loading cached Appliances Energy dataset...\n")
+  data <- read.csv(data_cache)
+} else {
+  cat("Downloading Appliances Energy dataset (approx. 2.5MB)...\n")
+  data <- read.csv(url)
+  write.csv(data, data_cache, row.names = FALSE)
+}
 
 # [Preprocessing]
 # 1. Remove unnecessary columns: 'date' (string), 'rv1', 'rv2' (random noise variables)
@@ -57,44 +79,30 @@ cat("Data Ready: N_train =", nrow(X_train), " Dimension =", ncol(X_train), "\n")
 cat("Note: Native d=26. Perfect for showing PSS robustness.\n")
 
 # ==============================================================================
-# 2. CV Functions (Fast Sparse PSS)
+# 2. CV Functions
 # ==============================================================================
-# (Memory-efficient sparse indexing version)
-cv_tune_pss <- function(X, ell_candidates, n_folds = 3) {
-  folds <- createFolds(1:nrow(X), k = n_folds, list = TRUE)
-  scores <- c(); d <- ncol(X)
-  cat("Tuning PSS ell: ")
-  for (l in ell_candidates) {
-    if (d * log2(l) > 31) { cat(sprintf("[Skip l=%d] ", l)); scores <- c(scores, -Inf); next }
-    fold_scores <- c(); powers <- l^((1:d)-1)
-    for (i in 1:n_folds) {
-      idx_val <- folds[[i]]; X_tr <- X[-idx_val, , drop=FALSE]; X_val <- X[idx_val, , drop=FALSE]
-      n_tr <- nrow(X_tr)
-      boundaries <- vector("list", d); bin_log_vol <- 0
-      for(j in 1:d) {
-        rng <- range(X_tr[,j]); boundaries[[j]] <- seq(rng[1]-1e-8, rng[2]+1e-8, length.out = l + 1)
-        bin_log_vol <- bin_log_vol + log((rng[2]-rng[1])/l)
-      }
-      get_lin_idx <- function(mat) {
-        idx_mat <- matrix(0, nrow=nrow(mat), ncol=d)
-        for(j in 1:d) {
-          v <- findInterval(mat[,j], boundaries[[j]])
-          v[v < 1] <- 1; v[v > l] <- l
-          idx_mat[,j] <- v
-        }
-        as.vector(1 + (idx_mat - 1) %*% powers)
-      }
-      lin_tr <- get_lin_idx(X_tr); lin_val <- get_lin_idx(X_val)
-      unique_tr <- unique(lin_tr); mapped_tr <- match(lin_tr, unique_tr); tr_counts <- tabulate(mapped_tr)
-      mapped_val <- match(lin_val, unique_tr); val_counts <- tr_counts[mapped_val]; val_counts[is.na(val_counts)] <- 0
-      pos <- val_counts > 0; log_liks <- numeric(length(lin_val))
-      if(any(pos)) log_liks[pos] <- log(val_counts[pos]) - log(n_tr) - bin_log_vol
-      if(any(!pos)) log_liks[!pos] <- log(1e-6)
-      fold_scores <- c(fold_scores, mean(log_liks))
-    }
-    avg <- mean(fold_scores); scores <- c(scores, avg); cat(sprintf("[%d: %.2f] ", l, avg))
-  }
-  cat("\n"); return(ell_candidates[which.max(scores)])
+cv_tune_pss <- function(X, ell_candidates, n_folds = 3,
+                        occupancy_min = 10,
+                        stable_coverage_tau = 0.99,
+                        seed = 42) {
+  cat("Tuning PSS ell with stable-coverage constrained CV:\n")
+  sel <- select_l_via_sc_cv_pss(
+    X,
+    l_range = ell_candidates,
+    n_folds = n_folds,
+    occupancy_min = occupancy_min,
+    tau = stable_coverage_tau,
+    one_se_rule = FALSE,
+    seed = seed
+  )
+  print(sel$cv_table[, c(
+    "ell",
+    "cv_score",
+    "validation_nll",
+    "stable_validation_coverage",
+    "validation_cell_size_median"
+  )])
+  sel
 }
 
 cv_tune_knn <- function(X, k_candidates, n_folds = 3) {
@@ -126,7 +134,17 @@ ell_cands <- c(2, 3, 4, 5) # d=26 → expected ell around 2 or 3
 k_cands <- c(1,2,3,4,5,7,10)
 
 cat("\n>>> Tuning PSS (Full Data) <<<\n")
-time_tune_pss <- system.time({ best_ell <- cv_tune_pss(X_train, ell_cands, n_folds = 3) })
+time_tune_pss <- system.time({
+  pss_cv <- cv_tune_pss(
+    X_train,
+    ell_cands,
+    n_folds = 3,
+    occupancy_min = 10,
+    stable_coverage_tau = 0.99,
+    seed = 42
+  )
+  best_ell <- pss_cv$ell_star
+})
 cat("PSS Tuning Time:", time_tune_pss[3], "s\n")
 
 cat("\n>>> Tuning KNN (Subset) <<<\n")
@@ -138,32 +156,8 @@ cat("Selected Ell:", best_ell, "| Selected K:", best_k, "\n")
 # ==============================================================================
 # 4. Core Estimators
 # ==============================================================================
-calculate_entropy_pss_d <- function(data, n_partitions) {
-  d <- ncol(data); n_samples <- nrow(data); l <- n_partitions 
-  all_coords <- as.data.frame(data)
-  all_boundaries <- lapply(all_coords, function(col) seq(min(col), max(col), length.out = l + 1))
-  all_indices_mat <- do.call(cbind, mapply(findInterval, all_coords, all_boundaries, MoreArgs = list(rightmost.closed = TRUE), SIMPLIFY = FALSE))
-  all_indices_mat <- pmin(all_indices_mat, l)
-  powers_of_l <- l^((1:d) - 1)
-  linear_indices <- as.vector(1 + (all_indices_mat - 1) %*% powers_of_l)
-  point_indices_by_bin <- split(seq_len(n_samples), linear_indices)
-  
-  process_single_bin <- function(indices) {
-    n_k <- length(indices); if (n_k < 2) return(0)
-    m_k <- floor(sqrt(n_k) + 0.5); bin_data <- data[indices, , drop = FALSE]
-    sorted_data_list <- apply(bin_data, 2, sort)
-    m_spacings_list <- lapply(1:d, function(j) {
-      col <- sorted_data_list[, j]
-      sapply(1:n_k, function(i) col[min(n_k, i + m_k)] - col[max(1, i - m_k)])
-    })
-    m_spacings_mat <- do.call(cbind, m_spacings_list)
-    valid <- rowSums(m_spacings_mat > 0) == d; if (!any(valid)) return(0)
-    log_term <- rowSums(log(2 * m_k / (n_k * m_spacings_mat[valid, , drop=FALSE])))
-    sum(-(log(n_k / n_samples) + log_term))
-  }
-  bin_sums <- sapply(point_indices_by_bin, process_single_bin)
-  return(sum(bin_sums) / n_samples)
-}
+# calculate_entropy_pss_d() is sourced from PSS/PSS_entropy.R so this downstream
+# experiment uses the same shared PSS estimator as the main benchmarks.
 
 get_mi_pss <- function(X_sub, y, ell) {
   H_S <- calculate_entropy_pss_d(X_sub, ell)
@@ -299,3 +293,66 @@ p_mi <- ggplot(df_mi, aes(x = Step, y = MI_Value, color = Method)) +
   paper_theme
 
 print(p_mi)
+
+# ==============================================================================
+# 8. Save reproducible outputs
+# ==============================================================================
+
+history_to_df <- function(history, method) {
+  do.call(rbind, lapply(seq_along(history), function(i) {
+    data.frame(
+      Method = method,
+      Step = i,
+      Feature_Index = history[[i]]$features[[length(history[[i]]$features)]],
+      Selected_Features = paste(history[[i]]$features, collapse = ","),
+      MI = history[[i]]$mi,
+      stringsAsFactors = FALSE
+    )
+  }))
+}
+
+selection_df <- bind_rows(
+  history_to_df(res_pss, "PSS"),
+  history_to_df(res_knn, "KNN")
+)
+
+accuracy_df <- bind_rows(
+  data.frame(Method = "PSS", Classifier = "SVM", Step = seq_along(acc_pss_svm), Accuracy = acc_pss_svm),
+  data.frame(Method = "PSS", Classifier = "NaiveBayes", Step = seq_along(acc_pss_nb), Accuracy = acc_pss_nb),
+  data.frame(Method = "KNN", Classifier = "SVM", Step = seq_along(acc_knn_svm), Accuracy = acc_knn_svm),
+  data.frame(Method = "KNN", Classifier = "NaiveBayes", Step = seq_along(acc_knn_nb), Accuracy = acc_knn_nb)
+)
+
+params_df <- data.frame(
+  N_Train = nrow(X_train),
+  N_Test = nrow(X_test),
+  Dimensions = ncol(X_train),
+  Best_Ell = best_ell,
+  Best_K = best_k,
+  PSS_CV_Method = pss_cv$selection_rule,
+  PSS_CV_Stable_Coverage_Tau = pss_cv$stable_coverage_min,
+  PSS_CV_Occupancy_Min = pss_cv$occupancy_min,
+  PSS_Tuning_Time_s = unname(time_tune_pss[3]),
+  KNN_Tuning_Time_s = unname(time_tune_knn[3]),
+  PSS_Selection_Time_s = unname(time_pss[3]),
+  KNN_Selection_Time_s = unname(time_knn[3]),
+  stringsAsFactors = FALSE
+)
+
+write.csv(selection_df, file.path(out_dir, "feature_selection_history.csv"), row.names = FALSE)
+write.csv(accuracy_df, file.path(out_dir, "feature_selection_accuracy.csv"), row.names = FALSE)
+write.csv(df_mi, file.path(out_dir, "feature_selection_mi_long.csv"), row.names = FALSE)
+write.csv(params_df, file.path(out_dir, "feature_selection_params.csv"), row.names = FALSE)
+write.csv(pss_cv$cv_table, file.path(out_dir, "pss_stable_coverage_cv_table.csv"), row.names = FALSE)
+
+ggsave(file.path(out_dir, "figure6a_svm_accuracy.png"), p_svm, width = 7.2, height = 5.0, dpi = 300)
+ggsave(file.path(out_dir, "figure6a_svm_accuracy.pdf"), p_svm, width = 7.2, height = 5.0)
+ggsave(file.path(out_dir, "figure6b_estimated_mi.png"), p_mi, width = 7.2, height = 5.0, dpi = 300)
+ggsave(file.path(out_dir, "figure6b_estimated_mi.pdf"), p_mi, width = 7.2, height = 5.0)
+
+cat("\nSaved UCI Energy feature-selection outputs to:", out_dir, "\n")
+cat("\nBest SVM accuracy by method:\n")
+print(accuracy_df %>%
+  filter(Classifier == "SVM") %>%
+  group_by(Method) %>%
+  summarise(Best_Accuracy = max(Accuracy), Best_Step = Step[which.max(Accuracy)], .groups = "drop"))
