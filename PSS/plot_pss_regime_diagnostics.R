@@ -104,8 +104,9 @@ conv_d <- nearest_value(summary_df$Dimensions, 5)
 summary_focus <- summary_df %>%
   dplyr::filter(abs(Correlation - rho_focus) < 1e-12) %>%
   dplyr::mutate(
-    Distribution = factor(Distribution, levels = c("Normal", "Gamma", "Beta", "Lognormal")),
-    Tuning = factor(Tuning, levels = c("Oracle", "CV")),
+    Distribution = factor(Distribution, levels = c("Normal", "Gamma", "Beta", "Lognormal", "Laplace")),
+    Tuning = dplyr::recode(Tuning, CV = "SC-CV"),
+    Tuning = factor(Tuning, levels = c("Oracle", "SC-CV")),
     RMSE_Lower = pmax(RMSE_Lower, 1e-12),
     RMSE_Upper = pmax(RMSE_Upper, 1e-12),
     RMSE = pmax(RMSE, 1e-12)
@@ -116,8 +117,9 @@ if (!nrow(summary_focus)) {
        paste(sort(unique(summary_df$Correlation)), collapse = ", "), call. = FALSE)
 }
 
-method_cols <- c(Oracle = "#0072B2", CV = "#D55E00")
-dist_cols <- c(Normal = "#0072B2", Gamma = "#009E73", Beta = "#D55E00", Lognormal = "#CC79A7")
+method_cols <- c(Oracle = "#0072B2", `SC-CV` = "#D55E00")
+dist_cols <- c(Normal = "#0072B2", Gamma = "#009E73", Beta = "#D55E00",
+               Lognormal = "#CC79A7", Laplace = "#999999")
 
 paper_theme <- ggplot2::theme_bw(base_size = 11) +
   ggplot2::theme(
@@ -152,13 +154,13 @@ save_plot <- function(plot, name, width = 7.2, height = 4.6) {
   }
 }
 
-# Figure 1: CV-to-oracle gap. This is the cleanest answer to the tuning question.
+# Figure 1: SC-CV-to-oracle gap. This is the cleanest answer to the tuning question.
 gap_df <- summary_focus %>%
   dplyr::select(Distribution, Dimensions, N_Samples, Tuning, RMSE) %>%
   tidyr::pivot_wider(names_from = Tuning, values_from = RMSE) %>%
-  dplyr::filter(!is.na(Oracle), !is.na(CV)) %>%
+  dplyr::filter(!is.na(Oracle), !is.na(.data[["SC-CV"]])) %>%
   dplyr::mutate(
-    CV_Oracle_Ratio = CV / Oracle,
+    CV_Oracle_Ratio = .data[["SC-CV"]] / Oracle,
     Ratio_Label = sprintf("%.2fx", CV_Oracle_Ratio),
     N_Samples = factor(N_Samples),
     Dimensions = factor(Dimensions)
@@ -176,8 +178,8 @@ p_gap <- ggplot2::ggplot(gap_df, ggplot2::aes(x = Dimensions, y = N_Samples, fil
     labels = function(x) paste0(scales::number(x, accuracy = 0.01), "x")
   ) +
   ggplot2::labs(
-    title = "CV tracks the oracle partition except in sparse regimes",
-    subtitle = paste0("Cell values are RMSE(CV) / RMSE(oracle), rho = ", rho_focus),
+    title = "SC-CV tracks the oracle partition except in sparse regimes",
+    subtitle = paste0("Cell values are RMSE(SC-CV) / RMSE(oracle), rho = ", rho_focus),
     x = "Dimension d",
     y = "Sample size n",
     fill = "RMSE ratio"
@@ -218,9 +220,9 @@ p_conv <- ggplot2::ggplot(
   paper_theme
 save_plot(p_conv, "figure_pss_empirical_convergence", width = 9.2, height = 3.8)
 
-# Figure 3: Occupancy diagnostics under the CV-selected partition.
+# Figure 3: Occupancy diagnostics under the SC-CV-selected partition.
 diag_df <- summary_focus %>%
-  dplyr::filter(Tuning == "CV", N_Samples == max_n) %>%
+  dplyr::filter(Tuning == "SC-CV", N_Samples == max_n) %>%
   dplyr::select(
     Distribution, Dimensions, Coverage_Fraction,
     Skipped_Point_Fraction, Skipped_Occupied_Cell_Fraction
@@ -255,7 +257,7 @@ p_diag <- ggplot2::ggplot(
   ggplot2::scale_color_manual(values = dist_cols) +
   ggplot2::labs(
     title = "Coverage and occupancy constraints expose sparse-cell failure modes",
-    subtitle = paste0("CV-selected partitions at n = ", scales::comma(max_n), ", rho = ", rho_focus),
+    subtitle = paste0("SC-CV-selected partitions at n = ", scales::comma(max_n), ", rho = ", rho_focus),
     x = "Dimension d",
     y = "Fraction"
   ) +
@@ -339,7 +341,7 @@ if (nrow(cv_curve_df)) {
     ggplot2::scale_x_continuous(breaks = sort(unique(cv_curve_df$ell))) +
     ggplot2::scale_color_manual(values = c(Feasible = "#009E73", Filtered = "#999999")) +
     ggplot2::labs(
-      title = "Coverage- and occupancy-constrained CV objective",
+      title = "Stable-coverage CV objective",
       subtitle = paste0("Representative setting: n = ", scales::comma(max_n),
                         ", d = ", conv_d, ", rho = ", rho_focus),
       x = "Partitions per axis ell",

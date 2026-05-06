@@ -343,11 +343,15 @@ pss_validation_cell_sizes <- function(model, X_test) {
 }
 
 select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3,
-                                coverage_min = 0.95, one_se_rule = TRUE,
+                                coverage_min = 0.95, one_se_rule = FALSE,
                                 occupancy_min = 10,
                                 occupancy_fraction_min = coverage_min,
                                 occupancy_penalty = coverage_penalty,
+                                stable_coverage_min = 0.99,
+                                stable_coverage_penalty = 0,
+                                selection_mode = c("stable_coverage", "coverage_occupancy"),
                                 seed = 42) {
+  selection_mode <- match.arg(selection_mode)
   data <- as.matrix(data)
   set.seed(seed)
   n <- nrow(data)
@@ -359,7 +363,9 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
     fold_scores <- numeric(n_folds)
     fold_coverages <- numeric(n_folds)
     fold_stable_fractions <- numeric(n_folds)
+    fold_stable_coverages <- numeric(n_folds)
     all_cell_sizes <- integer(0)
+    n_stable_covered <- 0L
     for (fold in seq_len(n_folds)) {
       validation_rows <- which(fold_id == fold)
       train_rows <- which(fold_id != fold)
@@ -369,14 +375,21 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
       cell_sizes <- pss_validation_cell_sizes(model, validation_data)
       ok <- is.finite(logf)
       n_covered <- n_covered + sum(ok)
+      stable_ok <- ok & cell_sizes >= occupancy_min
+      n_stable_covered <- n_stable_covered + sum(stable_ok)
       all_cell_sizes <- c(all_cell_sizes, cell_sizes)
       fold_coverages[fold] <- sum(ok) / length(validation_rows)
       fold_stable_fractions[fold] <- mean(cell_sizes >= occupancy_min)
+      fold_stable_coverages[fold] <- mean(stable_ok)
       if (any(ok)) {
         fold_nll <- mean(-logf[ok])
-        fold_scores[fold] <- fold_nll +
-          coverage_penalty * (1 - fold_coverages[fold]) +
-          occupancy_penalty * (1 - fold_stable_fractions[fold])
+        fold_scores[fold] <- if (selection_mode == "stable_coverage") {
+          fold_nll + stable_coverage_penalty * (1 - fold_stable_coverages[fold])
+        } else {
+          fold_nll +
+            coverage_penalty * (1 - fold_coverages[fold]) +
+            occupancy_penalty * (1 - fold_stable_fractions[fold])
+        }
         nll_sum <- nll_sum + sum(-logf[ok])
       } else {
         fold_scores[fold] <- Inf
@@ -384,37 +397,74 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
     }
     coverage <- n_covered / n
     stable_fraction <- mean(all_cell_sizes >= occupancy_min)
-    score <- if (n_covered == 0L) Inf else (nll_sum / n_covered) +
+    stable_coverage <- n_stable_covered / n
+    validation_nll <- if (n_covered == 0L) Inf else nll_sum / n_covered
+    coverage_occupancy_score <- validation_nll +
       coverage_penalty * (1 - coverage) +
       occupancy_penalty * (1 - stable_fraction)
+    stable_coverage_score <- validation_nll +
+      stable_coverage_penalty * (1 - stable_coverage)
+    score <- if (selection_mode == "stable_coverage") {
+      stable_coverage_score
+    } else {
+      coverage_occupancy_score
+    }
     data.frame(
       ell = ell,
       cv_score = score,
+      validation_nll = validation_nll,
+      coverage_occupancy_score = coverage_occupancy_score,
+      stable_coverage_score = stable_coverage_score,
       cv_score_se = stats::sd(fold_scores) / sqrt(n_folds),
       cv_coverage = coverage,
       min_fold_coverage = min(fold_coverages),
       stable_cell_fraction = stable_fraction,
       min_fold_stable_cell_fraction = min(fold_stable_fractions),
+      stable_validation_coverage = stable_coverage,
+      min_fold_stable_validation_coverage = min(fold_stable_coverages),
       validation_cell_size_q10 = as.numeric(stats::quantile(all_cell_sizes, 0.1, names = FALSE)),
       validation_cell_size_median = stats::median(all_cell_sizes),
       occupancy_min = occupancy_min,
       occupancy_fraction_min = occupancy_fraction_min,
-      feasible = is.finite(score) &&
+      stable_coverage_min = stable_coverage_min,
+      feasible_coverage_occupancy = is.finite(score) &&
         coverage >= coverage_min &&
         stable_fraction >= occupancy_fraction_min,
+      feasible_stable_coverage = is.finite(score) &&
+        stable_coverage >= stable_coverage_min,
+      feasible = is.finite(score) &&
+        if (selection_mode == "stable_coverage") {
+          stable_coverage >= stable_coverage_min
+        } else {
+          coverage >= coverage_min &&
+            stable_fraction >= occupancy_fraction_min
+        },
       stringsAsFactors = FALSE
     )
   }))
 
   feasible_table <- cv_table[cv_table$feasible, , drop = FALSE]
-  selection_rule <- "coverage_occupancy_constrained"
+  selection_rule <- if (selection_mode == "stable_coverage") {
+    "stable_coverage_constrained"
+  } else {
+    "coverage_occupancy_constrained"
+  }
   if (nrow(feasible_table) == 0L) {
-    feasible_table <- cv_table[
-      order(-cv_table$cv_coverage, -cv_table$stable_cell_fraction, cv_table$cv_score, cv_table$ell),
-      ,
-      drop = FALSE
-    ]
-    selection_rule <- "fallback_max_coverage_occupancy"
+    if (selection_mode == "stable_coverage") {
+      feasible_table <- cv_table[
+        order(-cv_table$stable_validation_coverage, cv_table$cv_score, cv_table$ell),
+        ,
+        drop = FALSE
+      ]
+      selection_rule <- "fallback_max_stable_coverage"
+    } else {
+      feasible_table <- cv_table[
+        order(-cv_table$cv_coverage, -cv_table$stable_cell_fraction, cv_table$cv_score, cv_table$ell),
+        ,
+        drop = FALSE
+      ]
+      selection_rule <- "fallback_max_coverage_occupancy"
+    }
   }
 
   best <- feasible_table[order(feasible_table$cv_score, feasible_table$ell), ][1, ]
@@ -435,9 +485,12 @@ select_l_via_cv_pss <- function(data, l_range, n_folds = 3, coverage_penalty = 3
     ell_star = as.integer(best$ell),
     cv_table = cv_table,
     selection_rule = selection_rule,
+    selection_mode = selection_mode,
     coverage_min = coverage_min,
     occupancy_min = occupancy_min,
-    occupancy_fraction_min = occupancy_fraction_min
+    occupancy_fraction_min = occupancy_fraction_min,
+    stable_coverage_min = stable_coverage_min,
+    stable_coverage_penalty = stable_coverage_penalty
   )
 }
 

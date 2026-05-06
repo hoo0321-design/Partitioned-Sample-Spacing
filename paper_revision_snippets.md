@@ -26,6 +26,34 @@ where each one-dimensional factor is estimated by sample spacings computed only 
 
 Thus the finite-sample estimator may be biased when cells are large or when substantial within-cell dependence remains, and this is why the experiments report occupancy and skipped-point diagnostics together with estimation error.
 
+## Stable-Coverage Cross-Validation (SC-CV)
+
+For data-driven partition selection, we use stable-coverage cross-validation (SC-CV). For a candidate partition level \(\ell\), a validation point is called stably covered if its held-out PSS log-density is finite and the corresponding training cell contains at least \(n_{\min}\) observations. Let
+
+\[
+S(\ell)
+= \frac{1}{N_{\mathrm{val}}}
+\sum_{i \in \mathrm{val}}
+\mathbf 1\left\{
+\widehat f_{\ell}^{(-i)}(X_i) \text{ is finite and }
+n_{k(i)}^{(-i)} \ge n_{\min}
+\right\}.
+\]
+
+The selected partition level is
+
+\[
+\widehat \ell_{\mathrm{SC-CV}}
+= \arg\min_{\ell}
+\mathrm{CVNLL}(\ell)
+\quad
+\text{subject to}
+\quad
+S(\ell) \ge 0.99.
+\]
+
+In the experiments we set \(n_{\min}=10\). This single stable-coverage constraint combines the two finite-sample failure modes that reviewers highlighted: skipped validation points and sparse occupied cells. Unlike a hard upper bound on \(\ell\), the constraint is data-driven because feasibility is determined by the empirical validation occupancy profile.
+
 ## Occupancy-Aware Complexity Rewrite
 
 The practical runtime is governed by occupied cells rather than by the nominal number \(\ell^d\) of possible cells. Let \(\mathcal O\) denote the set of occupied partitions and let \(n_k\) be the number of observations in cell \(k\). Assigning samples to cells and evaluating the density contributes an \(O(Nd)\) pass. The dominant additional cost is sorting each coordinate within each occupied cell:

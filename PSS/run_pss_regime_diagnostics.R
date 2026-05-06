@@ -1,5 +1,6 @@
 #==============================================================================
-# PSS regime diagnostics: oracle vs CV, distribution expansion, occupancy stats
+# PSS regime diagnostics: oracle vs stable-coverage CV (SC-CV),
+# distribution expansion, occupancy stats
 #
 # Usage from repository root:
 #   Rscript PSS/run_pss_regime_diagnostics.R --quick
@@ -81,7 +82,9 @@ make_config_grid <- function(mode) {
 run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
                                coverage_min = 0.95,
                                occupancy_min = 10,
-                               occupancy_fraction_min = 0.95) {
+                               occupancy_fraction_min = 0.95,
+                               stable_coverage_min = 0.99,
+                               stable_coverage_penalty = 0) {
   l_range <- l_grid_for_d(d, mode)
   H_true <- true_entropy_gaussian_copula(d, rho, family)
 
@@ -113,9 +116,12 @@ run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
         n_folds = n_folds,
         coverage_penalty = 3,
         coverage_min = coverage_min,
-        one_se_rule = TRUE,
+        one_se_rule = FALSE,
         occupancy_min = occupancy_min,
         occupancy_fraction_min = occupancy_fraction_min,
+        stable_coverage_min = stable_coverage_min,
+        stable_coverage_penalty = stable_coverage_penalty,
+        selection_mode = "stable_coverage",
         seed = seed + rep_id
       )
     })[["elapsed"]]
@@ -145,6 +151,8 @@ run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
       Coverage_Min = cv$coverage_min,
       Occupancy_Min = cv$occupancy_min,
       Occupancy_Fraction_Min = cv$occupancy_fraction_min,
+      Stable_Coverage_Min = cv$stable_coverage_min,
+      Stable_Coverage_Penalty = cv$stable_coverage_penalty,
       stringsAsFactors = FALSE
     )
 
@@ -189,6 +197,9 @@ run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
       Coverage_Min = NA_real_,
       Occupancy_Min = NA_real_,
       Occupancy_Fraction_Min = NA_real_,
+      Stable_Coverage_Min = NA_real_,
+      Stable_Coverage_Penalty = NA_real_,
+      Stable_Validation_Coverage = NA_real_,
       Selected_Ell_Mean = oracle_l,
       Selected_Ell_Median = oracle_l,
       Selected_Ell_SD = 0,
@@ -218,11 +229,22 @@ run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
       N_Samples = n,
       Correlation = rho,
       Method = "PSS",
-      Tuning = "CV",
+      Tuning = "SC-CV",
       Selection_Rule = paste(unique(cv_selected$Selection_Rule), collapse = ";"),
       Coverage_Min = coverage_min,
       Occupancy_Min = occupancy_min,
       Occupancy_Fraction_Min = occupancy_fraction_min,
+      Stable_Coverage_Min = stable_coverage_min,
+      Stable_Coverage_Penalty = stable_coverage_penalty,
+      Stable_Validation_Coverage = mean(
+        cv_table$stable_validation_coverage[
+          match(
+            paste(cv_selected$Replicate, cv_selected$Selected_Ell),
+            paste(cv_table$Replicate, cv_table$ell)
+          )
+        ],
+        na.rm = TRUE
+      ),
       Selected_Ell_Mean = mean(cv_selected$Selected_Ell),
       Selected_Ell_Median = stats::median(cv_selected$Selected_Ell),
       Selected_Ell_SD = stats::sd(cv_selected$Selected_Ell),
@@ -251,8 +273,8 @@ run_single_setting <- function(family, n, d, rho, n_reps, n_folds, seed, mode,
   list(
     summary = summary,
     oracle_grid = add_metadata(oracle_grid, "OracleGrid"),
-    cv_selected = add_metadata(cv_selected, "CV"),
-    cv_table = add_metadata(cv_table, "CV")
+    cv_selected = add_metadata(cv_selected, "SC-CV"),
+    cv_table = add_metadata(cv_table, "SC-CV")
   )
 }
 
@@ -267,6 +289,8 @@ coverage_min <- 0.95
 coverage_min <- as.numeric(get_arg_value("coverage-min", coverage_min))
 occupancy_min <- as.integer(get_arg_value("occupancy-min", 10))
 occupancy_fraction_min <- as.numeric(get_arg_value("occupancy-fraction-min", 0.95))
+stable_coverage_min <- as.numeric(get_arg_value("stable-coverage-min", 0.99))
+stable_coverage_penalty <- as.numeric(get_arg_value("stable-coverage-penalty", 0))
 
 set.seed(42)
 config_grid <- make_config_grid(mode)
@@ -274,8 +298,9 @@ config_grid <- make_config_grid(mode)
 cat("============================================================\n")
 cat("PSS regime diagnostics mode:", mode, "\n")
 cat("Settings:", nrow(config_grid), " | reps:", n_reps, " | folds:", n_folds, "\n")
-cat("CV coverage constraint:", coverage_min, "\n")
-cat("CV occupancy constraint: fraction(n_k >=", occupancy_min, ") >=", occupancy_fraction_min, "\n")
+cat("SC-CV stable validation coverage constraint: S(ell) >=", stable_coverage_min, "\n")
+cat("Stable cell threshold: validation point must be finite and have n_k >=", occupancy_min, "\n")
+cat("SC-CV stable coverage penalty:", stable_coverage_penalty, "\n")
 cat("============================================================\n")
 
 all_results <- vector("list", nrow(config_grid))
@@ -297,7 +322,9 @@ for (i in seq_len(nrow(config_grid))) {
     mode = mode,
     coverage_min = coverage_min,
     occupancy_min = occupancy_min,
-    occupancy_fraction_min = occupancy_fraction_min
+    occupancy_fraction_min = occupancy_fraction_min,
+    stable_coverage_min = stable_coverage_min,
+    stable_coverage_penalty = stable_coverage_penalty
   )
 }
 
