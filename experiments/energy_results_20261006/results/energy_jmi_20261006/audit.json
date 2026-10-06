@@ -1,0 +1,23 @@
+{
+  "prediction_records_verified": 482,
+  "prediction_rows_verified": 2536018,
+  "historical_metric_only_records_hash_verified": 46,
+  "pss_component_scores_recomputed": 975,
+  "pss_chosen_ell_cv_diagnostics_recomputed": 975,
+  "kl_component_scores_recomputed": 975,
+  "development_paths_reconstructed": 75,
+  "outer_paths_reconstructed": 6,
+  "passed": true,
+  "curve_points": 303,
+  "unique_prediction_files_verified": 375,
+  "analysis_source_sha256": "80e8a326b51ee1a7267d6571e3b9a989f6bbe51280e1d631f414c2c85ce6f003",
+  "source_hashes_verified": true,
+  "reference_unchanged": true,
+  "all_configurations_present": true,
+  "training_only_winners_recomputed": true,
+  "all_three_locks_verified_before_test_snapshots": true,
+  "full_training_samples_verified": true,
+  "full_jmi_tables_and_all_candidate_greedy_maxima_verified": true,
+  "independent_pss_recomputation_scope": "All 325 outer singleton/pair scores and chosen-ell pooled/class CV diagnostics per seed. Entire ell grid not reselected.",
+  "historical_metric_only_scope": "Historical inner cached metrics are checked against hashed source files, not independently recalculated without prediction files."
+}

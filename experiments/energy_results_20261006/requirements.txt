@@ -1,0 +1,8 @@
+# The compact plot uses matplotlib and the Python standard library.
+matplotlib>=3.7
+
+# The archived experiment scripts additionally use these scientific packages.
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+scikit-learn>=1.3

@@ -1,0 +1,30 @@
+{
+  "completed_at_utc": "2026-10-06T06:20:09.612381+00:00",
+  "candidate_rows": 1200,
+  "datasets": 150,
+  "conditions": 5,
+  "full_expected_counts": true,
+  "repetitions_per_condition_ell": 30,
+  "unique_seeds": 150,
+  "failed_fits": 0,
+  "failed_datasets": 0,
+  "zero_valid_fits": 0,
+  "clips": 0,
+  "ties": 0,
+  "all_generated_datasets_finite": true,
+  "minimum_coverage": 0.99459,
+  "maximum_coverage": 1.0,
+  "protocol_sha256": "69624e28f3dc79cf599ef7662fe880f237e75d28934c78997e19ddef1e17c814",
+  "candidates_sha256": "20f0e4590b210f8140cf2954ab7b4e3f2304af81ede44fc76e03c4ca32728fa8",
+  "core_source_unchanged": true,
+  "binary_unchanged": true,
+  "code_sha256": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296",
+    "run_dependent_five.py": "972fe8fa2dfd4dd7396fff6796a07256840b0dee412bc31a9ee3060992ca8b7d",
+    "make_anchor_grid_datasets.py": "ce639d884073ef9b081ac8d87a69255a4549cafb45744fb3ede571716f797008",
+    "run.py": "9b10f5c6b61b8423c41323d5460e4d89c3ee3aa2e88fc6c65a3e0a76014d677a"
+  },
+  "binary_sha256": "895a652b3cea6ba3fc8ced3671223b603bcfd4348730f9125c556737edd8fdee",
+  "seconds": 28.17
+}

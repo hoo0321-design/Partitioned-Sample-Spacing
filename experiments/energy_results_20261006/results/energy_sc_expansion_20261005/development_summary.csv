@@ -1,0 +1,226 @@
+seed,method,config,estimator,k,mean_accuracy,ell1_fraction,folds,tau,n_min
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":7}",univariate,7.0,0.7747486932046642,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.9}",pss,,0.7720948934459188,0.65,5.0,0.9,5.0
+42,KL tuned,"{""estimator"":""kl"",""k"":10}",kl,10.0,0.7610776035383996,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":20}",ross,20.0,0.7804583835946923,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":30}",kl,30.0,0.7801367108966626,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":10}",univariate,10.0,0.7784479292320065,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":7}",kl,7.0,0.7597104945717733,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":2}",kl,2.0,0.7655006031363089,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.85}",pss,,0.766465621230398,0.6,3.0,0.85,5.0
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.99}",pss,,0.7603538399678328,0.8,10.0,0.99,5.0
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.8}",pss,,0.7749095295536791,0.5,5.0,0.8,5.0
+42,KL tuned,"{""estimator"":""kl"",""k"":3}",kl,3.0,0.7621230398069964,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":50}",univariate,50.0,0.7671089666264576,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":3}",ross,3.0,0.7511057498994772,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":15}",ross,15.0,0.7881785283474065,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":3}",univariate,3.0,0.7679935665460395,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.8}",pss,,0.7640530759951748,0.5,10.0,0.8,5.0
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":1}",univariate,1.0,0.7569762766385203,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":2}",ross,2.0,0.7459589867310013,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":30}",ross,30.0,0.7830317651789306,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":20}",univariate,20.0,0.7575392038600723,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.99}",pss,,0.766465621230398,0.85,5.0,0.99,5.0
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":30}",univariate,30.0,0.7573783675110576,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":5}",kl,5.0,0.760032167269803,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.9}",pss,,0.7814234016887817,0.65,10.0,0.9,5.0
+42,KL tuned,"{""estimator"":""kl"",""k"":20}",kl,20.0,0.7769199839163651,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":7}",ross,7.0,0.7705669481302775,0.0,,,
+42,Ross tuned,"{""estimator"":""ross"",""k"":10}",ross,10.0,0.7798954563731404,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":2}",univariate,2.0,0.7659831121833535,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":15}",kl,15.0,0.7675110574989947,0.0,,,
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":15}",univariate,15.0,0.7608363490148774,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.95}",pss,,0.7636509851226377,0.7,3.0,0.95,5.0
+42,Ross tuned,"{""estimator"":""ross"",""k"":50}",ross,50.0,0.7827905106554081,0.0,,,
+42,KL tuned,"{""estimator"":""kl"",""k"":1}",kl,1.0,0.7635705669481303,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.85}",pss,,0.7659831121833535,0.55,10.0,0.85,5.0
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.8}",pss,,0.7666264575794131,0.55,3.0,0.8,5.0
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.95}",pss,,0.7753116204262164,0.7,5.0,0.95,5.0
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.99}",pss,,0.7609167671893848,0.85,3.0,0.99,5.0
+42,Ross tuned,"{""estimator"":""ross"",""k"":5}",ross,5.0,0.7722557297949337,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.85}",pss,,0.7731403297145155,0.6,5.0,0.85,5.0
+42,KL tuned,"{""estimator"":""kl"",""k"":50}",kl,50.0,0.7827100924809006,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.95}",pss,,0.7689585846401287,0.7,10.0,0.95,5.0
+42,Univariate tuned,"{""estimator"":""univariate"",""k"":5}",univariate,5.0,0.7644551668677121,0.0,,,
+42,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.9}",pss,,0.7655006031363089,0.65,3.0,0.9,5.0
+42,Ross tuned,"{""estimator"":""ross"",""k"":1}",ross,1.0,0.7480498592681947,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":7}",univariate,7.0,0.7803779654201849,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.9}",pss,,0.773220747889023,0.65,5.0,0.9,5.0
+43,KL tuned,"{""estimator"":""kl"",""k"":10}",kl,10.0,0.7820667470848411,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":20}",ross,20.0,0.7931644551668677,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":30}",kl,30.0,0.7938882187374346,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":10}",univariate,10.0,0.784238037796542,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":7}",kl,7.0,0.7769199839163651,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":2}",kl,2.0,0.7826296743063933,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.85}",pss,,0.7720144752714114,0.55,3.0,0.85,5.0
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.99}",pss,,0.769199839163651,0.8,10.0,0.99,5.0
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.8}",pss,,0.7687173301166063,0.5,5.0,0.8,5.0
+43,KL tuned,"{""estimator"":""kl"",""k"":3}",kl,3.0,0.7782870928829916,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":50}",univariate,50.0,0.7761158021712907,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":3}",ross,3.0,0.7563329312424608,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":15}",ross,15.0,0.7950944913550463,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":3}",univariate,3.0,0.7779654201849618,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.8}",pss,,0.7606755126658625,0.5,10.0,0.8,5.0
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":1}",univariate,1.0,0.7828709288299156,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":2}",ross,2.0,0.7568958584640129,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":30}",ross,30.0,0.7943707277844793,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":20}",univariate,20.0,0.7716123843988741,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.99}",pss,,0.7733815842380377,0.85,5.0,0.99,5.0
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":30}",univariate,30.0,0.7701648572577402,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":5}",kl,5.0,0.7783675110574991,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.9}",pss,,0.7741857659831122,0.6,10.0,0.9,5.0
+43,KL tuned,"{""estimator"":""kl"",""k"":20}",kl,20.0,0.791395255327704,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":7}",ross,7.0,0.7621230398069964,0.0,,,
+43,Ross tuned,"{""estimator"":""ross"",""k"":10}",ross,10.0,0.7754724567752312,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":2}",univariate,2.0,0.7827905106554081,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":15}",kl,15.0,0.7783675110574991,0.0,,,
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":15}",univariate,15.0,0.7752312022517088,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.95}",pss,,0.7784479292320065,0.7,3.0,0.95,5.0
+43,Ross tuned,"{""estimator"":""ross"",""k"":50}",ross,50.0,0.7883393646964213,0.0,,,
+43,KL tuned,"{""estimator"":""kl"",""k"":1}",kl,1.0,0.7597909127462806,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.85}",pss,,0.7831121833534379,0.55,10.0,0.85,5.0
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.8}",pss,,0.7831121833534379,0.55,3.0,0.8,5.0
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.95}",pss,,0.7807800562927222,0.7,5.0,0.95,5.0
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.99}",pss,,0.7733815842380377,0.85,3.0,0.99,5.0
+43,Ross tuned,"{""estimator"":""ross"",""k"":5}",ross,5.0,0.7791716928025734,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.85}",pss,,0.7699236027342179,0.55,5.0,0.85,5.0
+43,KL tuned,"{""estimator"":""kl"",""k"":50}",kl,50.0,0.7935665460394049,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.95}",pss,,0.7807800562927222,0.7,10.0,0.95,5.0
+43,Univariate tuned,"{""estimator"":""univariate"",""k"":5}",univariate,5.0,0.7783675110574989,0.0,,,
+43,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.9}",pss,,0.7761158021712907,0.65,3.0,0.9,5.0
+43,Ross tuned,"{""estimator"":""ross"",""k"":1}",ross,1.0,0.7574587856855649,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":7}",univariate,7.0,0.7893043827905107,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.9}",pss,,0.7797346200241254,0.6,5.0,0.9,5.0
+44,KL tuned,"{""estimator"":""kl"",""k"":10}",kl,10.0,0.7836751105749901,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":20}",ross,20.0,0.7935665460394049,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":30}",kl,30.0,0.7945315641334941,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":10}",univariate,10.0,0.7868918375552875,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":7}",kl,7.0,0.7805388017691999,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":2}",kl,2.0,0.7726578206674709,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.85}",pss,,0.7743466023321269,0.6,3.0,0.85,5.0
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.99}",pss,,0.7695215118616807,0.8,10.0,0.99,5.0
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.8}",pss,,0.7777241656614394,0.5,5.0,0.8,5.0
+44,KL tuned,"{""estimator"":""kl"",""k"":3}",kl,3.0,0.7733815842380377,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":50}",univariate,50.0,0.7900281463610775,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":3}",ross,3.0,0.7598713309207881,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":15}",ross,15.0,0.7930036188178528,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":3}",univariate,3.0,0.7703256936067552,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.8}",pss,,0.788661037394451,0.5,10.0,0.8,5.0
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":1}",univariate,1.0,0.7709690390028147,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":2}",ross,2.0,0.7649376759147568,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":30}",ross,30.0,0.7971853638922397,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":20}",univariate,20.0,0.7890631282669883,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.99}",pss,,0.7805388017691999,0.8,5.0,0.99,5.0
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":30}",univariate,30.0,0.7802975472456776,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":5}",kl,5.0,0.7831926015279453,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.9}",pss,,0.7808604744672296,0.6,10.0,0.9,5.0
+44,KL tuned,"{""estimator"":""kl"",""k"":20}",kl,20.0,0.7900281463610778,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":7}",ross,7.0,0.7775633293124246,0.0,,,
+44,Ross tuned,"{""estimator"":""ross"",""k"":10}",ross,10.0,0.7881785283474065,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":2}",univariate,2.0,0.771773220747889,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":15}",kl,15.0,0.788098110172899,0.0,,,
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":15}",univariate,15.0,0.7819863289103338,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.95}",pss,,0.7756332931242461,0.7,3.0,0.95,5.0
+44,Ross tuned,"{""estimator"":""ross"",""k"":50}",ross,50.0,0.798713309207881,0.0,,,
+44,KL tuned,"{""estimator"":""kl"",""k"":1}",kl,1.0,0.748291113791717,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.85}",pss,,0.7804583835946923,0.55,10.0,0.85,5.0
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.8}",pss,,0.7783675110574989,0.55,3.0,0.8,5.0
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.95}",pss,,0.7801367108966626,0.7,5.0,0.95,5.0
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.99}",pss,,0.7782066747084841,0.85,3.0,0.99,5.0
+44,Ross tuned,"{""estimator"":""ross"",""k"":5}",ross,5.0,0.775794129473261,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.85}",pss,,0.7874547647768396,0.55,5.0,0.85,5.0
+44,KL tuned,"{""estimator"":""kl"",""k"":50}",kl,50.0,0.7959790912746282,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.95}",pss,,0.7801367108966626,0.7,10.0,0.95,5.0
+44,Univariate tuned,"{""estimator"":""univariate"",""k"":5}",univariate,5.0,0.7790912746280659,0.0,,,
+44,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.9}",pss,,0.7830317651789304,0.65,3.0,0.9,5.0
+44,Ross tuned,"{""estimator"":""ross"",""k"":1}",ross,1.0,0.743707277844793,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":7}",univariate,7.0,0.780940892641737,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.9}",pss,,0.7785283474065139,0.65,5.0,0.9,5.0
+45,KL tuned,"{""estimator"":""kl"",""k"":10}",kl,10.0,0.7709690390028147,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":20}",ross,20.0,0.7898673100120628,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":30}",kl,30.0,0.7918777643747488,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":10}",univariate,10.0,0.780940892641737,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":7}",kl,7.0,0.7761962203457982,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":2}",kl,2.0,0.7668677121029353,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.85}",pss,,0.7680739847205468,0.6,3.0,0.85,5.0
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.99}",pss,,0.7743466023321272,0.85,10.0,0.99,5.0
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.8}",pss,,0.7822275834338561,0.5,5.0,0.8,5.0
+45,KL tuned,"{""estimator"":""kl"",""k"":3}",kl,3.0,0.7819863289103338,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":50}",univariate,50.0,0.7716123843988741,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":3}",ross,3.0,0.7637314032971453,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":15}",ross,15.0,0.7896260554885405,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":3}",univariate,3.0,0.7745878568556493,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.8}",pss,,0.7683152392440692,0.5,10.0,0.8,5.0
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":1}",univariate,1.0,0.7654201849618013,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":2}",ross,2.0,0.7530357860876559,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":30}",ross,30.0,0.7966224366706877,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":20}",univariate,20.0,0.7792521109770808,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.99}",pss,,0.7784479292320065,0.85,5.0,0.99,5.0
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":30}",univariate,30.0,0.7739445114595899,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":5}",kl,5.0,0.7766787293928429,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.9}",pss,,0.7794933655006031,0.65,10.0,0.9,5.0
+45,KL tuned,"{""estimator"":""kl"",""k"":20}",kl,20.0,0.7880176919983916,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":7}",ross,7.0,0.7634901487736228,0.0,,,
+45,Ross tuned,"{""estimator"":""ross"",""k"":10}",ross,10.0,0.7725774024929635,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":2}",univariate,2.0,0.7780458383594692,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":15}",kl,15.0,0.788661037394451,0.0,,,
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":15}",univariate,15.0,0.7806192199437073,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.95}",pss,,0.7742661841576197,0.7,3.0,0.95,5.0
+45,Ross tuned,"{""estimator"":""ross"",""k"":50}",ross,50.0,0.7931644551668677,0.0,,,
+45,KL tuned,"{""estimator"":""kl"",""k"":1}",kl,1.0,0.7471652593486128,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.85}",pss,,0.7669481302774427,0.55,10.0,0.85,5.0
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.8}",pss,,0.7715319662243667,0.55,3.0,0.8,5.0
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.95}",pss,,0.7896260554885405,0.7,5.0,0.95,5.0
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.99}",pss,,0.767189384800965,0.85,3.0,0.99,5.0
+45,Ross tuned,"{""estimator"":""ross"",""k"":5}",ross,5.0,0.7674306393244873,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.85}",pss,,0.7761962203457982,0.55,5.0,0.85,5.0
+45,KL tuned,"{""estimator"":""kl"",""k"":50}",kl,50.0,0.7933252915158825,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.95}",pss,,0.7845597104945717,0.7,10.0,0.95,5.0
+45,Univariate tuned,"{""estimator"":""univariate"",""k"":5}",univariate,5.0,0.7698431845597105,0.0,,,
+45,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.9}",pss,,0.7801367108966627,0.65,3.0,0.9,5.0
+45,Ross tuned,"{""estimator"":""ross"",""k"":1}",ross,1.0,0.7585846401286691,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":7}",univariate,7.0,0.7774024929634097,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.9}",pss,,0.7702452754322477,0.6,5.0,0.9,5.0
+46,KL tuned,"{""estimator"":""kl"",""k"":10}",kl,10.0,0.7790108564535584,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":20}",ross,20.0,0.7885806192199437,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":30}",kl,30.0,0.7990349819059107,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":10}",univariate,10.0,0.7854443104141535,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":7}",kl,7.0,0.7815842380377965,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":2}",kl,2.0,0.7818254925613188,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.85}",pss,,0.7851226377161238,0.6,3.0,0.85,5.0
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.99}",pss,,0.7784479292320065,0.8,10.0,0.99,5.0
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.8}",pss,,0.764616003216727,0.5,5.0,0.8,5.0
+46,KL tuned,"{""estimator"":""kl"",""k"":3}",kl,3.0,0.777804583835947,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":50}",univariate,50.0,0.784800965018094,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":3}",ross,3.0,0.763168476075593,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":15}",ross,15.0,0.7918777643747487,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":3}",univariate,3.0,0.7702452754322477,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.8}",pss,,0.7756332931242461,0.5,10.0,0.8,5.0
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":1}",univariate,1.0,0.7704865299557699,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":2}",ross,2.0,0.7645355850422195,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":30}",ross,30.0,0.7948532368315239,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":20}",univariate,20.0,0.786087655810213,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.99}",pss,,0.7722557297949337,0.85,5.0,0.99,5.0
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":30}",univariate,30.0,0.7756332931242461,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":5}",kl,5.0,0.7789304382790511,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.9}",pss,,0.7728990751909932,0.6,10.0,0.9,5.0
+46,KL tuned,"{""estimator"":""kl"",""k"":20}",kl,20.0,0.7950140731805387,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":7}",ross,7.0,0.765741857659831,0.0,,,
+46,Ross tuned,"{""estimator"":""ross"",""k"":10}",ross,10.0,0.7852030558906312,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":2}",univariate,2.0,0.7730599115400082,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":15}",kl,15.0,0.7933252915158825,0.0,,,
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":15}",univariate,15.0,0.7854443104141535,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.95}",pss,,0.7876960193003618,0.7,3.0,0.95,5.0
+46,Ross tuned,"{""estimator"":""ross"",""k"":50}",ross,50.0,0.7940490550864495,0.0,,,
+46,KL tuned,"{""estimator"":""kl"",""k"":1}",kl,1.0,0.7562525130679534,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.85}",pss,,0.7708082026537998,0.55,10.0,0.85,5.0
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.8}",pss,,0.7795737836751107,0.55,3.0,0.8,5.0
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.95}",pss,,0.7814234016887817,0.7,5.0,0.95,5.0
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.99}",pss,,0.7817450743868114,0.85,3.0,0.99,5.0
+46,Ross tuned,"{""estimator"":""ross"",""k"":5}",ross,5.0,0.7857659831121833,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":5,""n_min"":5,""tau"":0.85}",pss,,0.769360675512666,0.55,5.0,0.85,5.0
+46,KL tuned,"{""estimator"":""kl"",""k"":50}",kl,50.0,0.7910735826296743,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":10,""n_min"":5,""tau"":0.95}",pss,,0.7800562927221552,0.65,10.0,0.95,5.0
+46,Univariate tuned,"{""estimator"":""univariate"",""k"":5}",univariate,5.0,0.7741857659831122,0.0,,,
+46,PSS expanded SC-CV,"{""estimator"":""pss"",""folds"":3,""n_min"":5,""tau"":0.9}",pss,,0.7868918375552875,0.65,3.0,0.9,5.0
+46,Ross tuned,"{""estimator"":""ross"",""k"":1}",ross,1.0,0.765741857659831,0.0,,,

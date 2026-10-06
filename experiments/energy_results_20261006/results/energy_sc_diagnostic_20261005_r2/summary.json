@@ -1,0 +1,150 @@
+{
+  "scope": "Post-hoc diagnostics on 100 frozen selected subsets. No new feature selection, classifier fits, or test evaluation. Different thresholds can change feature paths; these are not rerun performance estimates.",
+  "ell1_causes": {
+    "coverage_excludes_better_nll": 70,
+    "nll_prefers_ell1": 0
+  },
+  "threshold_sensitivity": [
+    {
+      "tau": 0.8,
+      "n_min": 2,
+      "ell1_count": 48,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.8,
+      "n_min": 5,
+      "ell1_count": 48,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.8,
+      "n_min": 10,
+      "ell1_count": 50,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.85,
+      "n_min": 2,
+      "ell1_count": 55,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.85,
+      "n_min": 5,
+      "ell1_count": 55,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.85,
+      "n_min": 10,
+      "ell1_count": 55,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.9,
+      "n_min": 2,
+      "ell1_count": 61,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.9,
+      "n_min": 5,
+      "ell1_count": 61,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.9,
+      "n_min": 10,
+      "ell1_count": 61,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.95,
+      "n_min": 2,
+      "ell1_count": 70,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.95,
+      "n_min": 5,
+      "ell1_count": 70,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.95,
+      "n_min": 10,
+      "ell1_count": 70,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.99,
+      "n_min": 2,
+      "ell1_count": 83,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.99,
+      "n_min": 5,
+      "ell1_count": 83,
+      "fallback_count": 0
+    },
+    {
+      "tau": 0.99,
+      "n_min": 10,
+      "ell1_count": 83,
+      "fallback_count": 0
+    }
+  ],
+  "denominator_summary": [
+    {
+      "rule": "fixed_ell2",
+      "steps": 5,
+      "mean_abs_difference": 0.0021827098873250126,
+      "max_abs_difference": 0.0047079130695705795,
+      "min_pooled_coverage": 0.9996380483567395,
+      "min_conditional_coverage": 0.9990426041168023
+    },
+    {
+      "rule": "fixed_ell2",
+      "steps": 10,
+      "mean_abs_difference": 0.0833295373675754,
+      "max_abs_difference": 0.11342574664351623,
+      "min_pooled_coverage": 0.9926161864774866,
+      "min_conditional_coverage": 0.9851627313337588
+    },
+    {
+      "rule": "fixed_ell2",
+      "steps": 20,
+      "mean_abs_difference": 2.371165066074023,
+      "max_abs_difference": 2.5438902369071634,
+      "min_pooled_coverage": 0.9268133777327349,
+      "min_conditional_coverage": 0.841576260370134
+    },
+    {
+      "rule": "original_selected_ell",
+      "steps": 5,
+      "mean_abs_difference": 0.0035251498735212826,
+      "max_abs_difference": 0.010264793872444888,
+      "min_pooled_coverage": 0.999203706384827,
+      "min_conditional_coverage": 0.998245054243778
+    },
+    {
+      "rule": "original_selected_ell",
+      "steps": 10,
+      "mean_abs_difference": 0.0,
+      "max_abs_difference": 0.0,
+      "min_pooled_coverage": 1.0,
+      "min_conditional_coverage": 1.0
+    },
+    {
+      "rule": "original_selected_ell",
+      "steps": 20,
+      "mean_abs_difference": 0.0,
+      "max_abs_difference": 0.0,
+      "min_pooled_coverage": 1.0,
+      "min_conditional_coverage": 1.0
+    }
+  ],
+  "denominator_caveat": "H_n = coverage * H_Neff only for identical density values and valid sets. This isolates the denominator and is NOT an old-versus-new estimator comparison."
+}

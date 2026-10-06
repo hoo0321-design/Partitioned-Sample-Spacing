@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "scope": "Export/source SHA-256 verification and plotting saved summary means/SDs only; no model reruns or independent replay of historical audits.",
+  "export_hashes_verified": {
+    "source_files": 22,
+    "saved_artifacts": 98
+  },
+  "summary_rows_plotted": 33,
+  "summary_sha256": {
+    "energy_component_guard_20261005": "f15827d2eb0cd3b0ef4d3ed5f2fb592922a93d3fbd2fca535919a972d4b00fb1",
+    "energy_jmi_20261006": "b0cdd28addeea9168efbaad48f4988128fe605b18bee0ab59c75e601edbfac0f",
+    "energy_theory_c_20261006": "a6ecf5e5bca153f2f80c3fa8c7c2d664f85c91dec76d04ce0e07b2381c2de858"
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "features": [
+    5,
+    10,
+    20
+  ],
+  "uncertainty": "Saved sample SD over overlapping splits; not confidence intervals."
+}

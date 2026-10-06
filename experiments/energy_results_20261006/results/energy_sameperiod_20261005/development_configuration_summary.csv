@@ -1,0 +1,181 @@
+seed,method,config,mean_validation_accuracy,mean_validation_balanced_accuracy,counts_evaluated
+42,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7503819863289104,0.7430125914884959,3
+42,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7480498592681947,0.7408038691379016,3
+42,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7798954563731403,0.777796906150249,3
+42,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7798954563731403,0.777796906150249,3
+42,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7842380377965421,0.7820091532188096,3
+42,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7881785283474065,0.7859176219669761,3
+42,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7804583835946923,0.7764656962613148,3
+42,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7804583835946923,0.7764656962613148,3
+42,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7622838761560112,0.7581344476735113,3
+42,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7511057498994772,0.7433206220031782,3
+42,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7699236027342179,0.765312853829378,3
+42,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7722557297949337,0.7684199204925491,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.95}",0.7598713309207881,0.7553188708793507,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.99}",0.7581825492561318,0.7551162869808264,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.9}",0.7627663852030558,0.758217658044309,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.95}",0.7636509851226377,0.7594675300883708,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.99}",0.7609167671893848,0.7566004198203125,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.9}",0.7675914756735022,0.7636715068340955,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.95}",0.7598713309207881,0.7553188708793507,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.99}",0.7581825492561318,0.7551162869808264,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.9}",0.7611580217129071,0.7561987630093739,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.95}",0.7636509851226377,0.7594675300883708,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.99}",0.7609167671893848,0.7566004198203125,3
+42,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.9}",0.7655006031363089,0.7603755491182276,3
+42,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7533574587856856,0.7490714221959237,3
+42,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7569762766385203,0.7522545992357598,3
+42,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7625251306795335,0.759387635648899,3
+42,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7784479292320065,0.7772281264004933,3
+42,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7572175311620426,0.7540042406470451,3
+42,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7608363490148774,0.7575893085635604,3
+42,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7575392038600723,0.7531219688486587,3
+42,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7575392038600723,0.7531219688486587,3
+42,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7543224768797748,0.750573539086482,3
+42,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7679935665460395,0.7648381685073596,3
+42,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7599517490952955,0.7568831712350058,3
+42,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7644551668677121,0.7620136191931411,3
+43,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7720144752714114,0.7683196459213102,3
+43,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7574587856855649,0.7519676190574164,3
+43,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7873743466023321,0.7845673201990913,3
+43,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7754724567752312,0.7716192996328254,3
+43,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7851226377161238,0.7832180233360128,3
+43,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7950944913550462,0.7923201172614451,3
+43,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7937273823884198,0.7912983737362543,3
+43,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7931644551668677,0.7904552921256739,3
+43,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7630076397265783,0.7566332473418146,3
+43,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7563329312424608,0.7486043328690073,3
+43,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7664656212303981,0.7609706208893147,3
+43,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7791716928025734,0.7750930951319948,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.95}",0.7742661841576196,0.7710420872138233,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.99}",0.7714515480498593,0.7693633276488839,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.9}",0.778206674708484,0.7737885709057508,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.95}",0.7783675110574989,0.7738347853072183,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.99}",0.7820667470848411,0.7799186034241675,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.9}",0.7765983112183353,0.7715864118125569,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.95}",0.7742661841576196,0.7710420872138233,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.99}",0.7714515480498593,0.7693633276488839,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.9}",0.778206674708484,0.7737885709057508,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.95}",0.7784479292320065,0.7738054824152254,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.99}",0.7733815842380377,0.771353937007199,3
+43,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.9}",0.7761158021712907,0.7718984954056026,3
+43,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.788258946521914,0.78527222620461,3
+43,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7828709288299155,0.7800972653387781,3
+43,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7763570566948129,0.7718525148038055,3
+43,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.784238037796542,0.7815068435501451,3
+43,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7700040209087254,0.7654149577859108,3
+43,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7752312022517088,0.7712879275669918,3
+43,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7716123843988741,0.7671768721002022,3
+43,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7716123843988741,0.7671768721002022,3
+43,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7748291113791717,0.7714763701011371,3
+43,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7779654201849618,0.7749246814362595,3
+43,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7774024929634097,0.7732220743049641,3
+43,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7783675110574989,0.7748829871617483,3
+44,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7611580217129071,0.7542616391776704,3
+44,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":1e-05}",0.743707277844793,0.7359768887186862,3
+44,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7852030558906313,0.7822786863601264,3
+44,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7881785283474065,0.7849116666478944,3
+44,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":0.0001}",0.793003618817853,0.7895595862946735,3
+44,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":1e-05}",0.793003618817853,0.7895595862946735,3
+44,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7935665460394049,0.7894451922102205,3
+44,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7935665460394049,0.7894451922102205,3
+44,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7828709288299156,0.7777105883633878,3
+44,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7598713309207881,0.751443360027633,3
+44,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":0.0001}",0.76389223964616,0.7546348572111529,3
+44,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":1e-05}",0.775794129473261,0.7677933838685335,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.95}",0.7864093285082429,0.7835590788151384,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.99}",0.7761962203457982,0.7729997421928873,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.9}",0.7821471652593486,0.7787106468705846,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.95}",0.7770004020908726,0.7745279298339147,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.99}",0.7782066747084841,0.7748466689068353,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.9}",0.7798150381986328,0.775333850824795,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.95}",0.7796542018496181,0.7783581175450255,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.99}",0.7742661841576196,0.7720448155740526,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.9}",0.7845597104945718,0.781185313567287,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.95}",0.7756332931242461,0.7723390723574459,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.99}",0.7782066747084841,0.7748466689068353,3
+44,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.9}",0.7830317651789304,0.7775856348249852,3
+44,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7589867310012063,0.7513196579800687,3
+44,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7709690390028147,0.761667101559733,3
+44,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7893043827905107,0.7863334775676525,3
+44,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7868918375552875,0.7836578683731995,3
+44,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7865701648572578,0.7832475358145391,3
+44,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7819863289103338,0.7797541946844179,3
+44,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7890631282669883,0.7862553767175147,3
+44,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7890631282669883,0.7862553767175147,3
+44,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7765983112183353,0.7712018191670827,3
+44,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7703256936067552,0.7651236410373858,3
+44,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7787696019300362,0.7750193355334541,3
+44,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7790912746280659,0.7754296680921148,3
+45,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7684760755930841,0.7634408337524877,3
+45,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7585846401286691,0.7523240609963859,3
+45,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7725774024929635,0.7685563539672948,3
+45,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7725774024929635,0.7685563539672948,3
+45,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7896260554885405,0.7854682005922383,3
+45,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7896260554885405,0.7854682005922383,3
+45,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7898673100120628,0.7858501272463826,3
+45,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7898673100120628,0.7858501272463826,3
+45,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7731403297145155,0.7696991260180609,3
+45,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7637314032971453,0.757492239197261,3
+45,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7546441495778046,0.7472247913173388,3
+45,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7674306393244873,0.7612428706633922,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.95}",0.7912344189786892,0.7873654897059889,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.99}",0.7741857659831122,0.77220166946129,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.9}",0.782951347004423,0.7786757110273479,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.95}",0.7838359469240048,0.781625495778064,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.99}",0.767189384800965,0.7650323705984682,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.9}",0.7798150381986328,0.7765445860793223,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.95}",0.794692400482509,0.7903898862915636,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.99}",0.7741857659831122,0.77220166946129,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.9}",0.7803779654201849,0.7764955219617398,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.95}",0.7742661841576196,0.7705412240934818,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.99}",0.767189384800965,0.7650323705984682,3
+45,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.9}",0.7801367108966627,0.7748952738910612,3
+45,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7708082026537998,0.7641399583642524,3
+45,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7654201849618013,0.7589076764874592,3
+45,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7801367108966626,0.7768419396326972,3
+45,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.780940892641737,0.7779693596148247,3
+45,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.771049457177322,0.7671704098369494,3
+45,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7806192199437073,0.7782679241456242,3
+45,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7815038198632891,0.7798669612388783,3
+45,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7792521109770808,0.7768320174305746,3
+45,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7706473663047849,0.7690764492391858,3
+45,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7745878568556493,0.7724012072898029,3
+45,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7748291113791717,0.772902317560782,3
+45,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7698431845597105,0.767790117767945,3
+46,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7655006031363089,0.7601599546084273,3
+46,Joint Ross MI,"{""k"":1,""method"":""Joint Ross MI"",""noise"":1e-05}",0.765741857659831,0.7606686465251732,3
+46,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7860876558102131,0.783364041789782,3
+46,Joint Ross MI,"{""k"":10,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7852030558906313,0.7824509227867699,3
+46,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7918777643747487,0.7880229510904865,3
+46,Joint Ross MI,"{""k"":15,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7918777643747487,0.7880229510904865,3
+46,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7892239646160032,0.785154416761467,3
+46,Joint Ross MI,"{""k"":20,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7885806192199437,0.7844485759285749,3
+46,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7743466023321272,0.7703532692695173,3
+46,Joint Ross MI,"{""k"":3,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7631684760755931,0.7551612655450807,3
+46,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":0.0001}",0.7857659831121834,0.7834847715466049,3
+46,Joint Ross MI,"{""k"":5,""method"":""Joint Ross MI"",""noise"":1e-05}",0.7857659831121834,0.7834847715466049,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.95}",0.7808604744672296,0.7769114332448529,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.99}",0.7720144752714114,0.7693877831967332,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":0.0001,""tau"":0.9}",0.7836751105749898,0.7805161961686858,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.95}",0.7827100924809006,0.7815960372168345,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.99}",0.7798150381986328,0.7767117422379409,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":10,""noise"":1e-05,""tau"":0.9}",0.7868918375552875,0.784619521755291,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.95}",0.7880176919983916,0.7838740243064551,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.99}",0.7720144752714114,0.7693877831967332,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":0.0001,""tau"":0.9}",0.7836751105749898,0.7805161961686858,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.95}",0.7876960193003618,0.7860328851118895,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.99}",0.7817450743868114,0.7787287934877423,3
+46,PSS SC-CV,"{""method"":""PSS SC-CV"",""n_min"":5,""noise"":1e-05,""tau"":0.9}",0.7868918375552875,0.784619521755291,3
+46,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7665460394049055,0.7626417782683621,3
+46,Univariate Ross MI,"{""k"":1,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7704865299557699,0.767323879258667,3
+46,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7865701648572577,0.7854004911475796,3
+46,Univariate Ross MI,"{""k"":10,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7854443104141535,0.7844379773655367,3
+46,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7855247285886611,0.7833492585542526,3
+46,Univariate Ross MI,"{""k"":15,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7854443104141536,0.783519383090106,3
+46,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7840772014475271,0.7824931214934793,3
+46,Univariate Ross MI,"{""k"":20,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7860876558102131,0.7838520449986047,3
+46,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7741857659831122,0.7714685822611186,3
+46,Univariate Ross MI,"{""k"":3,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7702452754322477,0.7684514333950317,3
+46,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":0.0001}",0.7726578206674709,0.7702228013496079,3
+46,Univariate Ross MI,"{""k"":5,""method"":""Univariate Ross MI"",""noise"":1e-05}",0.7741857659831122,0.7714685822611186,3

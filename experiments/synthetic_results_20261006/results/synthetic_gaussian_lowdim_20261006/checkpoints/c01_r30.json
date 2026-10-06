@@ -1,0 +1,18 @@
+{
+  "config_id": 1,
+  "family": "Normal",
+  "n": 30000,
+  "d": 3,
+  "rho": 0.2,
+  "replicate": 30,
+  "seed": 1643394787,
+  "truth": 4.201908166610416,
+  "assumption_matched": false,
+  "clips": 0,
+  "ties": 0,
+  "array_sha256": "7f379a8b3b6f5a26251c737431b1d1936ee311f418b1e3d972752f77f657e670",
+  "all_finite": true,
+  "failure": "",
+  "status": "ok",
+  "seconds": 0.08113441697787493
+}

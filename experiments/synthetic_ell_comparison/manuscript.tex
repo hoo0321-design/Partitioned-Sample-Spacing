@@ -1,0 +1,64 @@
+% Manuscript insertion fragment; requires amsmath, amssymb, and graphicx.
+% The figure path is relative to the repository root.
+% Existing bounded-only manuscript fragments are preserved separately.
+
+\paragraph{Sensitivity to partition resolution.}
+We examine the choice of partition resolution using two dependent distributions.
+The bounded model has density
+\[
+f_d(\mathbf{x})=1+0.7\cos\!\bigl(2\pi(x_1-x_2)\bigr),
+\qquad \mathbf{x}\in[0,1]^d.
+\]
+It has uniform marginals, satisfies $0.3\le f_d\le1.7$, and is Lipschitz
+with constant $1.4\pi\sqrt{2}$ on the cube, independently of $d$.
+Thus it meets the theory's distributional regularity assumptions.
+The second model is a centered Gaussian with unit marginal variances and
+common pairwise correlation $\rho=0.2$. Its unbounded support and lack of a
+uniform positive density lower bound place it outside those assumptions.
+
+For each setting, we compare the empirical RMSE-minimizing resolution with
+the \emph{theory-selected} resolution
+\begin{equation}
+\begin{aligned}
+\ell_{\mathrm{th}}
+&=\underset{\ell\in\mathcal{L}}{\operatorname{arg\,min}}
+\left\{\ell^{-2}+\sqrt{\Lambda_{n,d,\delta}}
+\left(\frac{\ell^d}{n}\right)^{1/4}\right\},\\
+\Lambda_{n,d,\delta}
+&=2d\log(2n+1)+\log(96/\delta),\qquad\delta=0.05.
+\end{aligned}
+\label{eq:ell-comparison-selection}
+\end{equation}
+The common positive factor $Kd$ in the error bound cancels from this
+minimization; no coefficient is fitted to observed errors.
+We use $\mathcal{L}=\{1,\ldots,7\}$ for the bounded model and
+$\mathcal{L}=\{1,\ldots,8\}$ for the Gaussian model.
+The bounded panels present five settings from a seven-setting experiment;
+the Gaussian panels follow an exploratory correlation sweep.
+Exact agreement occurs in three of the five displayed bounded settings and
+four of the five Gaussian settings.
+These are descriptive comparisons with minima evaluated on the same
+repetitions; they do not establish finite-sample RMSE optimality or certify
+the theorem's sample-size conditions.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{experiments/synthetic_ell_comparison/figures/bounded_gaussian_ell_rmse.pdf}
+\caption{Entropy-estimation RMSE versus partitions per coordinate $\ell$.
+The top row uses the bounded dependent density; the bottom row uses
+equicorrelated Gaussian data with $\rho=0.2$.
+(a,c) Fixed $n=100{,}000$ with $d=2,3,4$.
+(b) Fixed $d=2$ with $n=1{,}000,10{,}000,100{,}000$.
+(d) Fixed $d=3$ with $n=30{,}000,100{,}000,300{,}000$.
+The bounded and Gaussian settings use 100 and 30 independent repetitions,
+respectively. Shading gives pointwise 95\% bootstrap intervals from 2,000
+resamples. Stars mark empirical RMSE minima over the displayed grids;
+squares mark the theory-selected resolution in
+Eq.~\eqref{eq:ell-comparison-selection}.
+Open circles indicate incomplete coverage in at least one repetition.
+Within each repetition, all resolutions use the same dataset, with no
+coverage filter when selecting the minimum.
+Each row repeats one shared setting across its panels, giving five unique
+settings per row and ten in total.}
+\label{fig:ell-comparison}
+\end{figure*}

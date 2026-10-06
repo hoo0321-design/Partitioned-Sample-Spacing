@@ -1,0 +1,28 @@
+seed,method,estimator,folds,tau,n_min,k,ell
+42,PSS pooled SC-CV,pss,10.0,0.9,5.0,,
+42,PSS class-aware SC-CV,pss,5.0,0.9,5.0,,
+42,PSS class-aware (pooled settings),pss,10.0,0.9,5.0,,
+42,KL tuned,kl,,,,50.0,
+42,KL k=1,kl,,,,1.0,
+42,Ross tuned,ross,,,,15.0,
+42,Univariate tuned,univariate,,,,10.0,
+42,PSS ell=1,fixed,,,,,1.0
+42,All features,,,,,,
+43,PSS pooled SC-CV,pss,10.0,0.85,5.0,,
+43,PSS class-aware SC-CV,pss,5.0,0.85,5.0,,
+43,PSS class-aware (pooled settings),pss,10.0,0.85,5.0,,
+43,KL tuned,kl,,,,30.0,
+43,KL k=1,kl,,,,1.0,
+43,Ross tuned,ross,,,,15.0,
+43,Univariate tuned,univariate,,,,10.0,
+43,PSS ell=1,fixed,,,,,1.0
+43,All features,,,,,,
+44,PSS pooled SC-CV,pss,10.0,0.8,5.0,,
+44,PSS class-aware SC-CV,pss,10.0,0.85,5.0,,
+44,PSS class-aware (pooled settings),pss,10.0,0.8,5.0,,
+44,KL tuned,kl,,,,50.0,
+44,KL k=1,kl,,,,1.0,
+44,Ross tuned,ross,,,,50.0,
+44,Univariate tuned,univariate,,,,50.0,
+44,PSS ell=1,fixed,,,,,1.0
+44,All features,,,,,,

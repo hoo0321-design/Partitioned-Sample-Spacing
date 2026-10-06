@@ -1,0 +1,32 @@
+{
+  "completed_at_utc": "2026-10-06T16:18:13.782089+00:00",
+  "candidate_rows": 1400,
+  "datasets": 200,
+  "conditions": 2,
+  "full_expected_counts": true,
+  "repetitions_per_condition_ell": 100,
+  "unique_seed_sequences": 200,
+  "unique_sample_hashes": 200,
+  "failed_fits": 0,
+  "failed_datasets": 0,
+  "zero_valid_fits": 0,
+  "degenerate_fits": 0,
+  "ties": 0,
+  "all_generated_datasets_finite": true,
+  "all_generated_datasets_in_support": true,
+  "minimum_coverage": 0.99999,
+  "maximum_coverage": 1.0,
+  "protocol_sha256": "9af4994181458e5ac04e442ddeb7f3a9fa920d46d89e3560456b90046e77405e",
+  "candidates_sha256": "c719f9b49685d1350ea7e061e06314c83d1e462384672d72f4359e13400df548",
+  "archived_sampler_hash_verified": true,
+  "canonical_hashes_verified": true,
+  "code_and_binary_unchanged": true,
+  "code_sha256": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296",
+    "PSS/libpss_v2.dylib": "895a652b3cea6ba3fc8ced3671223b603bcfd4348730f9125c556737edd8fdee",
+    "pss_theory.py": "5e4313c9b4dff8e056c23f6a87effe4f47ac6a421c0ba13fcb2447d1b6786c8b",
+    "run_fig2_extension.py": "1c430876303a58720f82121f53faba6a44e3dfa622e943c56cc68727b08c1e02"
+  },
+  "seconds": 20.45
+}

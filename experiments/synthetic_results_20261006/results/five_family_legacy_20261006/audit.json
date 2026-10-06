@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "source": "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/results/anchor_grid_all_estimators_20260504_172951",
+  "source_configuration": {
+    "gamma_shape": 0.4,
+    "gamma_scale": 0.3,
+    "beta_a": 0.5,
+    "beta_b": 2.0,
+    "meanlog": 0.0,
+    "sdlog": 1.0,
+    "laplace_scale": 0.7071067811865475,
+    "reps": 30,
+    "families": "Normal,Gamma,Beta,Lognormal,Laplace",
+    "n_scaling": "1000,3000,10000,30000|d=5|rho=0.0",
+    "d_scaling": "2,5,10,20|n=20000|rho=0.0",
+    "rho_scaling": "0.0,0.5,0.8|n=20000|d=5"
+  },
+  "settings": 55,
+  "methods": 6,
+  "summary_rows": 330,
+  "selected_replicate_rows": 9900,
+  "repetitions": 30,
+  "source_sha256": {
+    "combined_summary.csv": "2dcb39d1d95a37f215398d6d78f750eb9c005726486aab040cc9d9968817f294",
+    "r_pss_cadee_estimates.csv": "8458e2d5e135d738154e590f6016ea5a43c8a8c8e6ffd7d4d05a34ce624147e9",
+    "knn_um_estimates.csv": "e70556ce3044c551f312e121eebc868bbecb94bcacde4226556b2fea6242b39a",
+    "data_generation_config.csv": "56aecb5f9f01a5353ae765aa4cb250357571e8bef9753e08208c1912a290d3df"
+  },
+  "analysis_sha256": "5ebf46ea2762f3319e48ccb17596ed2eb9d42329afb0189c1d0b4ce57c47720c",
+  "audit_helper_sha256": "a73ba3b65ff0dd7d01ae45f5b2edaee4b3d33685f3d0addc6f890147a46213e5",
+  "verification": "Every saved RMSE and delta-method RMSE SE recomputed from the 30 selected replicate errors; times recomputed from saved raw records.",
+  "estimator": "historical rank spacing / n; not relabeled as canonical subgrid / N_eff",
+  "selection": "saved parameters retained; no refitting or retuning; PSS coverage-filtered oracle; kNN methods oracle; CADEE no parameter grid",
+  "timing": "evaluation at selected parameter plus flow training, excluding parameter search",
+  "uncertainty": "plus/minus one Monte Carlo SE, not 95% confidence intervals; oracle selection uncertainty excluded",
+  "new_simulations": false,
+  "raw_values_clipped": false
+}

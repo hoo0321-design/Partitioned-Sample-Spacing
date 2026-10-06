@@ -1,0 +1,32 @@
+{
+  "config_id": 1,
+  "family": "ridge_medium",
+  "n": 100000,
+  "d": 3,
+  "replicate": 13,
+  "rep": 13,
+  "seed_namespace": 2026100607,
+  "seed_sequence": [
+    2026100607,
+    100000,
+    3,
+    13
+  ],
+  "seed_state": [
+    1863969488,
+    2621732062,
+    481332152,
+    2466186063
+  ],
+  "truth": -0.13162313217701307,
+  "true_entropy": -0.13162313217701307,
+  "ties": 0,
+  "array_sha256": "5a147610146d0a2505dd73e753cec97f2bbfea6391c46808872eccd8271d3ce8",
+  "minimum": 6.807526292673671e-07,
+  "maximum": 0.9999981811200465,
+  "all_finite": true,
+  "in_support": true,
+  "failure": "",
+  "status": "ok",
+  "seconds": 0.25822504196548834
+}

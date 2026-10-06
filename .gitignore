@@ -1,3 +1,14 @@
 results/
 __pycache__/
 *.pyc
+
+# Local build products and generated working outputs.
+.DS_Store
+*.dylib
+*.so
+/tmp/
+# Frozen publication bundles are intentionally tracked.
+!experiments/energy_results_20261006/results/
+!experiments/energy_results_20261006/results/**
+!experiments/synthetic_results_20261006/results/
+!experiments/synthetic_results_20261006/results/**

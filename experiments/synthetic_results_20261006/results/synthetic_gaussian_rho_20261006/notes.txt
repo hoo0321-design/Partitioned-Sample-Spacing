@@ -1,0 +1,25 @@
+Exploratory Gaussian lower-correlation sweep
+
+The full rho grid 0,.1,.2,.3,.4 was fixed before computing new outcomes; the existing .5 baseline is retained.
+The sweep was motivated by observed disagreement at rho=.5. It is exploratory, not independent confirmation.
+All checked correlations and n/d settings are reported. rho=0 is an independence control, not a dependent example.
+No theoretical coefficient, delta, or candidate grid is changed. Bound delta=.05; dimension-aware rate C=1.
+Empirical optimum means minimum aggregate RMSE over the saved grid, no coverage filter, same 30 repetitions.
+Exact match counts are descriptive over these eight settings, not estimates of population match probability.
+The RMSE ratio is RMSE at the fixed theoretical ell divided by the empirical grid minimum (optimistic denominator).
+No inferential claims are made from this postselection ratio. Pointwise bootstrap intervals are saved for fixed ell.
+At ell=1, the population Gaussian product-approximation bias is
+-.5*[(d-1)*log(1-rho)+log(1+(d-1)*rho)], which vanishes as rho tends to zero.
+For d=5 this bias is 0,.042485,.152394,.319121,.543896,.836988 nats for rho 0,.1,.2,.3,.4,.5.
+Thus more ell=1 matches under weak correlation do not establish theoretical finite-sample optimality.
+Gaussian densities are outside the stated compact-support/positive-lower-bound assumptions.
+
+ rho  settings  bound_matches  rate_C1_matches  bound_rmse_ratio_median  bound_rmse_ratio_max  rate_C1_rmse_ratio_median  rate_C1_rmse_ratio_max
+ 0.0         8              7                8                 1.000000              2.761702                   1.000000                1.000000
+ 0.1         8              7                8                 1.000000              2.227908                   1.000000                1.000000
+ 0.2         8              7                6                 1.000000              1.238395                   1.000000                1.370167
+ 0.3         8              5                4                 1.000000              3.118860                   1.151328                4.006907
+ 0.4         8              4                3                 1.023446              7.618814                   1.835788               12.565766
+ 0.5         8              3                3                 1.755062             28.672956                   3.620055               28.672956
+
+See protocol.json for generation, frozen sources, and seed reuse; no unfavorable draws were removed.

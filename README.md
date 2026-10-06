@@ -8,6 +8,50 @@ This code accompanies the manuscript:
 See manuscript for full theoretical details.
 [![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
+## October 2026 Energy and synthetic experiments
+
+The updated studies include the canonical Python/C++ PSS v2 estimator,
+[the Energy dataset and attribution](data/README.md), experiment source,
+frozen result tables, protocols, saved audits, and publication figures.
+
+| Study bundle | Contents |
+| --- | --- |
+| [Energy experiments](experiments/energy_results_20261006/README.md) | Same-period classification, coverage/fold expansion, class-aware coverage, JMI, and theory-rate coefficient calibration |
+| [Synthetic experiments](experiments/synthetic_results_20261006/README.md) | Bounded dependent densities, Gaussian correlation and low-dimension extensions, and the historical five-family comparison |
+| [Study notes](docs/energy_synthetic_studies.md) | Protocols, interpretation, limitations, and original workflow commands |
+
+Reproduce the published summary figures and verify the synthetic bundle:
+
+```sh
+python -m pip install -r experiments/requirements-energy-synthetic.txt
+python experiments/energy_results_20261006/plot.py --output-dir /tmp/pss-energy-figures
+python experiments/synthetic_results_20261006/verify.py
+python experiments/synthetic_ell_comparison/plot.py --output-dir /tmp/pss-synthetic-figures
+```
+
+To build and check the canonical estimator, use `python PSS/build_pss_v2.py`
+and `python PSS/test_density.py`. A C++17 compiler is required for estimator
+runs, but not for plotting saved tables. The study bundles distinguish portable
+plot/verification commands from historical simulation workflows: Energy caches
+and some older synthetic inputs are omitted, and frozen historical scripts
+retain their original source hashes and archive paths. No new simulation or
+selection of parameters was performed for this publication.
+
+## Partition-resolution comparison: bounded and Gaussian densities
+
+The combined four-panel figure compares the RMSE-minimizing partition count
+with the theory-selected count for bounded dependent and correlated Gaussian
+densities. It reuses saved estimates and pointwise bootstrap intervals.
+
+See [the figure and reproduction instructions](experiments/synthetic_ell_comparison/README.md),
+[the vector PDF](experiments/synthetic_ell_comparison/figures/bounded_gaussian_ell_rmse.pdf),
+and [the manuscript text and caption](experiments/synthetic_ell_comparison/manuscript.tex).
+
+```sh
+python -m pip install -r experiments/synthetic_ell_comparison/requirements.txt
+python experiments/synthetic_ell_comparison/plot.py
+```
+
 💻 Installation & Usage
 1. Prerequisites
 

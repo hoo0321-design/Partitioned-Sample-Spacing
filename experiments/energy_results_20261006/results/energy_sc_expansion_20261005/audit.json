@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "curve_points": 1205,
+  "predictions_verified": 7134805,
+  "unique_classifier_fits": 911,
+  "data_and_code_hashes_verified": true,
+  "complete_candidate_grids_verified": true,
+  "training_only_locks_recomputed": true,
+  "historical_same_configuration_paths_matched": 15
+}

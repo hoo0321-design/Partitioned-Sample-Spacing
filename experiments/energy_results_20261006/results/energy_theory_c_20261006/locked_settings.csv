@@ -1,0 +1,19 @@
+seed,method,coefficient,outer_status,inner_accuracy,estimator,folds,tau,n_min,k
+42,PSS theory C tuned,2.5,complete,0.769039002814636,,,,,
+42,PSS theory C=1,1.0,complete,0.7640530759951748,,,,,
+42,PSS class-aware SC-CV,,complete,,pss,5.0,0.9,5.0,
+42,KL tuned,,complete,,kl,,,,50.0
+42,KL k=1,,complete,,kl,,,,1.0
+42,All features,,complete,,,,,,
+43,PSS theory C tuned,3.0,complete,0.7866505830317653,,,,,
+43,PSS theory C=1,1.0,complete,0.7768395657418576,,,,,
+43,PSS class-aware SC-CV,,complete,,pss,5.0,0.85,5.0,
+43,KL tuned,,complete,,kl,,,,30.0
+43,KL k=1,,complete,,kl,,,,1.0
+43,All features,,complete,,,,,,
+44,PSS theory C tuned,2.5,complete,0.7914756735022115,,,,,
+44,PSS theory C=1,1.0,complete,0.772496984318456,,,,,
+44,PSS class-aware SC-CV,,complete,,pss,10.0,0.85,5.0,
+44,KL tuned,,complete,,kl,,,,50.0
+44,KL k=1,,complete,,kl,,,,1.0
+44,All features,,complete,,,,,,

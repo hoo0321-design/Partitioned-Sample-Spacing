@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "rendered_pages_visually_reviewed": 1,
+  "all_20_panels_present": true,
+  "text_extraction": "PASS",
+  "no_clipped_positive_error_intervals": true
+}

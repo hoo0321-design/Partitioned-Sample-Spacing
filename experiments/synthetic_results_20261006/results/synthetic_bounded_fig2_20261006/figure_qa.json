@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "rendered_pages_reviewed": 1,
+  "vector_pdf": true,
+  "visual_review": "All labels visible; legend positions clear of curves; empty coverage markers visible.",
+  "figure_inches": [
+    7.2,
+    3.15
+  ],
+  "pdf_sha256": "7cc35f4ddbc89d81d227c49b8e2a641c88593895ec0bb0dc556f6b23e781657e",
+  "audit_sha256": "7b4800a3041df0905bf062f9bd14c79f8cb85873353d84239ac0f51ba3266bc1",
+  "manuscript_fragment_sha256": "1b925481927df206fcb49ff5f0768ca6c166d407a7ca18c3a28520fe256c2f03",
+  "source_files_unchanged": true,
+  "manuscript_status": "Insertion fragment; not a standalone document. Parent manuscript compilation not performed."
+}

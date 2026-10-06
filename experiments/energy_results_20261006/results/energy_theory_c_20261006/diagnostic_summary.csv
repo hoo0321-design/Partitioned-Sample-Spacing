@@ -1,0 +1,3 @@
+method,selected_rows,ell1_fraction,mean_ell,minimum_stable_coverage,mean_minimum_stable_coverage,maximum_training_skip,maximum_conditional_training_skip,outside_mi_fraction
+PSS theory C tuned,60,0.0,2.183333333333333,0.15472779369627507,0.6117612119825728,0.06341392789923261,0.1426297357529449,0.7
+PSS theory C=1,60,0.95,1.05,0.9902897166507482,0.995505991640096,0.0,0.0,0.08333333333333333
