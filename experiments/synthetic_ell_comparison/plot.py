@@ -59,30 +59,33 @@ def draw_panel(ax, summary, selection, pairs, varying, title, grid_max):
     for (n, d), color in zip(pairs, COLORS):
         group = summary[(summary.n == n) & (summary.d == d)].sort_values("ell")
         chosen = selection[(selection.n == n) & (selection.d == d)].iloc[0]
-        label = rf"$d={d}$" if varying == "d" else rf"$n={n:,}$"
+        exponent = int(np.floor(np.log10(n)))
+        coefficient = n // 10**exponent
+        sample_label = rf"$n=10^{{{exponent}}}$" if coefficient == 1 else rf"$n={coefficient}\times10^{{{exponent}}}$"
+        label = rf"$d={d}$" if varying == "d" else sample_label
         x = group.ell.to_numpy()
         y = group.rmse.to_numpy()
-        ax.plot(x, y, color=color, lw=1.3, label=label, zorder=3)
-        # The original coverage diagnostic remains visible on both rows.
+        ax.plot(x, y, color=color, lw=1.05, label=label, zorder=3)
+        # The original coverage diagnostic remains visible in all panels.
         # Empty circles denote any replicate with less than full coverage.
         complete = group.coverage_min.to_numpy() >= 1.0
         for mask, fill in ((complete, color), (~complete, "white")):
-            ax.scatter(x[mask], y[mask], s=10, marker="o", facecolors=fill,
-                       edgecolors=color, linewidths=.7, zorder=4)
+            ax.scatter(x[mask], y[mask], s=7, marker="o", facecolors=fill,
+                       edgecolors=color, linewidths=.6, zorder=4)
         ax.fill_between(x, group.rmse_low.to_numpy(), group.rmse_high.to_numpy(),
                         color=color, alpha=.14, lw=0, zorder=2)
         ax.scatter([chosen.theory_ell], [chosen.theory_rmse], facecolors="none",
-                   edgecolors=color, marker="s", s=72, linewidths=1.2, zorder=5)
+                   edgecolors=color, marker="s", s=45, linewidths=1, zorder=5)
         ax.scatter([chosen.empirical_ell], [chosen.empirical_rmse], color=color,
-                   marker="*", s=90, edgecolors="black", linewidths=.55, zorder=6)
-    ax.set(yscale="log", xticks=range(1, grid_max+1),
-           xlabel=r"Partitions per coordinate $\ell$", ylabel="Entropy RMSE (nats)")
-    ax.set_title(title, pad=7)
+                   marker="*", s=60, edgecolors="black", linewidths=.45, zorder=6)
+    ax.set(yscale="log", xticks=range(1, grid_max+1))
+    ax.set_title(title, pad=6)
     ax.grid(alpha=.22, linewidth=.6)
     ax.set_axisbelow(True)
-    ax.legend(frameon=False, loc="upper left", fontsize=8.5, handlelength=1.6,
-              handletextpad=.5, labelspacing=.3, borderaxespad=.45)
-    ax.margins(x=.045, y=.13)
+    ax.legend(frameon=False, loc="upper left", fontsize=7.5, handlelength=1.15,
+              handletextpad=.35, labelspacing=.18, borderaxespad=.25)
+    ax.tick_params(axis="both", which="major", pad=2, length=3)
+    ax.margins(x=.065, y=.20)
 
 
 def main():
@@ -100,38 +103,42 @@ def main():
     bounded = load_study("bounded", bounded_pairs, 7, 100)
     gaussian = load_study("gaussian", gaussian_pairs, 8, 30)
     plt.rcParams.update({
-        "font.family": "DejaVu Sans", "font.size": 8.5,
-        "axes.titlesize": 9, "axes.labelsize": 9,
-        "xtick.labelsize": 8.5, "ytick.labelsize": 8.5,
+        "font.family": "DejaVu Sans", "font.size": 8,
+        "axes.titlesize": 8, "axes.labelsize": 8.5,
+        "xtick.labelsize": 7.5, "ytick.labelsize": 7.5,
         "axes.spines.top": False, "axes.spines.right": False,
         "pdf.fonttype": 42, "savefig.dpi": 300,
     })
-    fig, axes = plt.subplots(2, 2, figsize=(7.2, 6.3))
+    fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.8))
     panels = [
-        (axes[0, 0], bounded, [(100000, d) for d in [2, 3, 4]], "d",
-         r"(a) Fixed $n=100,000$; varying dimension", 7),
-        (axes[0, 1], bounded, [(n, 2) for n in [1000, 10000, 100000]], "n",
-         r"(b) Fixed $d=2$; varying sample size", 7),
-        (axes[1, 0], gaussian, [(100000, d) for d in [2, 3, 4]], "d",
-         r"(c) Fixed $n=100,000$; varying dimension", 8),
-        (axes[1, 1], gaussian, [(n, 3) for n in [30000, 100000, 300000]], "n",
-         r"(d) Fixed $d=3$; varying sample size", 8),
+        (axes[0], bounded, [(100000, d) for d in [2, 3, 4]], "d",
+         r"(a) Fixed $n=10^5$", 7),
+        (axes[1], bounded, [(n, 2) for n in [1000, 10000, 100000]], "n",
+         r"(b) Fixed $d=2$", 7),
+        (axes[2], gaussian, [(100000, d) for d in [2, 3, 4]], "d",
+         r"(c) Fixed $n=10^5$", 8),
+        (axes[3], gaussian, [(n, 3) for n in [30000, 100000, 300000]], "n",
+         r"(d) Fixed $d=3$", 8),
     ]
     for ax, (summary, selection), pairs, varying, title, grid_max in panels:
         draw_panel(ax, summary, selection, pairs, varying, title, grid_max)
+    # Reserve vertical space for the longest legend without hiding the curves.
+    axes[3].set_ylim(top=3.0)
     handles = [
-        Line2D([], [], color="black", marker="*", linestyle="none", markersize=9,
+        Line2D([], [], color="black", marker="*", linestyle="none", markersize=8,
                label=r"RMSE-minimizing $\ell$"),
         Line2D([], [], color="black", marker="s", markerfacecolor="none",
-               linestyle="none", markersize=7,
+               linestyle="none", markersize=6,
                label=r"Theory-selected $\ell$ ($\delta=0.05$)"),
     ]
     fig.legend(handles=handles, ncol=2, frameon=False, loc="upper center",
-               bbox_to_anchor=(.5, .998), fontsize=9, columnspacing=2)
-    fig.text(.535, .92, "Bounded dependent density", ha="center", fontsize=10, weight="bold")
-    fig.text(.535, .449, r"Gaussian ($\rho=0.2$)", ha="center", fontsize=10, weight="bold")
-    fig.subplots_adjust(left=.087, right=.985, top=.86, bottom=.095,
-                        wspace=.32, hspace=.59)
+               bbox_to_anchor=(.5, 1.0), fontsize=8.5, columnspacing=2)
+    fig.subplots_adjust(left=.075, right=.99, top=.70, bottom=.20, wspace=.40)
+    for start, title in [(0, "Bounded dependent density"), (2, r"Gaussian ($\rho=0.2$)")]:
+        center = (axes[start].get_position().x0 + axes[start+1].get_position().x1)/2
+        fig.text(center, .835, title, ha="center", fontsize=9, weight="bold")
+    fig.text(.012, .45, "Entropy RMSE (nats)", va="center", rotation="vertical", fontsize=8.5)
+    fig.text(.53, .035, r"Partitions per coordinate $\ell$", ha="center", fontsize=8.5)
     pdf = args.output_dir / f"{STEM}.pdf"
     png = args.output_dir / f"{STEM}.png"
     fig.savefig(pdf, metadata={"Title": "Partition selection for bounded and Gaussian densities",
@@ -143,7 +150,8 @@ def main():
         "bounded_unique_settings": 5, "bounded_matches": int(bounded[1]["match"].sum()),
         "gaussian_unique_settings": 5, "gaussian_matches": int(gaussian[1]["match"].sum()),
         "bounded_summary_rows": len(bounded[0]), "gaussian_summary_rows": len(gaussian[0]),
-        "page_size_inches": [7.2, 6.3], "minimum_fontsize_points": 8.5,
+        "layout": "one row, four panels",
+        "page_size_inches": [7.2, 2.8], "minimum_fontsize_points": 7.5,
         "source_sha256": {str(p.relative_to(PACKAGE)): hashlib.sha256(p.read_bytes()).hexdigest()
                           for p in sorted((PACKAGE / "tables").glob("*.csv"))},
     }

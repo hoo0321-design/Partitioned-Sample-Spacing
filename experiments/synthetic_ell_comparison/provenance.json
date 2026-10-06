@@ -53,12 +53,12 @@
     }
   ],
   "visual_validation": {
-    "renderer": "pdftoppm, 150 dpi",
+    "renderer": "pdftoppm, longest side 2400 pixels",
     "page_count": 1,
     "page_size_inches": [
       7.2,
-      6.3
+      2.8
     ],
-    "result": "All four panels, row labels, axes, legends, curves and selected markers inspected; no clipping or overlap."
+    "result": "All four horizontal panels, distribution headings, shared axis labels, legends, curves and selected markers inspected; no clipping or overlap."
   }
 }
