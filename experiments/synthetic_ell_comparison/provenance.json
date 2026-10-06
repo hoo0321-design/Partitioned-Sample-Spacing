@@ -1,0 +1,64 @@
+{
+  "purpose": "Frozen summary bundle for the combined bounded/Gaussian figure",
+  "new_simulations": 0,
+  "new_bootstrap_calculations": 0,
+  "inputs": [
+    {
+      "file": "tables/bounded_summary.csv",
+      "source": "results/synthetic_bounded_fig2_compact_20261006/per_ell_summary.csv",
+      "sha256": "14033979a84642b3a7d0ead1d194e311b7e16e8374eee83e709ed0d17d4ca9d5",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/bounded_selection.csv",
+      "source": "results/synthetic_bounded_fig2_compact_20261006/optimal_ell_comparison.csv",
+      "sha256": "35b08977355dc21b002c7dccf40b2db2a083ac5987d1f61cf090bdc579d42bcb",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/gaussian_summary.csv",
+      "source": "results/synthetic_gaussian_lowdim_20261006/per_ell_summary.csv",
+      "sha256": "47ed1a6b880ab6359e22580cb4d72149cec69caa61143b355e9e0438118cead6",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/gaussian_selection.csv",
+      "source": "results/synthetic_gaussian_lowdim_20261006/optimal_ell_comparison.csv",
+      "sha256": "2a63c6a4328483f753848fabae200eaaf041bc5fcc7ae5ebc72b8f459fb7f626",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/bounded_expanded_selection.csv",
+      "source": "results/synthetic_bounded_fig2_extended_20261006/optimal_ell_comparison.csv",
+      "sha256": "19f141accfc9b95e9dab1c267b8eed41583faa8d2d9daec9378a4be5434d7ac9",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/bounded_full_grid_summary.csv",
+      "source": "results/synthetic_bounded_fig2_compact_20261006/full_archive_summary.csv",
+      "sha256": "f4aaf9f8c9aeaa7e5c8c451205fe1672e22abaad25b8c4fe503c0d84660bd92f",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/gaussian_previous_rho_selection.csv",
+      "source": "results/synthetic_gaussian_rho_20261006/optimal_ell_comparison.csv",
+      "sha256": "fb459d8864ba8b4d20f210402e262ad531fa9cd7379dcaba9b66225573b48e1e",
+      "byte_identical": true
+    },
+    {
+      "file": "tables/gaussian_previous_rho_agreement.csv",
+      "source": "results/synthetic_gaussian_rho_20261006/agreement_summary.csv",
+      "sha256": "1beb02b1a62a889544078ced05c83accafcb89e3a8553fa019bbcd15523040c8",
+      "byte_identical": true
+    }
+  ],
+  "visual_validation": {
+    "renderer": "pdftoppm, 150 dpi",
+    "page_count": 1,
+    "page_size_inches": [
+      7.2,
+      6.3
+    ],
+    "result": "All four panels, row labels, axes, legends, curves and selected markers inspected; no clipping or overlap."
+  }
+}

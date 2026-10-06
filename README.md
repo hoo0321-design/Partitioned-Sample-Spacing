@@ -8,6 +8,21 @@ This code accompanies the manuscript:
 See manuscript for full theoretical details.
 [![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
+## Partition-resolution comparison: bounded and Gaussian densities
+
+The combined four-panel figure compares the RMSE-minimizing partition count
+with the theory-selected count for bounded dependent and correlated Gaussian
+densities. It reuses saved estimates and pointwise bootstrap intervals.
+
+See [the figure and reproduction instructions](experiments/synthetic_ell_comparison/README.md),
+[the vector PDF](experiments/synthetic_ell_comparison/figures/bounded_gaussian_ell_rmse.pdf),
+and [the manuscript text and caption](experiments/synthetic_ell_comparison/manuscript.tex).
+
+```sh
+python -m pip install -r experiments/synthetic_ell_comparison/requirements.txt
+python experiments/synthetic_ell_comparison/plot.py
+```
+
 💻 Installation & Usage
 1. Prerequisites
 
