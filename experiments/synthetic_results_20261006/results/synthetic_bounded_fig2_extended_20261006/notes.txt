@@ -1,0 +1,24 @@
+Bounded-dependent Fig. 2
+
+Five archived settings plus two new dimensions; no coefficient fitting.
+Main figure: ell=1..7, with unrestricted same-repeat RMSE minima (no coverage filter).
+All displayed empirical and theory-selected minima equal those over every available saved candidate grid. New d=3,4 grids are ell=1..7.
+Stars are descriptive RMSE minima, not independently evaluated tuned selectors.
+Empty circles indicate at least one repetition with coverage below 1. Minimum displayed coverage is 0.95363000.
+Minimum per-repeat coverage of empirical-minimum candidates: 1.00000000.
+For d>2, d-2 independent uniform coordinates are added to the same dependent pair.
+Lipschitz regularity holds on the cube; no continuity of the zero extension is asserted.
+The density satisfies the theorem's distributional assumptions with dimension-independent c,C,L.
+The bound's common positive factor K*d cancels from the ell minimization; it need not be estimated.
+The theorem's sample-size requirements involving unspecified K0 are not certified.
+100 repeats for n<=100,000; 30 for n=1,000,000. Pointwise 95% bootstrap intervals, 2,000 resamples.
+Shared setting n=100,000,d=2 appears in both panels. 7 unique settings.
+
+      n  d  reps  empirical_ell  empirical_rmse  theory_ell  theory_rmse  theory_rmse_ratio  match  full_archive_empirical_ell  full_archive_theory_ell  archive_ell_max  empirical_coverage_min  empirical_at_display_upper
+ 100000  2   100              3        0.008991           3     0.008991           1.000000   True                           3                        3               40                     1.0                       False
+ 100000  3   100              3        0.040187           2     0.043320           1.077976  False                           3                        2                7                     1.0                       False
+ 100000  4   100              2        0.019560           2     0.019560           1.000000   True                           2                        2                7                     1.0                       False
+ 100000  5   100              2        0.021016           1     0.115725           5.506443  False                           2                        1                7                     1.0                       False
+   1000  2   100              1        0.064831           2     0.069939           1.078790  False                           1                        2               11                     1.0                       False
+  10000  2   100              2        0.029153           2     0.029153           1.000000   True                           2                        2               35                     1.0                       False
+1000000  2    30              4        0.000971           3     0.004212           4.340010  False                           4                        3               40                     1.0                       False

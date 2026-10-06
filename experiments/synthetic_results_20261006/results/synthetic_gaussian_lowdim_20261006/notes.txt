@@ -1,0 +1,20 @@
+Low-dimensional Gaussian extension
+
+rho=.2; five fixed settings, 30 new-seed repetitions each, ell1..8; all conditions reported.
+The bound rule minimizes ell^-2+sqrt(2*d*log(2*n+1)+log(96/.05))*(ell^d/n)^.25 over the candidate grid.
+Figure legend: RMSE-minimizing ell (star); Theory-selected ell (square). The latter is the unit-coefficient bound-derived criterion above.
+The dimension-aware rate with C=1 uses nearest-integer rounding and a lower bound of one.
+No coefficient is fitted and the two formulas are kept distinct.
+The previous rho sweep motivated this design; new seeds do not make the chosen design a general confirmation.
+Increasing n reduces finite-sample estimation effects. Reducing d also lowers total correlation at fixed rho.
+All theoretical choices minimize the stated bound shape or implement a rate, not actual finite-sample RMSE.
+Empirical minima and RMSE ratios are descriptive over the same 30 repetitions, with no coverage filter.
+The x grid is finite; an upper-boundary minimum would require separately labeled grid expansion.
+Normal distributions do not satisfy the stated bounded-support/positive-lower-bound density assumptions.
+
+     n  d  empirical_ell  empirical_rmse  bound_ell  bound_rmse  bound_rmse_ratio  bound_match  rate_C1_ell  rate_C1_rmse  empirical_coverage_min  empirical_at_grid_upper
+ 30000  3              2        0.027702          2    0.027702          1.000000         True            1      0.053934                     1.0                    False
+100000  3              2        0.009886          2    0.009886          1.000000         True            1      0.055485                     1.0                    False
+300000  3              2        0.002264          2    0.002264          1.000000         True            1      0.055857                     1.0                    False
+100000  2              2        0.004789          3    0.007807          1.630105        False            1      0.020973                     1.0                    False
+100000  4              2        0.022737          2    0.022737          1.000000         True            1      0.098702                     1.0                    False

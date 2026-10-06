@@ -1,0 +1,35 @@
+Gaussian partition-level comparison
+
+Source: existing canonical PSS v2 estimates. No simulations, tuning, or baseline reruns.
+Normal equicorrelation rho=.5; n fixed at 20000 or d fixed at 5; 30 independent repetitions per condition.
+Truth: 0.5*[d*log(2*pi*e)+(d-1)*log(1-rho)+log(1+(d-1)*rho)].
+Empirical optimum: minimum aggregate RMSE over EVERY saved ell, without any coverage constraint.
+Bound optimum: integer minimizer of ell^-2+sqrt(Lambda)*(ell^d/n)^.25,
+Lambda=2*d*log(2*n+1)+log(96/.05). Ties prefer smaller ell.
+Dimension-aware rate: max(1,floor((n/(d^6*log(n)^2))^(1/(d+8))+.5)); C=1 fixed.
+No unknown asymptotic coefficient is estimated or asserted to equal one.
+Both theoretical choices are explicit formula implementations, not proven finite-sample RMSE minimizers.
+Gaussian densities do not meet the theorem's compact-support/positive-lower-bound assumptions.
+High-dimensional ell=1 agreement does not imply small estimation error.
+The empirical minimum is selected and reported on the same 30 repetitions; it is an optimistic reference.
+Intervals are pointwise bootstrap intervals at each fixed ell, not confidence sets for the minimizer.
+Canonical estimates average covered points. Coverage diagnostics at empirical minima are saved in the table.
+
+    n  d  empirical_ell  empirical_rmse  empirical_coverage_mean  empirical_coverage_min  bound_ell  bound_rmse  bound_to_best_rmse  rate_C1_ell  rate_C1_rmse  rate_C1_continuous  bound_matches  rate_matches
+20000  2              3        0.007121                 0.999992                 0.99995          2    0.012000            1.685103            1      0.144350            1.122865          False         False
+20000  5              2        0.060795                 1.000000                 1.00000          1    0.831317           13.674147            1      0.831317            0.716224          False         False
+20000 10              1        2.247647                 1.000000                 1.00000          1    2.247647            1.000000            1      2.247647            0.623691           True          True
+20000 20              1        5.390016                 1.000000                 1.00000          1    5.390016            1.000000            1      5.390016            0.636339           True          True
+ 1000  5              1        0.758962                 1.000000                 1.00000          1    0.758962            1.000000            1      0.758962            0.601228           True          True
+ 3000  5              2        0.443521                 1.000000                 1.00000          1    0.809435            1.825021            1      0.809435            0.639557          False         False
+10000  5              2        0.151696                 1.000000                 1.00000          1    0.821447            5.415090            1      0.821447            0.686658          False         False
+30000  5              2        0.028890                 1.000000                 1.00000          1    0.828358           28.672956            1      0.828358            0.734367          False         False
+
+Suggested caption
+RMSE of the canonical PSS entropy estimator as a function of partition level for equicorrelated
+Gaussian data (rho=0.5). Left: n=20000 with varying dimension; right: d=5 with varying sample size.
+Stars mark unrestricted empirical RMSE minima over the saved grid; open squares mark integer minimizers
+of the displayed theoretical bound with delta=0.05. Shading gives pointwise 95% bootstrap intervals over
+30 repetitions. The C=1 dimension-aware rate selects ell=1 throughout. No coverage filter is applied.
+This comparison is outside the theorem's distributional assumptions and does not test an identity
+between upper-bound minimization and finite-sample RMSE minimization.

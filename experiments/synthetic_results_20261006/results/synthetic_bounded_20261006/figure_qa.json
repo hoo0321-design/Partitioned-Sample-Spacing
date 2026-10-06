@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "pdf_pages_per_file": 2,
+  "rendered_pages_visually_reviewed": 4,
+  "source_syntax": "parsed",
+  "analysis_hash": "verified",
+  "issues": []
+}

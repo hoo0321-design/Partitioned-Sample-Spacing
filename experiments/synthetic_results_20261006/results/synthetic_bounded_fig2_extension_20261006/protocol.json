@@ -1,0 +1,4685 @@
+{
+  "study": "Bounded dependent-density Fig.2 extension at d=3 and d=4",
+  "estimator": "smoothed_subgrid_neff_v2",
+  "family": "ridge_medium",
+  "density": "f(x)=1+0.7*cos(2*pi*(x1-x2)) on [0,1]^d",
+  "density_constants": {
+    "c": 0.30000000000000004,
+    "C": 1.7,
+    "L": 6.220036113421713
+  },
+  "conditions": [
+    {
+      "n": 100000,
+      "d": 3
+    },
+    {
+      "n": 100000,
+      "d": 4
+    }
+  ],
+  "repetitions": 100,
+  "ell_grid": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "expected_datasets": 200,
+  "expected_fits": 1400,
+  "seed_design": "numpy.default_rng(SeedSequence([2026100607,n,d,replicate])) with replicate=0,...,99; independent fixed new seeds.",
+  "seed_schedule": [
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 0,
+      "rep": 0,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        0
+      ],
+      "seed_state": [
+        616709258,
+        3209307917,
+        4196641234,
+        222204880
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 1,
+      "rep": 1,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        1
+      ],
+      "seed_state": [
+        464301908,
+        1748932587,
+        3812955057,
+        2657611765
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 2,
+      "rep": 2,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        2
+      ],
+      "seed_state": [
+        1671025352,
+        2811839038,
+        22694640,
+        3557560235
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 3,
+      "rep": 3,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        3
+      ],
+      "seed_state": [
+        3567707976,
+        2865218180,
+        2983617140,
+        139166059
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 4,
+      "rep": 4,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        4
+      ],
+      "seed_state": [
+        2983467322,
+        1016695961,
+        2207491889,
+        2550463246
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 5,
+      "rep": 5,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        5
+      ],
+      "seed_state": [
+        4157896946,
+        1510874146,
+        532096203,
+        1878869275
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 6,
+      "rep": 6,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        6
+      ],
+      "seed_state": [
+        776315745,
+        1836309424,
+        3872860537,
+        3852548800
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 7,
+      "rep": 7,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        7
+      ],
+      "seed_state": [
+        758345664,
+        1013286895,
+        1523093445,
+        4009156386
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 8,
+      "rep": 8,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        8
+      ],
+      "seed_state": [
+        732481155,
+        3195391573,
+        1619233074,
+        1931830845
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 9,
+      "rep": 9,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        9
+      ],
+      "seed_state": [
+        3328186714,
+        3542302528,
+        3307503246,
+        3785211636
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 10,
+      "rep": 10,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        10
+      ],
+      "seed_state": [
+        2012316115,
+        4027663778,
+        1677680975,
+        2547037325
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 11,
+      "rep": 11,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        11
+      ],
+      "seed_state": [
+        3175805534,
+        3277163956,
+        775493647,
+        2014632917
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 12,
+      "rep": 12,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        12
+      ],
+      "seed_state": [
+        375650251,
+        1863596248,
+        1587558558,
+        2615577196
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 13,
+      "rep": 13,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        13
+      ],
+      "seed_state": [
+        1863969488,
+        2621732062,
+        481332152,
+        2466186063
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 14,
+      "rep": 14,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        14
+      ],
+      "seed_state": [
+        4145000785,
+        2762303482,
+        2917610026,
+        1911647709
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 15,
+      "rep": 15,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        15
+      ],
+      "seed_state": [
+        742144131,
+        2289815783,
+        3780175607,
+        829512644
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 16,
+      "rep": 16,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        16
+      ],
+      "seed_state": [
+        3533969120,
+        700267861,
+        2417439625,
+        2346950106
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 17,
+      "rep": 17,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        17
+      ],
+      "seed_state": [
+        3432711636,
+        3453309440,
+        994437914,
+        895023590
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 18,
+      "rep": 18,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        18
+      ],
+      "seed_state": [
+        1476316235,
+        2763253686,
+        1661801026,
+        3882471320
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 19,
+      "rep": 19,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        19
+      ],
+      "seed_state": [
+        930478830,
+        835060396,
+        3667700230,
+        2599258858
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 20,
+      "rep": 20,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        20
+      ],
+      "seed_state": [
+        3025577360,
+        1216650987,
+        3931115263,
+        3707558876
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 21,
+      "rep": 21,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        21
+      ],
+      "seed_state": [
+        3489765732,
+        4159527880,
+        688005687,
+        3791046019
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 22,
+      "rep": 22,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        22
+      ],
+      "seed_state": [
+        1586215647,
+        2425919552,
+        2653288054,
+        3241854100
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 23,
+      "rep": 23,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        23
+      ],
+      "seed_state": [
+        3776908601,
+        1981719638,
+        777745067,
+        549380216
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 24,
+      "rep": 24,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        24
+      ],
+      "seed_state": [
+        3501794530,
+        704862309,
+        3967516075,
+        2361566604
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 25,
+      "rep": 25,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        25
+      ],
+      "seed_state": [
+        1172219980,
+        1148680625,
+        646187697,
+        723599311
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 26,
+      "rep": 26,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        26
+      ],
+      "seed_state": [
+        1304420517,
+        1679616656,
+        1294842197,
+        3633163091
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 27,
+      "rep": 27,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        27
+      ],
+      "seed_state": [
+        924443330,
+        2762635704,
+        4175749425,
+        100054658
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 28,
+      "rep": 28,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        28
+      ],
+      "seed_state": [
+        788921789,
+        1840883113,
+        4070420952,
+        2090415733
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 29,
+      "rep": 29,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        29
+      ],
+      "seed_state": [
+        1945395363,
+        882342395,
+        3296564124,
+        3085663574
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 30,
+      "rep": 30,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        30
+      ],
+      "seed_state": [
+        1556420715,
+        1466347407,
+        1289793335,
+        829517191
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 31,
+      "rep": 31,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        31
+      ],
+      "seed_state": [
+        2129573510,
+        934881590,
+        2706452885,
+        3032377338
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 32,
+      "rep": 32,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        32
+      ],
+      "seed_state": [
+        860113128,
+        143982663,
+        2164812345,
+        2861539077
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 33,
+      "rep": 33,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        33
+      ],
+      "seed_state": [
+        1929628771,
+        1516710833,
+        782282130,
+        1266557881
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 34,
+      "rep": 34,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        34
+      ],
+      "seed_state": [
+        3624830411,
+        1935407175,
+        2254329756,
+        1697326225
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 35,
+      "rep": 35,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        35
+      ],
+      "seed_state": [
+        3204789368,
+        2179458483,
+        1948127762,
+        2915758502
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 36,
+      "rep": 36,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        36
+      ],
+      "seed_state": [
+        4262240467,
+        1240012814,
+        2286893294,
+        2561600339
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 37,
+      "rep": 37,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        37
+      ],
+      "seed_state": [
+        4141672755,
+        667861256,
+        3095301983,
+        1750219400
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 38,
+      "rep": 38,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        38
+      ],
+      "seed_state": [
+        1590480094,
+        46562844,
+        4082839557,
+        3271320526
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 39,
+      "rep": 39,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        39
+      ],
+      "seed_state": [
+        7259433,
+        4195650678,
+        1024960925,
+        1813957265
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 40,
+      "rep": 40,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        40
+      ],
+      "seed_state": [
+        3610593356,
+        1699292509,
+        1411604403,
+        1287506130
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 41,
+      "rep": 41,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        41
+      ],
+      "seed_state": [
+        624361275,
+        1713008214,
+        2837619298,
+        1237157392
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 42,
+      "rep": 42,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        42
+      ],
+      "seed_state": [
+        1923576875,
+        2985866112,
+        2982877460,
+        2529554014
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 43,
+      "rep": 43,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        43
+      ],
+      "seed_state": [
+        3068649888,
+        1544033693,
+        4128076879,
+        1859593220
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 44,
+      "rep": 44,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        44
+      ],
+      "seed_state": [
+        2073263137,
+        3003552124,
+        1349339835,
+        1803710392
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 45,
+      "rep": 45,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        45
+      ],
+      "seed_state": [
+        1845249707,
+        2309473058,
+        2914882687,
+        2633334949
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 46,
+      "rep": 46,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        46
+      ],
+      "seed_state": [
+        3028455421,
+        2088208722,
+        3530484905,
+        4127704534
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 47,
+      "rep": 47,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        47
+      ],
+      "seed_state": [
+        2429017582,
+        1866499291,
+        4258986425,
+        1920550605
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 48,
+      "rep": 48,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        48
+      ],
+      "seed_state": [
+        2812395698,
+        3749737502,
+        690036611,
+        2539626929
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 49,
+      "rep": 49,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        49
+      ],
+      "seed_state": [
+        3849791186,
+        2285758989,
+        893270080,
+        3245692471
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 50,
+      "rep": 50,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        50
+      ],
+      "seed_state": [
+        678774105,
+        134737327,
+        931314416,
+        2515509879
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 51,
+      "rep": 51,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        51
+      ],
+      "seed_state": [
+        4129845746,
+        3385857645,
+        1776289908,
+        1514617234
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 52,
+      "rep": 52,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        52
+      ],
+      "seed_state": [
+        2266447499,
+        2317411635,
+        2249049887,
+        1174979437
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 53,
+      "rep": 53,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        53
+      ],
+      "seed_state": [
+        1199428648,
+        2326000139,
+        3865372838,
+        2183427875
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 54,
+      "rep": 54,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        54
+      ],
+      "seed_state": [
+        1902394921,
+        1208583967,
+        670310540,
+        2129042136
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 55,
+      "rep": 55,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        55
+      ],
+      "seed_state": [
+        4000889463,
+        3962986321,
+        629216149,
+        2322966883
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 56,
+      "rep": 56,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        56
+      ],
+      "seed_state": [
+        1003924412,
+        2028865544,
+        1812131082,
+        390355128
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 57,
+      "rep": 57,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        57
+      ],
+      "seed_state": [
+        4008680751,
+        3252826468,
+        548461877,
+        1261375154
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 58,
+      "rep": 58,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        58
+      ],
+      "seed_state": [
+        316034046,
+        2875657106,
+        2074458054,
+        521345450
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 59,
+      "rep": 59,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        59
+      ],
+      "seed_state": [
+        813773086,
+        336532133,
+        1695052638,
+        1745198382
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 60,
+      "rep": 60,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        60
+      ],
+      "seed_state": [
+        2736035633,
+        1865783770,
+        3520429883,
+        2631285903
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 61,
+      "rep": 61,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        61
+      ],
+      "seed_state": [
+        1447970899,
+        1657321298,
+        6788270,
+        375649865
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 62,
+      "rep": 62,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        62
+      ],
+      "seed_state": [
+        1493380837,
+        1727104139,
+        506297846,
+        2859223728
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 63,
+      "rep": 63,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        63
+      ],
+      "seed_state": [
+        1461587732,
+        1121784598,
+        3048823670,
+        2383335501
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 64,
+      "rep": 64,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        64
+      ],
+      "seed_state": [
+        1851114273,
+        323327967,
+        4001160521,
+        870708549
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 65,
+      "rep": 65,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        65
+      ],
+      "seed_state": [
+        416819922,
+        3395571663,
+        3019659748,
+        189354132
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 66,
+      "rep": 66,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        66
+      ],
+      "seed_state": [
+        3329981851,
+        4202316474,
+        1029862711,
+        3279136659
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 67,
+      "rep": 67,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        67
+      ],
+      "seed_state": [
+        1324673228,
+        3072441207,
+        2023750341,
+        2729995615
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 68,
+      "rep": 68,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        68
+      ],
+      "seed_state": [
+        1822346964,
+        3777559693,
+        3783006584,
+        579256484
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 69,
+      "rep": 69,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        69
+      ],
+      "seed_state": [
+        2483575064,
+        3064419405,
+        2081584189,
+        1872211802
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 70,
+      "rep": 70,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        70
+      ],
+      "seed_state": [
+        2652595956,
+        1381556031,
+        3571212392,
+        1875430820
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 71,
+      "rep": 71,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        71
+      ],
+      "seed_state": [
+        3758805591,
+        1409838807,
+        4027661373,
+        2627576670
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 72,
+      "rep": 72,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        72
+      ],
+      "seed_state": [
+        676012122,
+        4246862558,
+        319942615,
+        1245071570
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 73,
+      "rep": 73,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        73
+      ],
+      "seed_state": [
+        2784782677,
+        300312050,
+        2102055546,
+        543327281
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 74,
+      "rep": 74,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        74
+      ],
+      "seed_state": [
+        764243247,
+        895277225,
+        72354443,
+        268973857
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 75,
+      "rep": 75,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        75
+      ],
+      "seed_state": [
+        1654944258,
+        1899435474,
+        1826751799,
+        2072783049
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 76,
+      "rep": 76,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        76
+      ],
+      "seed_state": [
+        2451493926,
+        1683632293,
+        1681399395,
+        3528559535
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 77,
+      "rep": 77,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        77
+      ],
+      "seed_state": [
+        3904002667,
+        2124920882,
+        469874966,
+        2146711801
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 78,
+      "rep": 78,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        78
+      ],
+      "seed_state": [
+        355968329,
+        1785968420,
+        2740169091,
+        1852533770
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 79,
+      "rep": 79,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        79
+      ],
+      "seed_state": [
+        1175818948,
+        300548944,
+        2812930754,
+        2836978531
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 80,
+      "rep": 80,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        80
+      ],
+      "seed_state": [
+        3642745526,
+        990173382,
+        761297887,
+        3255502788
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 81,
+      "rep": 81,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        81
+      ],
+      "seed_state": [
+        170742391,
+        1500823120,
+        2713482468,
+        2305871578
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 82,
+      "rep": 82,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        82
+      ],
+      "seed_state": [
+        3957275675,
+        1330090263,
+        4234529148,
+        1523792982
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 83,
+      "rep": 83,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        83
+      ],
+      "seed_state": [
+        1491307517,
+        2197576710,
+        1416383519,
+        4004089889
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 84,
+      "rep": 84,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        84
+      ],
+      "seed_state": [
+        1297076352,
+        3535151507,
+        426669821,
+        4233593456
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 85,
+      "rep": 85,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        85
+      ],
+      "seed_state": [
+        1687061095,
+        2986224472,
+        854311136,
+        676070588
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 86,
+      "rep": 86,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        86
+      ],
+      "seed_state": [
+        1308940066,
+        2221860680,
+        3384891334,
+        2917081342
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 87,
+      "rep": 87,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        87
+      ],
+      "seed_state": [
+        4067809015,
+        342402284,
+        271094007,
+        1047278092
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 88,
+      "rep": 88,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        88
+      ],
+      "seed_state": [
+        1928818129,
+        2695928141,
+        3442922829,
+        1810013489
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 89,
+      "rep": 89,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        89
+      ],
+      "seed_state": [
+        367262310,
+        1358099399,
+        3862165021,
+        2569430218
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 90,
+      "rep": 90,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        90
+      ],
+      "seed_state": [
+        1731595068,
+        2302085983,
+        349250288,
+        3403590395
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 91,
+      "rep": 91,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        91
+      ],
+      "seed_state": [
+        4128332014,
+        3690682988,
+        2299956624,
+        3925455861
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 92,
+      "rep": 92,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        92
+      ],
+      "seed_state": [
+        3556675414,
+        3082523367,
+        538334121,
+        4290610515
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 93,
+      "rep": 93,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        93
+      ],
+      "seed_state": [
+        1827201833,
+        633515070,
+        3112753731,
+        2848623458
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 94,
+      "rep": 94,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        94
+      ],
+      "seed_state": [
+        1685563109,
+        1371421376,
+        1892588642,
+        712259609
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 95,
+      "rep": 95,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        95
+      ],
+      "seed_state": [
+        4096984456,
+        1266890235,
+        3871075878,
+        2643575449
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 96,
+      "rep": 96,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        96
+      ],
+      "seed_state": [
+        2198876499,
+        669094428,
+        2866535238,
+        4271929538
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 97,
+      "rep": 97,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        97
+      ],
+      "seed_state": [
+        2606931694,
+        3169520571,
+        2247908604,
+        156762711
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 98,
+      "rep": 98,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        98
+      ],
+      "seed_state": [
+        3816019210,
+        3948860087,
+        3797824301,
+        265376020
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 1,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 3,
+      "replicate": 99,
+      "rep": 99,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        3,
+        99
+      ],
+      "seed_state": [
+        1751312136,
+        3064461712,
+        152534443,
+        2822087456
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 0,
+      "rep": 0,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        0
+      ],
+      "seed_state": [
+        1498255182,
+        1789989526,
+        4207597131,
+        3968999674
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 1,
+      "rep": 1,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        1
+      ],
+      "seed_state": [
+        3658095490,
+        3812519933,
+        3399737768,
+        3943829742
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 2,
+      "rep": 2,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        2
+      ],
+      "seed_state": [
+        1280000975,
+        1513142854,
+        949192044,
+        3056673080
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 3,
+      "rep": 3,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        3
+      ],
+      "seed_state": [
+        1309905537,
+        720713669,
+        3919577564,
+        296680203
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 4,
+      "rep": 4,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        4
+      ],
+      "seed_state": [
+        1572994508,
+        41429624,
+        3718634912,
+        2099604497
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 5,
+      "rep": 5,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        5
+      ],
+      "seed_state": [
+        906740434,
+        2474389044,
+        1580535086,
+        3444416941
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 6,
+      "rep": 6,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        6
+      ],
+      "seed_state": [
+        4260089802,
+        3714413669,
+        4074096248,
+        3119471212
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 7,
+      "rep": 7,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        7
+      ],
+      "seed_state": [
+        1813123405,
+        278398496,
+        139256515,
+        140179452
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 8,
+      "rep": 8,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        8
+      ],
+      "seed_state": [
+        2759425651,
+        3281256596,
+        90035305,
+        1776703051
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 9,
+      "rep": 9,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        9
+      ],
+      "seed_state": [
+        1769409488,
+        1869515151,
+        2109281029,
+        4081760753
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 10,
+      "rep": 10,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        10
+      ],
+      "seed_state": [
+        149050612,
+        3285454224,
+        534645663,
+        3900694384
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 11,
+      "rep": 11,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        11
+      ],
+      "seed_state": [
+        3526951046,
+        1784478265,
+        1072386607,
+        4056104244
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 12,
+      "rep": 12,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        12
+      ],
+      "seed_state": [
+        3944886066,
+        2636685176,
+        1459965622,
+        766967022
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 13,
+      "rep": 13,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        13
+      ],
+      "seed_state": [
+        2267913992,
+        1990708241,
+        3744787354,
+        990292368
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 14,
+      "rep": 14,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        14
+      ],
+      "seed_state": [
+        1313888722,
+        2161165620,
+        2240645082,
+        2912496080
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 15,
+      "rep": 15,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        15
+      ],
+      "seed_state": [
+        695051930,
+        711874390,
+        692278005,
+        2088134977
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 16,
+      "rep": 16,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        16
+      ],
+      "seed_state": [
+        2987908701,
+        2158740193,
+        1323374729,
+        1249500189
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 17,
+      "rep": 17,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        17
+      ],
+      "seed_state": [
+        3274062386,
+        1704020321,
+        4294783745,
+        856120594
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 18,
+      "rep": 18,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        18
+      ],
+      "seed_state": [
+        2504722503,
+        3949427809,
+        500718534,
+        316128676
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 19,
+      "rep": 19,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        19
+      ],
+      "seed_state": [
+        274005648,
+        972682442,
+        1053659728,
+        3931135668
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 20,
+      "rep": 20,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        20
+      ],
+      "seed_state": [
+        2292316279,
+        2267995062,
+        933024292,
+        2716873906
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 21,
+      "rep": 21,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        21
+      ],
+      "seed_state": [
+        3489376403,
+        3501764432,
+        1369255128,
+        2187868451
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 22,
+      "rep": 22,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        22
+      ],
+      "seed_state": [
+        3430761755,
+        3340800865,
+        2440368240,
+        3665526467
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 23,
+      "rep": 23,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        23
+      ],
+      "seed_state": [
+        4255317572,
+        3249398986,
+        1556997181,
+        68966728
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 24,
+      "rep": 24,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        24
+      ],
+      "seed_state": [
+        2575345731,
+        2847604996,
+        478051751,
+        2902083395
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 25,
+      "rep": 25,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        25
+      ],
+      "seed_state": [
+        1848911854,
+        2973010846,
+        3981861892,
+        467975928
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 26,
+      "rep": 26,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        26
+      ],
+      "seed_state": [
+        3432000210,
+        1316220361,
+        856238848,
+        1847270135
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 27,
+      "rep": 27,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        27
+      ],
+      "seed_state": [
+        3479027809,
+        3750376172,
+        2585054065,
+        3510273987
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 28,
+      "rep": 28,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        28
+      ],
+      "seed_state": [
+        1515615909,
+        2701151965,
+        1708658001,
+        3143737871
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 29,
+      "rep": 29,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        29
+      ],
+      "seed_state": [
+        3783650572,
+        650568702,
+        856988908,
+        2624572880
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 30,
+      "rep": 30,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        30
+      ],
+      "seed_state": [
+        3050782913,
+        1811461668,
+        19314779,
+        1968716869
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 31,
+      "rep": 31,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        31
+      ],
+      "seed_state": [
+        267479269,
+        1647496795,
+        711637916,
+        2036645101
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 32,
+      "rep": 32,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        32
+      ],
+      "seed_state": [
+        1104263736,
+        896534489,
+        1347018986,
+        1225958542
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 33,
+      "rep": 33,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        33
+      ],
+      "seed_state": [
+        488476730,
+        1508094611,
+        3634337549,
+        4267627771
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 34,
+      "rep": 34,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        34
+      ],
+      "seed_state": [
+        354163076,
+        1564759594,
+        1367728899,
+        2523451440
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 35,
+      "rep": 35,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        35
+      ],
+      "seed_state": [
+        2915353420,
+        3462333830,
+        1975101123,
+        2331280106
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 36,
+      "rep": 36,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        36
+      ],
+      "seed_state": [
+        2160032753,
+        1079873842,
+        1256026040,
+        2822380741
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 37,
+      "rep": 37,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        37
+      ],
+      "seed_state": [
+        2100005785,
+        3621844374,
+        1829840267,
+        114205514
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 38,
+      "rep": 38,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        38
+      ],
+      "seed_state": [
+        85427098,
+        1419048512,
+        1065039913,
+        468127675
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 39,
+      "rep": 39,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        39
+      ],
+      "seed_state": [
+        3806287624,
+        1289346358,
+        3417659303,
+        798877120
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 40,
+      "rep": 40,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        40
+      ],
+      "seed_state": [
+        10997425,
+        463626222,
+        862810379,
+        1219749997
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 41,
+      "rep": 41,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        41
+      ],
+      "seed_state": [
+        3789258819,
+        1984231052,
+        3846227530,
+        2613911566
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 42,
+      "rep": 42,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        42
+      ],
+      "seed_state": [
+        2331536133,
+        619832052,
+        3516281965,
+        4123219210
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 43,
+      "rep": 43,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        43
+      ],
+      "seed_state": [
+        1800636747,
+        3935198513,
+        894560305,
+        527709801
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 44,
+      "rep": 44,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        44
+      ],
+      "seed_state": [
+        2739667450,
+        386698726,
+        1274112346,
+        3223974273
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 45,
+      "rep": 45,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        45
+      ],
+      "seed_state": [
+        310532427,
+        3076967601,
+        118401677,
+        4110118329
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 46,
+      "rep": 46,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        46
+      ],
+      "seed_state": [
+        3939364442,
+        3295765930,
+        3856069979,
+        3875559811
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 47,
+      "rep": 47,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        47
+      ],
+      "seed_state": [
+        2728445632,
+        2507298305,
+        689176672,
+        1053986579
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 48,
+      "rep": 48,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        48
+      ],
+      "seed_state": [
+        3454129520,
+        79079375,
+        4159490588,
+        3156160899
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 49,
+      "rep": 49,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        49
+      ],
+      "seed_state": [
+        2717063775,
+        3265432705,
+        4230433406,
+        46551543
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 50,
+      "rep": 50,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        50
+      ],
+      "seed_state": [
+        1418933444,
+        3216402322,
+        2250300834,
+        661046795
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 51,
+      "rep": 51,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        51
+      ],
+      "seed_state": [
+        1251678879,
+        207719415,
+        3258695171,
+        1896871945
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 52,
+      "rep": 52,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        52
+      ],
+      "seed_state": [
+        3665680799,
+        3909447329,
+        1569767807,
+        1760644818
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 53,
+      "rep": 53,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        53
+      ],
+      "seed_state": [
+        2179696324,
+        4093970210,
+        1450152474,
+        453317312
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 54,
+      "rep": 54,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        54
+      ],
+      "seed_state": [
+        3619828929,
+        2700354861,
+        1495702565,
+        4223599712
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 55,
+      "rep": 55,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        55
+      ],
+      "seed_state": [
+        572905968,
+        3452184039,
+        1559205581,
+        1940686168
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 56,
+      "rep": 56,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        56
+      ],
+      "seed_state": [
+        1330054698,
+        3998568885,
+        681299039,
+        2588053731
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 57,
+      "rep": 57,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        57
+      ],
+      "seed_state": [
+        855670807,
+        3163603360,
+        562312255,
+        1379985455
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 58,
+      "rep": 58,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        58
+      ],
+      "seed_state": [
+        3563178660,
+        3728676425,
+        2351136985,
+        495243903
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 59,
+      "rep": 59,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        59
+      ],
+      "seed_state": [
+        3560267636,
+        2996021289,
+        2589531506,
+        2626970297
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 60,
+      "rep": 60,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        60
+      ],
+      "seed_state": [
+        2316980070,
+        1544091010,
+        3106499130,
+        1310740911
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 61,
+      "rep": 61,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        61
+      ],
+      "seed_state": [
+        1095532065,
+        2973145380,
+        1745540759,
+        2375564364
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 62,
+      "rep": 62,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        62
+      ],
+      "seed_state": [
+        4131663536,
+        1224107211,
+        886376870,
+        2302751599
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 63,
+      "rep": 63,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        63
+      ],
+      "seed_state": [
+        3686395606,
+        747488713,
+        1795402550,
+        1120158053
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 64,
+      "rep": 64,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        64
+      ],
+      "seed_state": [
+        1046852519,
+        1700772920,
+        1430080458,
+        2150825824
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 65,
+      "rep": 65,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        65
+      ],
+      "seed_state": [
+        3175929819,
+        2159746881,
+        4029529974,
+        1802002195
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 66,
+      "rep": 66,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        66
+      ],
+      "seed_state": [
+        3889692740,
+        2367096231,
+        3871181028,
+        810960579
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 67,
+      "rep": 67,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        67
+      ],
+      "seed_state": [
+        3524201473,
+        1759135381,
+        1225590759,
+        961931856
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 68,
+      "rep": 68,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        68
+      ],
+      "seed_state": [
+        2019186520,
+        3935142404,
+        1266229689,
+        1155986070
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 69,
+      "rep": 69,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        69
+      ],
+      "seed_state": [
+        223184758,
+        4148505600,
+        2820121601,
+        2994334022
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 70,
+      "rep": 70,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        70
+      ],
+      "seed_state": [
+        1068469723,
+        2491035033,
+        3846772116,
+        2122342114
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 71,
+      "rep": 71,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        71
+      ],
+      "seed_state": [
+        1825707032,
+        740678660,
+        2238857301,
+        2754178636
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 72,
+      "rep": 72,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        72
+      ],
+      "seed_state": [
+        4285724225,
+        3890012533,
+        3197843868,
+        90781275
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 73,
+      "rep": 73,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        73
+      ],
+      "seed_state": [
+        1014251203,
+        530277297,
+        526497660,
+        4086553243
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 74,
+      "rep": 74,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        74
+      ],
+      "seed_state": [
+        1959356730,
+        457091111,
+        1497459258,
+        355743039
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 75,
+      "rep": 75,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        75
+      ],
+      "seed_state": [
+        2148982861,
+        3709849694,
+        3067638591,
+        3352441557
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 76,
+      "rep": 76,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        76
+      ],
+      "seed_state": [
+        421026783,
+        4093026272,
+        745825863,
+        2977977292
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 77,
+      "rep": 77,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        77
+      ],
+      "seed_state": [
+        1174635253,
+        2993559559,
+        822561858,
+        2540452179
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 78,
+      "rep": 78,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        78
+      ],
+      "seed_state": [
+        3183560982,
+        3955612672,
+        987881332,
+        3255915590
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 79,
+      "rep": 79,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        79
+      ],
+      "seed_state": [
+        1035994836,
+        3854044624,
+        3368277201,
+        672163116
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 80,
+      "rep": 80,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        80
+      ],
+      "seed_state": [
+        972719508,
+        339378356,
+        2587314389,
+        4192814980
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 81,
+      "rep": 81,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        81
+      ],
+      "seed_state": [
+        2884441763,
+        3676007618,
+        363682559,
+        3068322442
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 82,
+      "rep": 82,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        82
+      ],
+      "seed_state": [
+        1754140696,
+        3095668266,
+        619980151,
+        3562470733
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 83,
+      "rep": 83,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        83
+      ],
+      "seed_state": [
+        2826416624,
+        2736690764,
+        2129179609,
+        95056496
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 84,
+      "rep": 84,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        84
+      ],
+      "seed_state": [
+        4155079574,
+        2821871376,
+        590999295,
+        1567038335
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 85,
+      "rep": 85,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        85
+      ],
+      "seed_state": [
+        2502650124,
+        1220599017,
+        3351999708,
+        2958161315
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 86,
+      "rep": 86,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        86
+      ],
+      "seed_state": [
+        1665465085,
+        361817427,
+        3636206478,
+        2525446603
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 87,
+      "rep": 87,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        87
+      ],
+      "seed_state": [
+        2104950133,
+        2607309679,
+        861887515,
+        595386754
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 88,
+      "rep": 88,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        88
+      ],
+      "seed_state": [
+        1999491071,
+        2120409313,
+        1045152248,
+        3285474524
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 89,
+      "rep": 89,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        89
+      ],
+      "seed_state": [
+        3190828518,
+        2777836650,
+        832392050,
+        1078034527
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 90,
+      "rep": 90,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        90
+      ],
+      "seed_state": [
+        924781447,
+        3677526565,
+        3020008218,
+        13767857
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 91,
+      "rep": 91,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        91
+      ],
+      "seed_state": [
+        171110546,
+        2835439680,
+        66707412,
+        566603108
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 92,
+      "rep": 92,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        92
+      ],
+      "seed_state": [
+        78030099,
+        2013686097,
+        827428102,
+        275932190
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 93,
+      "rep": 93,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        93
+      ],
+      "seed_state": [
+        3670232505,
+        3643123599,
+        302064650,
+        1637061406
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 94,
+      "rep": 94,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        94
+      ],
+      "seed_state": [
+        3755300894,
+        1395425068,
+        441368231,
+        3092222656
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 95,
+      "rep": 95,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        95
+      ],
+      "seed_state": [
+        13915131,
+        508775549,
+        4054898221,
+        1642409455
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 96,
+      "rep": 96,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        96
+      ],
+      "seed_state": [
+        3873970357,
+        1920860504,
+        2259801837,
+        3642040213
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 97,
+      "rep": 97,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        97
+      ],
+      "seed_state": [
+        1244448128,
+        1957384561,
+        1278790632,
+        3946041486
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 98,
+      "rep": 98,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        98
+      ],
+      "seed_state": [
+        3544629909,
+        2882831782,
+        1572571389,
+        1338877798
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    },
+    {
+      "config_id": 2,
+      "family": "ridge_medium",
+      "n": 100000,
+      "d": 4,
+      "replicate": 99,
+      "rep": 99,
+      "seed_namespace": 2026100607,
+      "seed_sequence": [
+        2026100607,
+        100000,
+        4,
+        99
+      ],
+      "seed_state": [
+        4161769904,
+        4245826904,
+        361595584,
+        2575578103
+      ],
+      "truth": -0.13162313217701307,
+      "true_entropy": -0.13162313217701307
+    }
+  ],
+  "sampling": "Unmodified archived pss_theory.sample, family ridge_medium, float64. The exact cosine rejection sampler is part of the fixed generator. No data-dependent dataset redraw, jitter, clipping, parameter or coefficient retuning.",
+  "truth": "-(1-sqrt(1-0.7^2)+log((1+sqrt(1-0.7^2))/2)) nats; independent of d",
+  "failure_policy": "Keep all 100 replicates and all seven candidates, failures, ties, degeneracy and zero-valid diagnostics. Canonical zero estimate retained when n_valid=0. No coverage filter.",
+  "interpretation": "Extension chosen after existing d=2 and d=5 curves. All outcomes are retained; agreement between empirical and unit-coefficient theory-selected ell is not guaranteed.",
+  "theory": {
+    "delta": 0.05,
+    "coefficients": [
+      1,
+      1
+    ],
+    "objective": "ell^-2 + sqrt(2*d*log(2*n+1)+log(96/delta))*(ell^d/n)^.25",
+    "selection_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "code_paths": {
+    "PSS/pss_v2.py": "/Users/hojeongwoo/Documents/ChatGPT/pss/PSS/pss_v2.py",
+    "PSS/pss_v2.cpp": "/Users/hojeongwoo/Documents/ChatGPT/pss/PSS/pss_v2.cpp",
+    "PSS/libpss_v2.dylib": "/Users/hojeongwoo/Documents/ChatGPT/pss/PSS/libpss_v2.dylib",
+    "pss_theory.py": "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/experiments/theory_selection/pss_theory.py",
+    "run_fig2_extension.py": "/Users/hojeongwoo/Documents/ChatGPT/pss/experiments/synthetic_bounded/run_fig2_extension.py"
+  },
+  "code_sha256": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296",
+    "PSS/libpss_v2.dylib": "895a652b3cea6ba3fc8ced3671223b603bcfd4348730f9125c556737edd8fdee",
+    "pss_theory.py": "5e4313c9b4dff8e056c23f6a87effe4f47ac6a421c0ba13fcb2447d1b6786c8b",
+    "run_fig2_extension.py": "1c430876303a58720f82121f53faba6a44e3dfa622e943c56cc68727b08c1e02"
+  },
+  "workers": 3,
+  "verified_against": "/Users/hojeongwoo/Documents/ChatGPT/pss/results/synthetic_bounded_20261006/audit.json",
+  "environment": {
+    "python": "3.11.5 (main, Sep 11 2023, 08:31:25) [Clang 14.0.6 ]",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "thread_limits": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "frozen_at_utc": "2026-10-06T16:17:53.333248+00:00"
+}

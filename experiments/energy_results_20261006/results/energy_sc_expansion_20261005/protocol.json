@@ -1,0 +1,287 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "data_sha256": "d5107b1732a324021038393e112ac738c038a37a5441f8af7dc5e64757378e0e",
+  "code_sha256": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296",
+    "experiments/energy_sameperiod/core.py": "4291b790642a536a00b61426200ec6c1176e39cefd025bccc482e2ceab76d6c9",
+    "experiments/energy_v2/core.py": "e3f19eba651852d9e9b9b0323e21e0f5d9b18f29da3831a37876809337bf0ad4",
+    "experiments/energy_sc_expansion/core.py": "1a2edadc651316802fc1a20f0334816934db77fa2c288ee527cd6f389e351ba7",
+    "experiments/energy_sc_expansion/run.py": "7f0a0f39fe74f5148d8f09c3c8d593ac12a0e28ae8f81bb70ebcb556f61a5dc9"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "purpose": "Exploratory SC-CV coverage/fold expansion and tuned entropy-difference kNN comparison; NOT confirmation on never-inspected tests.",
+  "split": "Same five random 70:30 holdouts and nested 70:30 training/validation holdouts as previous same-period study. Repeated/overlapping test sets. No seed selected or removed.",
+  "target": "Appliances > training median, ties class 0; threshold independently fit in inner and outer training",
+  "selection": "All training rows; training min/max scaling, fixed Gaussian jitter SD=1e-5, RNG seeds unchanged. No test preprocessing information.",
+  "classifier": "Identical fixed RBF SVM for all: C=1, gamma=1/feature_count, training sample-SD scaling; raw unjittered predictors. No class weights.",
+  "density": "Canonical v2 smoothed subgrid/N_eff, no normalization or extrapolation, no change to estimator",
+  "sc_cv": "For each candidate feature subset: pooled covered NLL, constrained pooled stable validation coverage >= tau, fixed n_min=5. Same ell for pooled and conditional entropy scores. Candidate ell=1..5. No forced ell>1.",
+  "folds": "Stratified training-only folds, K=3,5,10. Conditional density coverage diagnosed but not an additional constraint.",
+  "fallback": "No feasible ell: maximize stable coverage, then minimize covered NLL, then smallest ell. Report all fallbacks.",
+  "primary_configs": {
+    "PSS expanded SC-CV": [
+      {
+        "estimator": "pss",
+        "folds": 3,
+        "tau": 0.8,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 3,
+        "tau": 0.85,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 3,
+        "tau": 0.9,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 3,
+        "tau": 0.95,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 3,
+        "tau": 0.99,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 5,
+        "tau": 0.8,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 5,
+        "tau": 0.85,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 5,
+        "tau": 0.9,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 5,
+        "tau": 0.95,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 5,
+        "tau": 0.99,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 10,
+        "tau": 0.8,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 10,
+        "tau": 0.85,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 10,
+        "tau": 0.9,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 10,
+        "tau": 0.95,
+        "n_min": 5
+      },
+      {
+        "estimator": "pss",
+        "folds": 10,
+        "tau": 0.99,
+        "n_min": 5
+      }
+    ],
+    "KL tuned": [
+      {
+        "estimator": "kl",
+        "k": 1
+      },
+      {
+        "estimator": "kl",
+        "k": 2
+      },
+      {
+        "estimator": "kl",
+        "k": 3
+      },
+      {
+        "estimator": "kl",
+        "k": 5
+      },
+      {
+        "estimator": "kl",
+        "k": 7
+      },
+      {
+        "estimator": "kl",
+        "k": 10
+      },
+      {
+        "estimator": "kl",
+        "k": 15
+      },
+      {
+        "estimator": "kl",
+        "k": 20
+      },
+      {
+        "estimator": "kl",
+        "k": 30
+      },
+      {
+        "estimator": "kl",
+        "k": 50
+      }
+    ],
+    "Ross tuned": [
+      {
+        "estimator": "ross",
+        "k": 1
+      },
+      {
+        "estimator": "ross",
+        "k": 2
+      },
+      {
+        "estimator": "ross",
+        "k": 3
+      },
+      {
+        "estimator": "ross",
+        "k": 5
+      },
+      {
+        "estimator": "ross",
+        "k": 7
+      },
+      {
+        "estimator": "ross",
+        "k": 10
+      },
+      {
+        "estimator": "ross",
+        "k": 15
+      },
+      {
+        "estimator": "ross",
+        "k": 20
+      },
+      {
+        "estimator": "ross",
+        "k": 30
+      },
+      {
+        "estimator": "ross",
+        "k": 50
+      }
+    ],
+    "Univariate tuned": [
+      {
+        "estimator": "univariate",
+        "k": 1
+      },
+      {
+        "estimator": "univariate",
+        "k": 2
+      },
+      {
+        "estimator": "univariate",
+        "k": 3
+      },
+      {
+        "estimator": "univariate",
+        "k": 5
+      },
+      {
+        "estimator": "univariate",
+        "k": 7
+      },
+      {
+        "estimator": "univariate",
+        "k": 10
+      },
+      {
+        "estimator": "univariate",
+        "k": 15
+      },
+      {
+        "estimator": "univariate",
+        "k": 20
+      },
+      {
+        "estimator": "univariate",
+        "k": 30
+      },
+      {
+        "estimator": "univariate",
+        "k": 50
+      }
+    ]
+  },
+  "noise": 1e-05,
+  "n_min": 5,
+  "ell_grid": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "tau_grid": [
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.99
+  ],
+  "fold_grid": [
+    3,
+    5,
+    10
+  ],
+  "k_grid": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    10,
+    15,
+    20,
+    30,
+    50
+  ],
+  "selection_objective": "Mean inner-validation accuracy at 5,10,20 features. Lock ALL policies before any new test evaluation.",
+  "tie_break": "Prefer higher tau, fewer folds, smaller k, then lexical config; never outer scores",
+  "search_budget": "15 PSS configs; 10 each for KL, Ross, univariate. Also report PSS matched-budget using only K=3,5 (10 configs). Equal counts are not equal compute.",
+  "ablations": "PSS K=3,5,10 each tunes tau separately; matched-budget K=3,5; tau=.99,K=3; fixed ell=1/2; historical KL k=1; all25 SVM. All fixed noise and n_min; fresh forward selection.",
+  "checkpoint": "Paths are selected using only respective training data; classifiers cached by identical subset only, per seed and inner/outer split separately. Cold selector timings at outer fit; diagnostic cost separately excluded.",
+  "interpretation": "MI-like scores are not calibrated MI. Random same-period interpolation, not forecasting or new-household generalization. Five-split SD is descriptive, not independent-dataset uncertainty."
+}

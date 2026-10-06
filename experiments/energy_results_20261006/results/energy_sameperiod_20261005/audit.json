@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "curve_points": 905,
+  "predictions_verified": 5358505,
+  "data_and_code_hashes_verified": true,
+  "locked_hyperparameters_verified": true,
+  "training_only_labels_and_indices_verified": true
+}

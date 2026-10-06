@@ -1,0 +1,19 @@
+seed,method,estimator,folds,tau,n_min,inner_accuracy,k,ell
+42,PSS class-aware SC-CV,pss,5.0,0.9,5.0,,,
+42,PSS-JMI,pss_jmi,5.0,0.95,5.0,0.771773220747889,,
+42,KL tuned,kl,,,,,50.0,
+42,KL-JMI,kl_jmi,,,,0.7775633293124246,20.0,
+42,PSS ell=1,fixed,,,,,,1.0
+42,All features,,,,,,,
+43,PSS class-aware SC-CV,pss,5.0,0.85,5.0,,,
+43,PSS-JMI,pss_jmi,10.0,0.99,5.0,0.7848009650180942,,
+43,KL tuned,kl,,,,,30.0,
+43,KL-JMI,kl_jmi,,,,0.7839163650985123,7.0,
+43,PSS ell=1,fixed,,,,,,1.0
+43,All features,,,,,,,
+44,PSS class-aware SC-CV,pss,10.0,0.85,5.0,,,
+44,PSS-JMI,pss_jmi,5.0,0.95,5.0,0.7773220747889024,,
+44,KL tuned,kl,,,,,50.0,
+44,KL-JMI,kl_jmi,,,,0.7902694008846,20.0,
+44,PSS ell=1,fixed,,,,,,1.0
+44,All features,,,,,,,

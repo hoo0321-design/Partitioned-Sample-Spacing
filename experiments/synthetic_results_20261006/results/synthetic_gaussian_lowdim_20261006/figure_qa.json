@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "rendered_pages_reviewed": 1,
+  "visual_review": "No clipping or overlapping labels; panel legends clear of curves.",
+  "figure_inches": [
+    7.2,
+    3.15
+  ],
+  "vector_pdf": true,
+  "data_and_numerical_summaries_unchanged": true,
+  "unchanged_sha256": {
+    "candidates.csv": "20f0e4590b210f8140cf2954ab7b4e3f2304af81ede44fc76e03c4ca32728fa8",
+    "per_ell_summary.csv": "47ed1a6b880ab6359e22580cb4d72149cec69caa61143b355e9e0438118cead6",
+    "optimal_ell_comparison.csv": "2a63c6a4328483f753848fabae200eaaf041bc5fcc7ae5ebc72b8f459fb7f626",
+    "protocol.json": "69624e28f3dc79cf599ef7662fe880f237e75d28934c78997e19ddef1e17c814"
+  },
+  "pdf_sha256": "0ef42c36579ce9cdd1b797d2b9e7975d6cb9b4ae14b461ea4ec25d5dbf11ae41",
+  "source_audit_sha256": "0017dad668d9d4b49642bdfa04b2a866d93f03aa2eff66c014a200ab4127dd22",
+  "manuscript_fragment_sha256": "2eb7e5692074a158bae6809114963d7c53775bd18a63aeac395e17351c8b4b2c",
+  "manuscript_status": "Insertion fragment; not a standalone document. Parent manuscript compilation not performed."
+}

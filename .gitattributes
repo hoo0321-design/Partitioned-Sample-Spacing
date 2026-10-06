@@ -1,2 +1,20 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve byte hashes of frozen datasets and publication artifacts across clones.
+data/energydata_complete.csv -text
+experiments/energy_results_20261006/results/** -text
+experiments/synthetic_results_20261006/results/** -text
+experiments/synthetic_results_20261006/archive_sources/** -text
+# Source/protocol hashes and frozen figure inputs also require stable bytes.
+PSS/pss_v2.py -text
+PSS/pss_v2.cpp -text
+PSS/build_pss_v2.py -text
+PSS/test_density.py -text
+experiments/**/*.py -text
+experiments/synthetic_results_20261006/output/** -text
+experiments/synthetic_ell_comparison/tables/** -text
+# Archived CSVs use CRLF and one archived generator has a final blank line.
+# Recognize their original formatting without changing provenance bytes.
+experiments/synthetic_results_20261006/results/**/*.csv whitespace=cr-at-eol
+experiments/synthetic_results_20261006/archive_sources/experiments/anchor_grid/make_anchor_grid_datasets.py whitespace=-blank-at-eof

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rendered_pages_reviewed": 1,
+  "vector_pdf": true,
+  "figure_inches": [
+    7.2,
+    3.15
+  ],
+  "visual_review": "Four curves per panel; legends clear of curves; d4/d5 stars at ell2 nearly overlap because their RMSEs are close.",
+  "independent_minima_recomputed": 7,
+  "previous_central_values_and_intervals_max_abs_difference": 4.440892098500626e-16,
+  "all_source_hashes_unchanged": true,
+  "pdf_sha256": "0b517fd4aa4988f726109664add6d049ebf636cc029c89e7e14d6e7089f0f996",
+  "audit_sha256": "1a8cedbd8e58559464f6966d88a61f500b128b83a1f4dbb6e2deceedd3c3fe2f",
+  "manuscript_fragment_sha256": "f178c1aea691cc1bdb9aa9598a2ace496aa14488a293760e128e2db860f4ef29",
+  "manuscript_status": "Insertion fragment; parent manuscript compilation not performed."
+}

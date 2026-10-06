@@ -1,0 +1,1216 @@
+{
+  "study": "Prespecified exploratory lower-correlation Gaussian sweep",
+  "estimator": "smoothed_subgrid_neff_v2",
+  "lower_rho_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "baseline_rho": 0.5,
+  "conditions": [
+    {
+      "n": 20000,
+      "d": 2
+    },
+    {
+      "n": 20000,
+      "d": 5
+    },
+    {
+      "n": 20000,
+      "d": 10
+    },
+    {
+      "n": 20000,
+      "d": 20
+    },
+    {
+      "n": 1000,
+      "d": 5
+    },
+    {
+      "n": 3000,
+      "d": 5
+    },
+    {
+      "n": 10000,
+      "d": 5
+    },
+    {
+      "n": 30000,
+      "d": 5
+    }
+  ],
+  "repetitions": 30,
+  "candidate_grids": {
+    "2": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "5": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "10": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "20": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "new_conditions": 40,
+  "copied_baseline_conditions": 8,
+  "new_fits": 39000,
+  "sampling": "Exact archived run_dependent_five.sample64 Normal generator; float64; no jitter.",
+  "seed_design": "Reuse each archived rho=.5 condition/replicate seed at all lower rho; paired exploratory comparison, not independent confirmation.",
+  "seed_schedule": [
+    {
+      "n": 20000,
+      "d": 2,
+      "source_config_id": 8,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026108701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026108702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026108703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026108704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026108705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026108706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026108707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026108708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026108709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026108710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026108711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026108712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026108713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026108714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026108715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026108716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026108717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026108718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026108719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026108720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026108721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026108722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026108723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026108724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026108725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026108726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026108727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026108728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026108729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026108730
+        }
+      ]
+    },
+    {
+      "n": 20000,
+      "d": 5,
+      "source_config_id": 2,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 20270505
+        },
+        {
+          "replicate": 2,
+          "seed": 20270506
+        },
+        {
+          "replicate": 3,
+          "seed": 20270507
+        },
+        {
+          "replicate": 4,
+          "seed": 20270508
+        },
+        {
+          "replicate": 5,
+          "seed": 20270509
+        },
+        {
+          "replicate": 6,
+          "seed": 20270510
+        },
+        {
+          "replicate": 7,
+          "seed": 20270511
+        },
+        {
+          "replicate": 8,
+          "seed": 20270512
+        },
+        {
+          "replicate": 9,
+          "seed": 20270513
+        },
+        {
+          "replicate": 10,
+          "seed": 20270514
+        },
+        {
+          "replicate": 11,
+          "seed": 20270515
+        },
+        {
+          "replicate": 12,
+          "seed": 20270516
+        },
+        {
+          "replicate": 13,
+          "seed": 20270517
+        },
+        {
+          "replicate": 14,
+          "seed": 20270518
+        },
+        {
+          "replicate": 15,
+          "seed": 20270519
+        },
+        {
+          "replicate": 16,
+          "seed": 20270520
+        },
+        {
+          "replicate": 17,
+          "seed": 20270521
+        },
+        {
+          "replicate": 18,
+          "seed": 20270522
+        },
+        {
+          "replicate": 19,
+          "seed": 20270523
+        },
+        {
+          "replicate": 20,
+          "seed": 20270524
+        },
+        {
+          "replicate": 21,
+          "seed": 20270525
+        },
+        {
+          "replicate": 22,
+          "seed": 20270526
+        },
+        {
+          "replicate": 23,
+          "seed": 20270527
+        },
+        {
+          "replicate": 24,
+          "seed": 20270528
+        },
+        {
+          "replicate": 25,
+          "seed": 20270529
+        },
+        {
+          "replicate": 26,
+          "seed": 20270530
+        },
+        {
+          "replicate": 27,
+          "seed": 20270531
+        },
+        {
+          "replicate": 28,
+          "seed": 20270532
+        },
+        {
+          "replicate": 29,
+          "seed": 20270533
+        },
+        {
+          "replicate": 30,
+          "seed": 20270534
+        }
+      ]
+    },
+    {
+      "n": 20000,
+      "d": 10,
+      "source_config_id": 9,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026109701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026109702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026109703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026109704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026109705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026109706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026109707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026109708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026109709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026109710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026109711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026109712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026109713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026109714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026109715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026109716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026109717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026109718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026109719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026109720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026109721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026109722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026109723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026109724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026109725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026109726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026109727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026109728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026109729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026109730
+        }
+      ]
+    },
+    {
+      "n": 20000,
+      "d": 20,
+      "source_config_id": 10,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026110701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026110702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026110703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026110704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026110705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026110706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026110707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026110708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026110709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026110710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026110711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026110712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026110713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026110714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026110715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026110716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026110717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026110718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026110719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026110720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026110721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026110722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026110723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026110724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026110725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026110726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026110727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026110728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026110729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026110730
+        }
+      ]
+    },
+    {
+      "n": 1000,
+      "d": 5,
+      "source_config_id": 4,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026104701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026104702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026104703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026104704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026104705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026104706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026104707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026104708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026104709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026104710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026104711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026104712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026104713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026104714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026104715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026104716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026104717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026104718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026104719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026104720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026104721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026104722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026104723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026104724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026104725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026104726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026104727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026104728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026104729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026104730
+        }
+      ]
+    },
+    {
+      "n": 3000,
+      "d": 5,
+      "source_config_id": 5,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026105701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026105702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026105703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026105704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026105705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026105706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026105707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026105708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026105709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026105710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026105711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026105712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026105713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026105714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026105715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026105716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026105717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026105718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026105719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026105720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026105721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026105722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026105723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026105724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026105725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026105726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026105727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026105728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026105729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026105730
+        }
+      ]
+    },
+    {
+      "n": 10000,
+      "d": 5,
+      "source_config_id": 6,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026106701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026106702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026106703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026106704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026106705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026106706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026106707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026106708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026106709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026106710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026106711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026106712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026106713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026106714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026106715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026106716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026106717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026106718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026106719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026106720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026106721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026106722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026106723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026106724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026106725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026106726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026106727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026106728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026106729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026106730
+        }
+      ]
+    },
+    {
+      "n": 30000,
+      "d": 5,
+      "source_config_id": 7,
+      "replicates": [
+        {
+          "replicate": 1,
+          "seed": 2026107701
+        },
+        {
+          "replicate": 2,
+          "seed": 2026107702
+        },
+        {
+          "replicate": 3,
+          "seed": 2026107703
+        },
+        {
+          "replicate": 4,
+          "seed": 2026107704
+        },
+        {
+          "replicate": 5,
+          "seed": 2026107705
+        },
+        {
+          "replicate": 6,
+          "seed": 2026107706
+        },
+        {
+          "replicate": 7,
+          "seed": 2026107707
+        },
+        {
+          "replicate": 8,
+          "seed": 2026107708
+        },
+        {
+          "replicate": 9,
+          "seed": 2026107709
+        },
+        {
+          "replicate": 10,
+          "seed": 2026107710
+        },
+        {
+          "replicate": 11,
+          "seed": 2026107711
+        },
+        {
+          "replicate": 12,
+          "seed": 2026107712
+        },
+        {
+          "replicate": 13,
+          "seed": 2026107713
+        },
+        {
+          "replicate": 14,
+          "seed": 2026107714
+        },
+        {
+          "replicate": 15,
+          "seed": 2026107715
+        },
+        {
+          "replicate": 16,
+          "seed": 2026107716
+        },
+        {
+          "replicate": 17,
+          "seed": 2026107717
+        },
+        {
+          "replicate": 18,
+          "seed": 2026107718
+        },
+        {
+          "replicate": 19,
+          "seed": 2026107719
+        },
+        {
+          "replicate": 20,
+          "seed": 2026107720
+        },
+        {
+          "replicate": 21,
+          "seed": 2026107721
+        },
+        {
+          "replicate": 22,
+          "seed": 2026107722
+        },
+        {
+          "replicate": 23,
+          "seed": 2026107723
+        },
+        {
+          "replicate": 24,
+          "seed": 2026107724
+        },
+        {
+          "replicate": 25,
+          "seed": 2026107725
+        },
+        {
+          "replicate": 26,
+          "seed": 2026107726
+        },
+        {
+          "replicate": 27,
+          "seed": 2026107727
+        },
+        {
+          "replicate": 28,
+          "seed": 2026107728
+        },
+        {
+          "replicate": 29,
+          "seed": 2026107729
+        },
+        {
+          "replicate": 30,
+          "seed": 2026107730
+        }
+      ]
+    }
+  ],
+  "truth": "0.5*[d*log(2*pi*e)+(d-1)*log(1-rho)+log(1+(d-1)*rho)] nats",
+  "baseline": "All archived rho=.5 estimate rows copied unchanged; only rep1 ell1 regenerated for each of eight settings as a spotcheck.",
+  "failure_policy": "Record every candidate, failure, tie and clip; no data or candidates dropped. Preserve canonical estimate=0 when n_valid=0 and degenerate flag.",
+  "interpretation": "All five lower correlations reported. No adaptive rho search or coefficient fitting. Normal is outside bounded-support theory assumptions; agreement is exploratory.",
+  "minima": "Analysis must use unrestricted aggregate RMSE over the full archived candidate grid, preserving failures and zero-valid diagnostics.",
+  "source": "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/results/sc_cv_v2_20261005",
+  "source_sha256": {
+    "protocol.json": "1b8faf7f615aa5c30f0ab79d7df75120eeac7c20942f2422fe379c0d289996d7",
+    "candidates.csv": "2a255924d708f89200cc35347041bf8a133fb8e483134d7f540347666b6e9968"
+  },
+  "archived_settings_sha256": "73b31db16717e0bb6e99d25923c6e331de1ac59bd740d490dbec3c722f53d1e6",
+  "code_sha256": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296",
+    "experiments/theory_selection/run_dependent_five.py": "972fe8fa2dfd4dd7396fff6796a07256840b0dee412bc31a9ee3060992ca8b7d",
+    "experiments/theory_selection/pss_theory.py": "5e4313c9b4dff8e056c23f6a87effe4f47ac6a421c0ba13fcb2447d1b6786c8b",
+    "experiments/anchor_grid/make_anchor_grid_datasets.py": "ce639d884073ef9b081ac8d87a69255a4549cafb45744fb3ede571716f797008",
+    "experiments/synthetic_gaussian_rho/run.py": "56d68cdad457ab3ff81021a45dd56ac4f663d2c99389350e0be38d16f5016c3d"
+  },
+  "binary_sha256": "895a652b3cea6ba3fc8ced3671223b603bcfd4348730f9125c556737edd8fdee",
+  "archived_binary_sha256": "ba7bdddd9a63543b90ff600bc339332adfd8570bc3a584a62042e23db8bd686d",
+  "binary_note": "Current binary may differ from archived build; Python/C++ sources must match and eight baseline numerical spotchecks must pass.",
+  "workers": 3,
+  "environment": {
+    "python": "3.11.5 (main, Sep 11 2023, 08:31:25) [Clang 14.0.6 ]",
+    "numpy": "1.24.3",
+    "scipy": "1.11.1",
+    "pandas": "2.0.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "thread_limits": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "frozen_at_utc": "2026-10-06T06:08:19.116358+00:00"
+}

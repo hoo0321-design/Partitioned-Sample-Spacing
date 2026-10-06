@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "curve_points": 483,
+  "predictions_verified": 2859843,
+  "components_recomputed": 240,
+  "source_hashes_verified": true,
+  "reference_unchanged": true,
+  "all_guard_configs_present": true,
+  "training_only_locks_recomputed": true,
+  "full_training_samples_verified": true,
+  "new_inner_predictions_checked_when_available": true,
+  "reused_inner_classifier_metrics_verified_against_hashed_source": true
+}

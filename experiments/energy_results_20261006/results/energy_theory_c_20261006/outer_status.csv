@@ -1,0 +1,19 @@
+seed,method,status,completed_steps,evaluated_counts,failure
+42,PSS theory C tuned,complete,20,20,null
+42,PSS theory C=1,complete,20,20,null
+42,PSS class-aware SC-CV,complete,20,20,null
+42,KL tuned,complete,20,20,null
+42,KL k=1,complete,20,20,null
+42,All features,complete,1,1,null
+43,PSS theory C tuned,complete,20,20,null
+43,PSS theory C=1,complete,20,20,null
+43,PSS class-aware SC-CV,complete,20,20,null
+43,KL tuned,complete,20,20,null
+43,KL k=1,complete,20,20,null
+43,All features,complete,1,1,null
+44,PSS theory C tuned,complete,20,20,null
+44,PSS theory C=1,complete,20,20,null
+44,PSS class-aware SC-CV,complete,20,20,null
+44,KL tuned,complete,20,20,null
+44,KL k=1,complete,20,20,null
+44,All features,complete,1,1,null

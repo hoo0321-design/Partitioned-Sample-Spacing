@@ -1,0 +1,9 @@
+{
+  "locked_before_test": true,
+  "protocol_sha256": "ace4cc42689770e330fb42ea3d0978bcef8b244eada468585e3ac5e9ca8ce20f",
+  "locks_sha256": {
+    "42": "6f0216c9528b2dbf87434691e4d47e31f8d15bfb3c8aa9515563a80c9f792f6d",
+    "43": "bebde88bc45c1c4bf09ed2ab4b015bd79e65a88838fdc7cee02a8887a3234cc4",
+    "44": "c32c43919a2873ac4420d09b235c5354152c032adad0189f865e150025e14aae"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "datasets": 150,
+  "candidate_rows": 1200,
+  "settings": 5,
+  "bound_matches": 4,
+  "minimum_training_coverage": 0.99459,
+  "upper_boundary_minima": 0,
+  "analysis_sha256": "d62371aa39d389658fccfebe5fb25e9cb8669d8340af7c542946b798493b0a7f",
+  "raw_sha256": "20f0e4590b210f8140cf2954ab7b4e3f2304af81ede44fc76e03c4ca32728fa8",
+  "protocol_sha256": "69624e28f3dc79cf599ef7662fe880f237e75d28934c78997e19ddef1e17c814",
+  "bootstrap_seed": 2026100605,
+  "bootstrap_replicates": 2000
+}

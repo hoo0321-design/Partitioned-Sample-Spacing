@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rendered_pages_reviewed": 1,
+  "vector_pdf": true,
+  "figure_inches": [
+    7.2,
+    3.15
+  ],
+  "visual_review": "Three curves per panel; all labels and markers visible; legends clear of curves.",
+  "compared_with_expanded_figure_rows": 35,
+  "central_values_and_intervals_max_abs_difference": 0.0,
+  "all_source_hashes_unchanged": true,
+  "pdf_sha256": "dc7605bf67616e6105dc8f62d86e21557fd38ce2450d9cbfc34578fe5d4a8d16",
+  "audit_sha256": "c15f03a366db19bed6c288b632103f7ac35dff6522e89d430e093d8b8cafcc67",
+  "manuscript_fragment_sha256": "f5ffe6b67acd66fc84a9ae6327241db6a8e4834257fba4b979bfefa909db99bc",
+  "manuscript_status": "Updated insertion fragment; parent manuscript compilation not performed."
+}

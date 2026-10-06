@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "source_files": {
+    "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/results/sc_cv_v2_20261005/candidates.csv": "2a255924d708f89200cc35347041bf8a133fb8e483134d7f540347666b6e9968",
+    "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/results/sc_cv_v2_20261005/protocol.json": "1b8faf7f615aa5c30f0ab79d7df75120eeac7c20942f2422fe379c0d289996d7",
+    "/Users/hojeongwoo/Documents/Codex/2026-05-03/d-dimensional-partitioned-sample-spacing-pss/Partitioned-Sample-Spacing/results/dependent_five_pdf_20261003/per_ell.csv": "9da4399b59f36803afe94efcc15eb45eb77095ba30f47b3cb4d2ffd8425fc054"
+  },
+  "canonical_code_hashes": {
+    "PSS/pss_v2.py": "5a74dd65148ea79c0b913b5d3fc12d546d7c91b821f760c7ba9bece5470a30f2",
+    "PSS/pss_v2.cpp": "badf5deac3591bc09535549e2c6615f902a36b81dc992ff7365fa7b74908a296"
+  },
+  "analysis_sha256": "f64a99f434721ff94f8b383368f9b5753def5a32a17d3f8624825fe17ef8f2ef",
+  "settings": 8,
+  "datasets": 240,
+  "candidate_estimates": 7800,
+  "groups_verified": 260,
+  "max_previous_rmse_difference": 1.7763568394002505e-14,
+  "bound_matches": 3,
+  "rate_matches": 3,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2026100602,
+  "new_simulations": false,
+  "empirical_selection_filter": "none",
+  "normal_rho": 0.5
+}
