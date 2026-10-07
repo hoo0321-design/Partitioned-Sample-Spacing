@@ -17,7 +17,9 @@ python experiments/synthetic_ell_comparison/plot.py
 The default outputs are `figures/bounded_gaussian_ell_rmse.pdf`, the matching
 300 dpi PNG, and `figures/figure_checks.json`, relative to this folder. Use
 `--output-dir PATH` to choose another location. The PDF is a vector figure
-measuring 7.2 by 6.3 inches, with a minimum text size of 8.5 points.
+measuring 7.2 by 2.8 inches, with a minimum text size of 7.5 points.
+All four panels form one horizontal row: the bounded model is on the left
+and the Gaussian model is on the right.
 The plotter was checked with NumPy 1.24.3, pandas 2.0.3 and Matplotlib 3.7.2.
 
 ## Panels and frozen data
@@ -29,8 +31,8 @@ The plotter was checked with NumPy 1.24.3, pandas 2.0.3 and Matplotlib 3.7.2.
 | (c) | Gaussian, rho = 0.2 | n = 100,000 | d = 2, 3, 4 | 30 | ell = 1,...,8 |
 | (d) | Gaussian, rho = 0.2 | d = 3 | n = 30,000; 100,000; 300,000 | 30 | ell = 1,...,8 |
 
-Each row contains five unique settings: its anchor setting appears in both
-panels. Stars identify the same-repeat RMSE minimum on the candidate grid;
+Each distribution contributes five unique settings: its anchor setting appears
+in both corresponding panels. Stars identify the same-repeat RMSE minimum on the candidate grid;
 squares identify the theory-selected ell. Shading retains the saved pointwise
 95% bootstrap intervals from 2,000 resamples. Empty circular markers denote
 any candidate for which at least one repetition has less than full coverage.

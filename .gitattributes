@@ -14,6 +14,9 @@ PSS/test_density.py -text
 experiments/**/*.py -text
 experiments/synthetic_results_20261006/output/** -text
 experiments/synthetic_ell_comparison/tables/** -text
+experiments/paper_figures/**/data/** -text
+experiments/paper_figures/**/figures/** -text
+experiments/paper_figures/**/provenance.json -text
 # Archived CSVs use CRLF and one archived generator has a final blank line.
 # Recognize their original formatting without changing provenance bytes.
 experiments/synthetic_results_20261006/results/**/*.csv whitespace=cr-at-eol

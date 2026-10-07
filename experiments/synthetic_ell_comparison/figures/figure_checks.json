@@ -8,11 +8,12 @@
   "gaussian_matches": 4,
   "bounded_summary_rows": 35,
   "gaussian_summary_rows": 40,
+  "layout": "one row, four panels",
   "page_size_inches": [
     7.2,
-    6.3
+    2.8
   ],
-  "minimum_fontsize_points": 8.5,
+  "minimum_fontsize_points": 7.5,
   "source_sha256": {
     "tables/bounded_expanded_selection.csv": "19f141accfc9b95e9dab1c267b8eed41583faa8d2d9daec9378a4be5434d7ac9",
     "tables/bounded_full_grid_summary.csv": "f4aaf9f8c9aeaa7e5c8c451205fe1672e22abaad25b8c4fe503c0d84660bd92f",

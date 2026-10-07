@@ -8,6 +8,34 @@ This code accompanies the manuscript:
 See manuscript for full theoretical details.
 [![arXiv](https://img.shields.io/badge/arXiv-2511.13602-b31b1b.svg)](https://arxiv.org/abs/2511.13602)
 
+## Start here: October 2026 manuscript figures
+
+Use the [paper reproduction guide](docs/paper_reproduction.md) for the current
+manuscript's Figure 2--5 commands, exact Energy settings, and implementation
+mapping. Each command below uses files included in this repository and can run
+from a fresh checkout; it does not require the original author's archive paths.
+
+```sh
+# Tested with Python 3.11 and the archived package versions.
+python -m pip install -r experiments/requirements-energy-synthetic.txt
+python experiments/paper_figures/figure2/plot.py --output-dir /tmp/pss-figure2
+python experiments/paper_figures/figure3/plot.py --output-dir /tmp/pss-figure3
+python experiments/synthetic_ell_comparison/plot.py --output-dir /tmp/pss-figure4
+python experiments/paper_figures/figure5/plot.py --output-dir /tmp/pss-figure5
+```
+
+These commands reproduce saved-result plots. Figure 5 additionally verifies
+accuracy from the bundled predictions. They do not rerun simulation, tuning,
+feature selection, or classifier training.
+
+**Implementation mapping matters.** Figure 3 uses historical rank-spacing PSS
+with denominator `n`. Figure 2 preserves historical SC-CV results whose coverage
+convention differs from the training-box support rule in the current manuscript;
+its original simulation generator has not been recovered. Neither is certified
+as a result of the current Python/C++ v2 estimator. Figure 4 and the PSS methods
+in Figure 5 use v2. The [guide](docs/paper_reproduction.md) gives the evidence and
+the limits of each reproduction command.
+
 ## October 2026 Energy and synthetic experiments
 
 The updated studies include the canonical Python/C++ PSS v2 estimator,
@@ -66,7 +94,13 @@ Install required Python libraries
 pip install numpy scipy pandas matplotlib scikit-learn
 
 
-2. How to Reproduce Simulation Results (Figures 2, 3, 4)
+2. Historical simulation workflows (earlier manuscript versions)
+
+The commands in this section retain the original R and baseline workflows.
+Their old figure numbering does not map to the current manuscript. For current
+Figure 2--5 saved-result reproduction, use the guide above. Full historical UM
+experiments also require their original Theano environment; the Python
+requirements above cover the saved plots and newer Energy experiments.
 
 The reproduction process consists of two steps: Simulation and Visualization.
 
@@ -113,11 +147,14 @@ Rscript run_plots.R
 
 
 
-3. Real Data Experiments (Figure 6)
+3. Historical real-data workflows
 
 To reproduce the application results:
 
-Feature Selection (Figure 6): Rscript uci_energy.R
+Historical feature selection: Rscript uci_energy.R
+
+The current manuscript's Figure 5 uses the Python Energy study and the portable
+four-method plot command above; it is not the output of this historical R script.
 
 ICA Experiment: Refer to the ICA/ directory and run ica_pss.R.
 
