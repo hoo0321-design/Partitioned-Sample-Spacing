@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "methods": [
+    "PSS class-aware SC-CV",
+    "KL tuned",
+    "PSS theory C=1",
+    "KL k=1"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "feature_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "prediction_metrics_rechecked": 240,
+  "summarized_points": 80,
+  "sd_ddof": 1,
+  "training_rows": 13814,
+  "test_rows": 5921,
+  "training_medians": [
+    60.0,
+    60.0,
+    60.0
+  ],
+  "full_energy_csv_checked": true,
+  "new_model_fits": 0,
+  "scope": "Recompute labels, accuracy and mean/sample SD from saved predictions; no retraining or replay of feature selection.",
+  "artifact_sha256": {
+    "predictions.npz": "1a8bbce7631329bc9f033ac5cf003fab3848aef7868e5e762d051c50931556e3",
+    "metrics.csv": "e7dbc883d2c969603695b1e22e968057cc4eee7fd5eaaa8d457214fe7c16d88d",
+    "summary.csv": "9947c59a686e8c60a1caab8a4e70e9efb555f2c8467c697b96fbe8dc75fcc716"
+  },
+  "provenance_sha256": "a883fda16413955f06de20d31f2a05d86259fe045954e369aa9919698bf4ce05",
+  "plotting_source_sha256": "d12528789d68ab11edc79433a4f32d609b7f692812e00743ff2e7bf5c1e7e5da",
+  "output_sha256": {
+    "energy_four_methods.png": "2c54b93b7d6519c0f6b2231fde0dcccd734fba2a09f3dd23db0add1a4b83ee28",
+    "energy_four_methods.pdf": "45177d0f5f6d8261b26ee15a908fbd6c55baaafadffd6230025d365cb1c1d8c9",
+    "energy_four_methods.svg": "19a0c6b8bfeb68bfb363a9004b2651a964037e4cac134c8ae47b95f303e808ac",
+    "energy_four_methods_data.csv": "6b13d1fef982c94e26c2b48c9a0dba851933638c35b5299be039bee319f6ae0a"
+  }
+}

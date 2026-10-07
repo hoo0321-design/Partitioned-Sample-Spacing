@@ -1,0 +1,1754 @@
+{
+  "schema_version": 1,
+  "methods": [
+    "PSS class-aware SC-CV",
+    "KL tuned",
+    "PSS theory C=1",
+    "KL k=1"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "original_verifier": "experiments/energy_theory_c/plot_four_methods.py:load_verified",
+  "original_verifier_passed": true,
+  "prediction_metrics_verified": 240,
+  "summary_points_verified": 80,
+  "source_file_sha256": {
+    "results/energy_theory_c_20261006/audit.json": "db42e9a8a0ec3b43ab67525f397d83f6d3b5ad975388b2f6d033c2e3908d1d19",
+    "results/energy_theory_c_20261006/protocol.json": "cec70e0e89f0287f5082f9b7cf24457540748ecf543cb87d756d0931b657e71e",
+    "results/energy_theory_c_20261006/all_locks.json": "51f436b5e2d007145128de3fdb783bd2d62f3181df4f727f519860b18fa3240f",
+    "results/energy_theory_c_20261006/metrics.csv": "2041ff253cbdb49174abfd0a25ee2a0526636d711c86e2ce9de7fa6129425190",
+    "results/energy_theory_c_20261006/summary.csv": "a6ecf5e5bca153f2f80c3fa8c7c2d664f85c91dec76d04ce0e07b2381c2de858",
+    "data/energydata_complete.csv": "d5107b1732a324021038393e112ac738c038a37a5441f8af7dc5e64757378e0e",
+    "results/energy_theory_c_20261006/seed_42/split.json": "99eb7ae63fcbe1f3e110d6c45dc5dab5328b424be1cfb924a942bbed229359de",
+    "results/energy_theory_c_20261006/seed_43/split.json": "8eaabb4b76b2ec5f2a86bcbe72b6db61973e8eec648e380d3fe8f60e5626d5ae",
+    "results/energy_theory_c_20261006/seed_44/split.json": "bae0f17d6f59f41ed66ca4388b7ef15d65b0852199c541df5c585d9cf2d92da1",
+    "results/energy_theory_c_20261006/seed_42/outer/PSS_class-aware_SC-CV.json": "f6885f9e1133cc34c268a7fe09d35a7beb2b45a5624f8427d37e13f7d62bca9c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/12.npz": "8c1b0db98b802d7464b83193e3fdec1c92f5a66a5a02600c12bb89fed9358d06",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_12.npz": "bab206d29fecfce9d99913d9accf6ad2556d79600568e045846113c632e4ca48",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_6_12.npz": "b008c7fd1b575d62bbabbbb939e27bedf718c78528fa1c61dcf523fe2cb28f01",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_6_12.npz": "32daacc08275909fc9192c1ebdc5f8338784dec0bd7362dc17c1be924a6cce54",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12.npz": "3e59fa7c4ed5bd3ac9a025ba67cd6770d8ff1fd014d942591e26d8bff2baa2b7",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14.npz": "d7166401c8c257c7cedcf66f702596bdaf09436c625518e9eed0f1b93178faf8",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14_16.npz": "2d84ad9f8d98ba59ecea2712f87fe5c7ef1cf807947f7dd00d33ff13ef8b6135",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14_16_18.npz": "ab615605fed7d7b9a97563bc10b0a4097cbd55fd3108f17c3b3da0218baf7b11",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_11_12_14_16_18.npz": "1c214ff387597b4c14d8f1afc5d04d9526778511f86bb489a859c0978d8f9d08",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_11_12_14_16_18_19.npz": "872f74223e42bc3b034610ba1f9aadd4e5fa445b2cbfe7663d0713952c1a89d8",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_11_12_14_16_18_19.npz": "c5e199d290ed944273430b524b0ef847916bb8715e76cb76808f638ee1599bde",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_11_12_14_16_18_19.npz": "143ae7cabd5bc5ac8063788f1835eeee32a170f4cd18001ce54e99c58840b9e4",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_11_12_14_16_18_19_24.npz": "4058a5c792901756258148426b53f0aebb05a6e5e3ec63650c56f62d5c144110",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_24.npz": "cabe04acb121e6a4fbc87b80327033720d01724c0dd5f956f704e130e0750fa5",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz": "db7ea9de9b33575605bdf42e1702fe67a5aa30551b97c32c4b45022f36ff4b1b",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "29a5750462048fe62d55446bc8505a02f2bdb109a25f9013e4cd8f6cad6811a2",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz": "225cee9307531ec791c41ada5e4dff8fa0211222d5dbf7d5932b97fa30dff681",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_16_18_19_20_21_23_24.npz": "25e955b1e461c24061a995f0e41a51e8a4d451cd76231c4ba05438452a3f8614",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "1ea8118a0ba509baffb44faa610d64aa5c9e80b441127e2aca0894b9771027ce",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz": "91dd049ceb27059ad9fcd14192b68962656f781696bd034a8ba796a5f9001928",
+    "results/energy_theory_c_20261006/seed_43/outer/PSS_class-aware_SC-CV.json": "6625003b2b2cdd38f4c1904924a35429134ac00026cc766343e577405078888f",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/12.npz": "af8c9bc73f869643d88df1004f51e34aacbfc8db4385e6216803a9f5af0c00ab",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_12.npz": "1d4790cd1679ad1a9acf2fed33497d61018b6b64f261b3b37317258205cb1c0a",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_12_18.npz": "352d93fecb4f654f4bef99e050a1ed609acad728dc67f55c863553f622cd9526",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_12_18.npz": "112f5305be4125f252a261f72ae7794d52de8ea3c706b6c1fb3096eef2b750e5",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_12_18.npz": "018651c03febd54f25422462589d26a4b0ce7657c0025ee68d62c9379398ee24",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_8_12_18.npz": "b289d849bb2fc677de929dc1130f44b8691a00c0e7b63d03db4fb77067ac0bce",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_8_12_18_20.npz": "682095653fd7c8cae36d94aa095960feb6ab2ab5f773c2292276fcb0f1feecbc",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_12_18_20.npz": "d8ea0dcc96ec9f4b821777f3d1e05803940f78f7589f96fc73b445d8bf2085e8",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_18_20.npz": "8e69d50776ca87982062880fe929b3679c26987f11f925b163ae15c8743c1d41",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_20.npz": "f04231e3d405555d99351788a362fc00f8af5084104f17d46f73865a5ac42aed",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_19_20.npz": "97bb36d55dcfee95b14dda8ba3aaa8c5ee1c59fff84943c5087f56a0685eeb08",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_19_20_24.npz": "c241b9e894baaafa35fd8edb3e10ebe723736eab9c1db4617eed45c34ad12b6f",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_16_18_19_20_24.npz": "e7bbf28eeea3f81846c81238e4831072245200f7ad3549b035ac9a6083677d96",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_14_16_18_19_20_24.npz": "3527a86c3883c1a898a7048e254bda9154ccde7115df56008675e192573db115",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "d098a8fce0bb585ae27e9dbb0a3408aed84bb72fdebc12815d1ed9df714bbaf1",
+    "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "58647facfc33f0467b00a2d5f0c077f29557a7cb2d38698a4b367f53f56817aa",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz": "97eb87463a5af4370b9bb5398527cbefff21d15fd5240e315fd7ddd0c8c6cb85",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "b4689e4054419b0b44206ba685b404f194f7e21f9ffc2a8829ff3458b9557311",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "014e42c1f52bc3aa31db5ccb0947a44916b670f019d5dafc5f94c1136b66f629",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz": "340970c2de98aff9721f7e953c3c58570bc14dc73c75a70091c119d5248e67ce",
+    "results/energy_theory_c_20261006/seed_44/outer/PSS_class-aware_SC-CV.json": "1d358bfaae8a4b926821fd19ed8d6bd13052bd277b2880db512daee1d54733c1",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/11.npz": "ae75814068a831274221bb76028df7eaeee415907ca18a00f144b9de11a45130",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/6_11.npz": "7bb396d1567b6369d17ed35e0d71cfbd424b4fb913157733f895d156d93d1122",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/6_11_20.npz": "846b51460007acdf5c12ea96600ba44454d9da75332cab4d65bb484c12d52335",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_11_20.npz": "934480365b3a7e1d2b9c8f8ffc218aa891893aa68a8b181b4cae409b72a65927",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_11_16_20.npz": "981a1c61e89515342f5ffb71940e8e841f3e18479361eb4755344531cb5be39c",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_9_11_16_20.npz": "a638ea5b8a7a03a729a0eb9c3182c61ca84cfb415f0ce375cbd77daaf9f3c0c7",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/2_5_6_9_11_16_20.npz": "a521244bfc582dbcbde36d22aab78734cfc2ab6cdf4664e40c0b144847df9d4a",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_5_6_9_11_16_20.npz": "0fc929df59c139f3f07dd873dc14340686eb2c54da80588e9777f8f721cdd1d1",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_5_6_9_11_16_18_20.npz": "73e03aeb67075e7232e7c4f332820564ce574dff7d9ad1c079ea75c382c7a361",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_9_11_16_18_20.npz": "7d7301646b1dc0582fe7fa76b8b3286ae9851e6ef5a95db0d5d3e0f5acd8e338",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_9_11_16_18_19_20.npz": "3a9b89cb37613b0a44e61d76de3207f739180c6b90bac5c67e11398e6fcfe5c9",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_16_18_19_20.npz": "c6a1d457fa82e3f45f5939cd693bd2d9707bea64fb20717fdac620b86d1eb6f6",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_12_16_18_19_20.npz": "48e9d40a71748e0c346fde4a4354203ec3cdc1aff0555112ce90303e76ec777f",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_12_16_18_19_20_24.npz": "f0716ba707c7c76065bcccf1d3aa61ff34031df2979633b7eff8996f93c6b53b",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_10_11_12_16_18_19_20_24.npz": "ef037d168a98458b4b5699d54004385e1d7807b87530aaaa3eac932130009123",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_10_11_12_14_16_18_19_20_24.npz": "f61fe495994d195d3750c4c302350d1b3bd5395d4335aa592b627c3a0cb45bea",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_24.npz": "2905f78a024b87337434f8924fed9289f0a644bc5f66861ecf74bdb34db077a4",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_21_24.npz": "59bbbd6a6290b879bc5ab99fa65439e78acf43c2e8562ea340e0840ed082ef46",
+    "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_21_23_24.npz": "dbec474c4a5cdf5c945f9cc10b7eb2aa5096ab01b358a96dc052fb2575cc89dd",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_15_16_18_19_20_21_23_24.npz": "0d1a6cc6d7bd3a27730fa697daf330f8948dd8a904a15bbadeb52ccb7360416a",
+    "results/energy_theory_c_20261006/seed_42/outer/KL_tuned.json": "25174df5629f76f7272af37d8d0c3e253de590d12e4ed9d8349393559b6dfa0e",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/12_16.npz": "3a292248a553df1ad4d145812816b49b246071e0d1712cbb7f9079397361270c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_12_16.npz": "9d822d60fde1613ef3073eb8566f269b19092ed6a084cf1c651bebe3d85b9445",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_12_16.npz": "bad506826f34614bc66fbaf2d7a72d931d6732be8847c3cab99e2e00f8776dda",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_12_16_18.npz": "4d4e3e55d19cac582350f6b3895fa8527636f389652149f1db20126d5106a38f",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_11_12_16_18.npz": "383066214583199a972eae0872768f8edaa098ad0b5be5862f5d474c0c330766",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_11_12_16_18.npz": "28408656185ffca0b6314d640a10a9cb5ba37a6931e7dfc3fe7e52e00345d49e",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_11_12_15_16_18.npz": "7db1d1561b882d804e8a7013c8252862bbb8310c310821a5ad52644ce25782c7",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18.npz": "111fd0ea98d9ace74ada69b5cadc3b8ecb3e653b8ad599174708ede12ab2455b",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_22.npz": "a12ca3abb4bae5c4b808927ade8796cec457c33d683d53e8486957352f8cddc3",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_22_23.npz": "60a4f959e981709c1f1cedb36d7b1b4eb5e64c454d52e47442c5c4606c66371c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_21_22_23.npz": "11bfb6883c8aff1b373cc89466df6935597ca6b096ed2a0c793fe59e7cdd9b87",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_7_10_11_12_15_16_18_21_22_23.npz": "29efd66d07555e5a4d3beccf0eae8be5d19d429e6d5fb4a52c7db7fd1bca4cef",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_7_9_10_11_12_15_16_18_21_22_23.npz": "a394b2ad825857f3ec615851e18a9c7d505b0b08d762e4e0c6e7c947ca28cdf4",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_7_9_10_11_12_15_16_18_21_22_23.npz": "3040827feb9d7fa2b2f1ce1db10a736aab38ae6aa4bd076937ceca50f5211cb5",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_6_7_9_10_11_12_15_16_18_21_22_23.npz": "02ed1a355473e0d9da6f9606db71e35ac4519e54d552b4e3195bf15d11874a56",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_6_7_9_10_11_12_14_15_16_18_21_22_23.npz": "53ab430c262500b4f4b90c03a3c7de102a277fdc06987bd0b706a21125a23967",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_6_7_9_10_11_12_14_15_16_18_21_22_23.npz": "af319f444bf8d0c176e3aa303ce79708a8dfbfdc774f3cb2ffa89bdf9072d398",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_6_7_8_9_10_11_12_14_15_16_18_21_22_23.npz": "5d126e61a78d09188a5f09ef8494fe6db27c42467723db2fa143bfe48ca36afa",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_14_15_16_18_21_22_23.npz": "7d7e976ef2a1cbccc3a433f6a4837b97314002173ee968e92aad1d4f9df47e29",
+    "results/energy_theory_c_20261006/seed_43/outer/KL_tuned.json": "4fe8f5a327d64b9df0545d1f0aeaa1464c4e56ab3b40c29f8699759cfd4fcf59",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/12_16.npz": "28f20ad54cd7bc3643704100b73cd5d69e5a7fc33f9f25d11551fda032d26892",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/3_12_16.npz": "0fe0995be86de2836d5991fcc235f5d15a5ae81b56b80c0cba165d5c3352cc2a",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_12_16.npz": "6912aa854d75515bd4eee805f383d99c5fd5148bf5c6da76debb63ddd4720847",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_12_16_18.npz": "6b2cd24b6d4d892801bcf7e6edad6fcb9c2f755e201d695a1920c6ec0d950695",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_12_16_18.npz": "d1a3d451555cffff7f4f54fc97724b144f137f14a00a0c82e9ad2f78a34c4d69",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_12_15_16_18.npz": "653e86d336b8f0a15e93a91a57ffb1b906e27fce7321a131c4b7bdf34cf64c61",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_10_12_15_16_18.npz": "0085718d943b10b7fb548d2625a39c274be3e8aee15b17b2ed96301f8ceb3b58",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_10_12_15_16_18_21.npz": "05e86d3c6b5027025bbcf324e1820c2baba4e115f6e8d4e1684a7086e76c1fa1",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21.npz": "3045ca7ab308ea5c03a72c40319b9fcc4f09ecf23550efc80db6599e70f8cdd8",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21_23.npz": "cae42f004d2bf66f73b77403033f44c22a540bda0116c3ab33ccc2113f542b87",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21_22_23.npz": "885f8c6fdacab14c469fc3d8553fe5723b81641ead55a3fd077a0ae397d1230e",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_11_12_15_16_18_21_22_23.npz": "ad9a51a243e3dd7b1bcc1ec86f15fc02cf03536424fd4ce3101e50d163b7cb0a",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_5_6_10_11_12_15_16_18_21_22_23.npz": "539217246ff6b65c1fb677f61ade223d085e1e38128702f9d2e04a3efa67be49",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_5_6_10_11_12_15_16_18_21_22_23.npz": "d9707b9107081b54b4397be1623876c782539a05d84c9131c1b0e5fc0d4c8d5b",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_5_6_10_11_12_15_16_18_19_21_22_23.npz": "952cf1f93eda0add543aac77ff19bf3637091d47822276b96a49bd4869981e14",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_10_11_12_15_16_18_19_21_22_23.npz": "6fc498dedf07556d78aca427b6e417bf39c71d48d6b10ddac1e183fbf28858db",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_19_21_22_23.npz": "c8e9b8577bc5d096bd8537f342642a86f841bbaf0a944065f0a36a8adf73423e",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_9_10_11_12_15_16_18_19_21_22_23.npz": "52bb51bfc909ad39831f90ae4d783021d58657842ee5b3953e1cb843bcdfa5ee",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_15_16_18_19_21_22_23.npz": "05e0c4285344a344c8ddffe4e82e53b08c470603a829ce29390934dcbffea998",
+    "results/energy_theory_c_20261006/seed_44/outer/KL_tuned.json": "eeb8a77510319c4ce4331dab8a470e2d5f05c1e21a5157c5d7f7db9392aa0375",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/12.npz": "17b4ae2b2831105e908849882abd4866490a2b21dcfa0279ce57dfdea386729b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/12_16.npz": "1ad575b1bd2e387ad602308106d1bad015215673621c1ef016e69e12c6ecef9c",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_12_16.npz": "2a17dade1f6b2ba1b817f508a74494a8597a7fb62fd6cb07a509a58a1e6900c8",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_12_16.npz": "39c24715aeff76710281dc53c9fa1d41f6d34f5812b9515ea4adb4c6edbb870c",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_12_16_18.npz": "cf633dc8993e9664061fcd6bc4616017093b33491b8efc700f3c3f2a4fd9fc62",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_11_12_16_18.npz": "03c47985d12e0c1d35cd35baec68ffe6c8161f4b2ecd161d550b8b3feb775e24",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_11_12_16_18.npz": "593917f3509575da7acc048da86e3849fcaa356dc176df7ace6cc15e038f1cad",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_11_12_15_16_18.npz": "695ddc8d4dcfad1953e4bd3e0cc7603773651ae2ab837f5cc4db5fac1151ab39",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18.npz": "83b7a6eff3a2a78425e4ed53952a8fa3a0311593f551fcca1f70b4cd4ae4f502",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21.npz": "7e2e8a5ddd9275f5ba3b6bce6a1018853624bd5f1bd0c98cbf8f1a197460378f",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21_23.npz": "a225d000f6f0b13ac5c1121a07390c36a6a5e65366415e70c6fc75c77253a2dc",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21_22_23.npz": "13b833f3508ea3262e64e5e356bfb4405a5dd6b1f52dbd8f8fae0fcafff05c86",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_7_10_11_12_15_16_18_21_22_23.npz": "c20069328dc61c42af87a85f250d1905269358449cc1c10eaa89c9140f5fd4d7",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_5_7_10_11_12_15_16_18_21_22_23.npz": "fc398536bf6020ebaded3ab3ed24ee9e8202b53fa4e2daf3976adfb69c1ea07a",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_5_6_7_10_11_12_15_16_18_21_22_23.npz": "d89bea92d530cfaf6601833830befbf458f8608b09c521f000d4ac6636621660",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_5_6_7_10_11_12_15_16_18_21_22_23.npz": "0e2cd3cc5d9d157d23b2606740857949d40ffa25b9fbcb0bd159daaa2758e163",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_21_22_23.npz": "c2e344deca4a10ce00cc1627fccfcc3584198514165f64c0d9b32392fb6b7163",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_19_21_22_23.npz": "20309c28f1f35d72c1ce156f733329ddf47c53f662ee4618423cccf76c9ce5f3",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_8_10_11_12_15_16_18_19_21_22_23.npz": "df1773ef792acb8d176a2d97837225c409fa8817011e6ae82aed2696df79d4f8",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_15_16_18_19_21_22_23.npz": "0f72821c8e93740243cf505700db5f6ff3ee7c4b9370423f8eb168a9d028e52e",
+    "results/energy_theory_c_20261006/seed_42/outer/PSS_theory_C1.json": "0015cdbbd8892bfc4f5cba6eae97f0295921e2c559c381f284c1b4d5adf8904b",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/16.npz": "33ee08f3f6f90c1a3af62ec8a856109e3f716e5efa816a3b5030a21aa46769e1",
+    "results/energy_theory_c_20261006/seed_42/outer_classifier/16_18.npz": "e09a6cf6c1cc7f5086c3c2a4280c4b2783f381211b59fce46fe899547672b7b2",
+    "results/energy_theory_c_20261006/seed_42/outer_classifier/11_16_18.npz": "e3d3908c74d851fcd4d577e40f93189a635a9d3bd18077f7abe0dd47e3f32fc6",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_16_18.npz": "8b5813cb4c90d44ed2bbd241317d401518543b25b121e57e672dc869bbde0bcc",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_12_16_18.npz": "ed32dae5d60f5e8f96a876495e3b4b680c616d59bd7029f9e7333e9a80b3a771",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_12_16_18_19.npz": "17a82e9b5cf315efe0b7c152c455041a32b6c4ccf9a5e79f69af92217d6f3f85",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_11_12_16_18_19.npz": "4d532cc17c9584e79f2374c0fbb8cfc686de3e9b0e71716908f5d87a2f6767b4",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_8_11_12_16_18_19.npz": "8e54032e64ef84db4a24e8783ee711cbeb1f3fbe740dd1858202e3d88096ee72",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_8_11_12_16_18_19_24.npz": "8646e3fbf7e2352c61c8452473504f0c8c987edc57ee969f05c8afe4dec8c752",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_11_12_16_18_19_24.npz": "38eac075d26e8b55aacad86e7742d937356676240b4c0775fab91148c716f321",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz": "ab231cc53b7568b7275399631ec8c14e1be9240c88557c998bd0ad16bc5d3081",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz": "d7f856ff935d31fe9bd7a8cfb51d8fc334683d18f894c46a3ceb88e2056ac336",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz": "d6fb0e2b94564e8c58dcbd0165b56f17411338622ddca0af46da735b4e1486bf",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz": "608faa57068d245710e5a808c2e28ac4bd4f70bcd6e35ffd9358dbfb44581b56",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "6875c56af9ea3099ce906fbb518872c24271460fef61bb2e4a54914b1c03896a",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz": "a002de9ee8233140370eb1b2da83e3e90ed2846e58559b2998a04de48941be31",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_7_8_10_11_12_14_16_18_19_20_21_23_24.npz": "9b81b549db2647d5bf3c27d5df7c642eae5bf08edd5404d9d793c50e95bd3895",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "fa00975d318f0d11ca021b13ee102cbe6fb4d9271887bade92272ea7b4af9e84",
+    "results/energy_theory_c_20261006/seed_43/outer/PSS_theory_C1.json": "8ce772559214d933d84ceb24146e1522ceb22d8e6d865943d1b724de11ce7b2e",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/11.npz": "063d64b8be84499dc7c13bdabfb7e6cf1feba3f667ab97a171197aa5f2b58837",
+    "results/energy_theory_c_20261006/seed_43/outer_classifier/11_18.npz": "fdb856e7a865fdc558259806f01c0662b53faae4497b1a4ef958aee74f4e2c81",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/6_11_18.npz": "9d9d6cf21f78b6069449a2b2611997fa9a03a8954a21b8d94b9719877b3cfc37",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/6_11_16_18.npz": "31ae527a59e9bcfb347948f2b9e834e50e3a0ce25756dd75db0e547e2222ebaf",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_16_18.npz": "142be0d548f43552c5a4206d4e55467ae713aa0cbabf8178b4c1315ddca14fde",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_16_18_19.npz": "6019ca3cbb712dd5fd9b7ff0834f6c14966e88eae51b382501c7e52d0d81d612",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_12_16_18_19.npz": "079c22506e90e0203e31e97fdc81b80f967ca25c90255180814d01ea7fe759c0",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_11_12_16_18_19.npz": "98f30e66907c7040f22ae71a2a444a38e087b628da38578e91587f57905a72e9",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_11_12_16_18_19_24.npz": "a8e79fddaa0c1c44c8747d6aff3beb76a6b59e8b4c438cf365d417a6d3304d85",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_10_11_12_16_18_19_24.npz": "e1ae2a92de313f729090c35b66c5e5cbfc7ce4cef01836d1512303f00c09eafa",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz": "2c7f9562703b72a225866fef7dec5e091b92a2d22716b829f5c9187cd812fec4",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz": "63517423afc2ecf6cd7d8dadeaabf9edc8b3bd6fbac9290b72951d62835b7adf",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz": "85f0dfb8ffb0be756adbf8b63595f3795f1af43ceec485892c523519fdf783c9",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "7a6777cef09e3f714dab6326134a075507076954d94025fe43737affe3810c64",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "44ab068e68c523019397702a154c516a6d84b024c881f31fe3945deaf691eab8",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz": "06155402fe98904984c7881680f783157baf1ab06771f9ef46f08ce93c78ea6f",
+    "results/energy_theory_c_20261006/seed_44/outer/PSS_theory_C1.json": "bfbd9f1de911895f47549ced1f12f832c4b4ae83e0ecade7ccbd9ba9857bc77e",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/16.npz": "e16d6deafa3e2b37fde6af07b64fe1cb9c81898c7c949057e3eddfcd621a2d45",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/16_18.npz": "d685662ef74bc0941de3bf23bc57b60bf0f4c87637aaed33c063c73d027375f3",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/11_16_18.npz": "4724cc6d3aa9b8a22a42d0d5e383c40c0316001bfaaa7f50736f19fbf4591b9a",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_11_16_18.npz": "74f40413cbfa1f0201ab0f772aad6e1f8c056f53edbe47fc0da544c786ec6ba8",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_11_16_18.npz": "8767ad121e839ef4c4e243007d9f60c1cd058b5b8dd950c2d5d9ee7eca4ae059",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_11_16_18_19.npz": "47c30aca25a535ff252a93ccd3d59220ae34090640ed15ba24e4a312bb4b8eb0",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_16_18_19.npz": "8b74ca7fc524fe41c8ef33acdfc0ad2a743d5fa5acc8a3e98e0457678fbd4a1f",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_12_16_18_19.npz": "529a58c9bb1bf7406e42ca991dcd1bb4a1af63d341177b088f690defc792aa80",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_12_16_18_19_24.npz": "836f47cd49822894ee0a748cfaf33e0211a2501c6d8e8fe8144a9f67ba8dc62f",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_11_12_16_18_19_24.npz": "4491fa937a5d666cdd94024e8b72b675527117738f25663cf268efba5c5118a5",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz": "4c731a062df4a75b8db113b5f86ac9388788348cd1f9af89a5700243b55fb2ee",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz": "a50bbd592a634e47597dc824fa45db0d8f4b745175dc509dff03b34ae5aad36b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz": "0d422adf4134621abc169a3f9a4293732d954fae13cdad708eb4a28bcd84ca3b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz": "9273504d4a48cb1c72d3ae96c31f2b103b8000415c0b88ab6b77e28c269d424b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz": "75805bd82f946c012f14e9cc004126c7fa896f0eee21632224d0eabd2e2e29d7",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz": "2963798becfbb2f857e39ff1721434dfc145aa2f89a2358af23fe55b6568a524",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "9e4bdd2747d1cde97afb62a250b08ac2c2a2bfe7bda5d1e1cf05182b5955d4be",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz": "4d15cb33ba906c0e87c6492c854d8ffd98ebe97d0526fb586ca443669e9dcbb2",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz": "cfcf8450cdd35aa54c369318e0b145824a3e7c9336d448eac89ff1e1c35ffc76",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz": "8d29dc8b24fa16ad9103c4232c8aa15d61506b44919dfa8b3a3ff94e30df1b39",
+    "results/energy_theory_c_20261006/seed_42/outer/KL_k1.json": "b20f10204baaf4b999e5863c115c3474d2e0053d73762699eaed7604bd76b586",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2.npz": "65d4b3dffb2ab25ca02f0b64ebeef3b32e7bad8dbbdf2ca8575efd5196dcf83c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_20.npz": "a74e48f24925a5bc8aa8a850c0b1be79acd603fdd8a35a3c924d710be70fd9c9",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20.npz": "12109f337e01740fc11680dee061003b375b60b889f42cd0f2f535b1897cba7f",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20_21.npz": "20c73102dc88ddb9f97a3bf4a6fbe6d40437a0174bf4ece74af23c68908b493a",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20_21_22.npz": "01387cca7edaad5fc44bfdcc72b00c471f3c1e2b1e45b1288b77708c6ba96943",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22.npz": "332cdb6c23f1b48c4db722a2f7f5abd232cd953ef1423e1c58a02b0bacda5317",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22_23.npz": "10b7421b6628ad66168078c6aa6391e60beb44a46e861c926f7327ed089bc169",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22_23_24.npz": "9f25b25080904e160ce25f6f8bf3d830f26303f4d76353665091df88ab37d13f",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_11_19_20_21_22_23_24.npz": "c990f21be373a6a302f1e25d358cf33291a51266658eaec4bbef3402e01a0d54",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_9_11_19_20_21_22_23_24.npz": "3a6e41b96a0563b529b6bb2cc1fa0e0cfcadbf2b0a962b1fb2679c34e51b069f",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_19_20_21_22_23_24.npz": "826851475b70cf38066f0dec8aa3d9d1301d3be6c6bafdafa834798f69188e4c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_17_19_20_21_22_23_24.npz": "1de4b7a73e859c6312e04cbb753c44ce45ec06645ca4ce2306467bce68c13981",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_13_17_19_20_21_22_23_24.npz": "7171bd2e5b286142962349c0b1c61e71f3b68299fbb443612aa200692069a31c",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_13_15_17_19_20_21_22_23_24.npz": "4a461a41334a5ad3ba3f1ae6ce29f13d02d4af4305853f54917ff38fca885ac4",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_8_9_11_13_15_17_19_20_21_22_23_24.npz": "40e5737d59241178b5bd88370daed6564ffb5ddc28ab53da219d8f8b9f320326",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_7_8_9_11_13_15_17_19_20_21_22_23_24.npz": "2e11f213670ae11fd6f49dd0f754987bd358198e7131af9bae709bf351cd7def",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_5_7_8_9_11_13_15_17_19_20_21_22_23_24.npz": "ed2b41d2824f182b48d4a247f04bc12091a6a39b2c0a60746059ca3195544586",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_7_8_9_11_13_15_17_19_20_21_22_23_24.npz": "91ccf42f5b4d322e40de510fcead846b121ff1c1d7c07b11c9fff044c0a19532",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_7_8_9_11_13_14_15_17_19_20_21_22_23_24.npz": "a33113c0e1ec4e5abb9a984649e8bf893f970a7ba1bfedcdffb454fff43f60cd",
+    "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_14_15_17_19_20_21_22_23_24.npz": "2ced8dafa17b0e65949524bce3bf44d75926359d950092598bb1c0b515b3b376",
+    "results/energy_theory_c_20261006/seed_43/outer/KL_k1.json": "71ec4af58e3ae666645b4e9b20917ccc56cbe1899e09bd2b53916e6ef082cd58",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2.npz": "a6febca272b36ddf9629a9463531f0f8ccf2e244f8c979274374b2df9c9f4836",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_20.npz": "7fee16a19b2225eecf516df2ede88fab9d36bcba0f9d61fc7fe89e62b3fda932",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20.npz": "47cd6bec4891455bb05da1ab72b760158045deef97ea7a12b861bdf14761ee31",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21.npz": "ce0f9cf87b29ef615e059a9110251b4c93b7da2e090301d845a9276d10b77a24",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21_22.npz": "02962f341caa333bb803ec573195b0133a31da97c4e068dabd77c43a9ef1721b",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21_22_24.npz": "e70c74af7400fa68200536c6ea00b7c73e580589260052f37f72c644f0b32c4b",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_19_20_21_22_24.npz": "75412755f6c5e494e0b670c4d5fdd6b96f3186f0bbaf18ecd7ad11e406523ddd",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_19_20_21_22_24.npz": "7c1f02e75db4d3fcf05c5ac9cef60994e9e6e3d5ef3565d16b5622dbbb6e88b1",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_19_20_21_22_23_24.npz": "a05a73b3128b2770cf1ed92e88d5213b41f967b8a6f9d92c9945da6629363ae7",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_18_19_20_21_22_23_24.npz": "4bf492d60b48c9e2ab9f82eb7b161975308253e9045b66d829e7f116f9998853",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_17_18_19_20_21_22_23_24.npz": "1d288b9550917bc4d78970d10559fb9e046a494bb501f06bf5912577149e5ac6",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_9_11_17_18_19_20_21_22_23_24.npz": "d720b76853fbdc54edb4596aea91546dc97a4beff8e24aed695ff42007a8806a",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_9_11_13_17_18_19_20_21_22_23_24.npz": "0c365b9d2f490a755c4e9d6cc6f7650e7b66894aa0b8d7cf3fbf90e174205f81",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_8_9_11_13_17_18_19_20_21_22_23_24.npz": "5e7625b9a997af7f5e8b66401b052465701e66de2a14fe02a1ea3062baee7e82",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_8_9_11_13_17_18_19_20_21_22_23_24.npz": "52140ef294c95fbfd382afb453dc8f8fa6798cdac3d1ae0863532bfd4d385524",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_8_9_11_13_17_18_19_20_21_22_23_24.npz": "cd87189ddd601aa18f4e377bb179342658f0c75f4ad3d95651f4c34a4cfd177d",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_8_9_11_13_15_17_18_19_20_21_22_23_24.npz": "6e30cae6315f453b19f44b5362c5eb2f73e6ff77a65fa901309c77270ac96c7f",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz": "dc11b2aef095ed83258a9d4da5d13ca8c054e2bd8055e35732f4d54b10fc6e17",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_4_5_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz": "c4e2ae9f1aa27745f88a448a34655b102dffbc2941560baecda37e906f1bdd09",
+    "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz": "502bf3bc1fa421cdfa23e5f2243609f258cfb052941458b5f036c98996ed07d3",
+    "results/energy_theory_c_20261006/seed_44/outer/KL_k1.json": "1bed3a60525fc75f8b18029c8f0d44809fef632eb009324003ccb1ac23e9d5c1",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2.npz": "dc785e471bc567df09bbada444e7634b4a62d37e8df37b0fba46c56b8afac79b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_20.npz": "ca2932bfce14dc08a281e047f57f6efcd8f74a00b9dfa20adae57387c097775e",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20.npz": "158bfb2be1b260e3a5017b5e724553b522ec8039d1168d53d067203744bb8e4f",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20_21.npz": "cfda7863cca6486452b227e7e4124b3660567a93200a78c69b9997a7c6cd007a",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20_21_22.npz": "f1431b4c2135b2387aee61978aacb0312ca076176b4cbdb6b0042304a8b9415b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22.npz": "13448d8fa9485ab9fcba2b3670bfb99a36b9f7226fa2fac5e7141912f0a16dd0",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22_23.npz": "f54d1472370474b490f297b0c63ed8d7358f71f6b88f9e89c60ddf3c86da52c2",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22_23_24.npz": "fef970cdd53ff342c15204df33fa39524152e3193b3ed3d0ff908355f46ff6b0",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_6_11_19_20_21_22_23_24.npz": "b7c12231944e52d1800336999f1f0c142bab8a03069da6eda42255a81c0f114d",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_11_19_20_21_22_23_24.npz": "e6627cc1b5cc0d0ddf427c84cc67533b3a49701ec3915983887530dab02114af",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_11_17_19_20_21_22_23_24.npz": "02fde5a2568d48367cd5667b9f0a2de84f283c34074c56e62f2997d15e9748e4",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_9_11_17_19_20_21_22_23_24.npz": "6c7ebf7b528bc32db32ef17c7e775f12add76dab6b932fb336b6ff79ba1d109b",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_9_11_17_19_20_21_22_23_24.npz": "1ce14a12ca60a3a04ec5f84a8ed73671f9e44a7f2a01cc3334273256311f7f58",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_9_11_13_17_19_20_21_22_23_24.npz": "50a3cb977cdf3558bf0bc5d806a0fb5e4cbba9307a6186ae428c1eabc402e430",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz": "b6ef87ac7e17e8c35e23762e0e28f0ac5558c4eb9e002f4a3e4ddb94d0a9c5ba",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz": "2f999e9e9d953ab08f182d3130ce867a06cb05e1afce278431780d110d57a122",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz": "b12723fcc100a61ac1590658ee105ba9d30763f0f26c7b32a489b93c44a5047a",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_8_9_11_13_15_17_19_20_21_22_23_24.npz": "9e93441e2327f13989f45b61cbf99bb7387ac961eebec37fedc518ee12fbb7fa",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_19_20_21_22_23_24.npz": "3ed605fb03f5194d1c8e55832d653cae93f3d0c649d87ed484ead0f18f7a3671",
+    "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz": "ce0b8e639b14f388f2cb8edc5d9035ad6713315755b52509ec07fab4a8eac62b",
+    "results/energy_component_guard_20261005/seed_42/outer/PSS_class-aware_SC-CV.json": "35b310e801d31b144fe80b5be3e47ff027abda7171180f6c0451e4edd907b8ee",
+    "results/energy_component_guard_20261005/seed_43/outer/PSS_class-aware_SC-CV.json": "ce36908e61208e385fccc3e04ca7eef4e49aaf93fb1042f9bf0ff3ba47184ebf",
+    "results/energy_component_guard_20261005/seed_44/outer/PSS_class-aware_SC-CV.json": "8f38d2811558893e9a78939284dcbf3d720846e37de0a32aee79ac24a2868dec",
+    "results/energy_component_guard_20261005/seed_42/outer/KL_tuned.json": "3b62180e201802c09b8a8dd199a2ca881910bdbd966c6a559d14c793b5c0a530",
+    "results/energy_component_guard_20261005/seed_43/outer/KL_tuned.json": "d61fc5adc42772fbcda33a6a83dcd06750fad6f6749437989c3170420f800c09",
+    "results/energy_component_guard_20261005/seed_44/outer/KL_tuned.json": "25814f8f4e5a6f889c68abac03d8380137be7126324854c5347fbb6cc47d80dc",
+    "results/energy_component_guard_20261005/seed_42/outer/KL_k1.json": "cc2252d39e48bd3a4412d27f7df09a34413d92e3ecc76b51376acf4074b9facd",
+    "results/energy_component_guard_20261005/seed_43/outer/KL_k1.json": "79f2ecff1f7e224d437143b4cae16b207a3ce56fc97829096f602180a764551d",
+    "results/energy_component_guard_20261005/seed_44/outer/KL_k1.json": "ce3a5dd4c2e4de020f43a310e5ded14cb6bca0401199dc19af22d4843606be6a",
+    "experiments/energy_theory_c/plot_four_methods.py": "2c37dcfbe889b22d0ee6bc8e7dfedfd208e7b61b59ea3148ae414a7df4f72688"
+  },
+  "prediction_records": [
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_6_12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_6_12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14_16.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_12_14_16_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_11_12_14_16_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_11_12_14_16_18_19.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_11_12_14_16_18_19.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_11_12_14_16_18_19.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_11_12_14_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 42,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_12.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_12_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 4,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_12_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 5,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_12_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 6,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_8_12_18.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 7,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_4_6_8_12_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 8,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_12_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 9,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 10,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 11,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_19_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 12,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 13,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 14,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 15,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 16,
+      "source": "results/energy_component_guard_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 43,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/11.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/6_11.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/6_11_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 4,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_11_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 5,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_11_16_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 6,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/5_6_9_11_16_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 7,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/2_5_6_9_11_16_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 8,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_5_6_9_11_16_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 9,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_5_6_9_11_16_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 10,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_9_11_16_18_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 11,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_9_11_16_18_19_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 12,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_16_18_19_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 13,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_12_16_18_19_20.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 14,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 15,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_10_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 16,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_4_5_6_8_9_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 17,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 18,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 19,
+      "source": "results/energy_component_guard_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS class-aware SC-CV",
+      "seed": 44,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_5_6_8_9_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/12.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_11_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_11_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_11_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_22.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_7_9_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_6_7_9_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_6_7_9_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_6_7_9_10_11_12_14_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_6_7_9_10_11_12_14_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_6_7_8_9_10_11_12_14_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 42,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_14_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/12.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/3_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_10_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_10_12_15_16_18_21.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_6_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_5_6_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_5_6_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_5_6_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_9_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 43,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/12.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_12_16.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_11_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_11_12_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_11_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_5_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_5_6_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_5_6_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_8_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "KL tuned",
+      "seed": 44,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_1_2_3_4_5_6_7_8_9_10_11_12_15_16_18_19_21_22_23.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/16.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 2,
+      "source": "results/energy_theory_c_20261006/seed_42/outer_classifier/16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 3,
+      "source": "results/energy_theory_c_20261006/seed_42/outer_classifier/11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_12_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/6_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_8_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/4_6_8_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_7_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 42,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/11.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 2,
+      "source": "results/energy_theory_c_20261006/seed_43/outer_classifier/11_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/6_11_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/6_11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/4_6_8_10_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 43,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/16.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_11_16_18.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_11_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_12_16_18_19.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/4_6_8_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_16_18_19_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_8_10_11_12_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "PSS theory C=1",
+      "seed": 44,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/0_2_3_4_6_7_8_10_11_12_13_14_15_16_18_19_20_21_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20_21.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_19_20_21_22.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22_23.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_9_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_13_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/2_4_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_7_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_4_5_7_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_7_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_7_8_9_11_13_14_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 42,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_42/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_14_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21_22.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_19_20_21_22_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_19_20_21_22_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_19_20_21_22_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_11_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_9_11_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_8_9_11_13_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/2_3_8_9_11_13_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_8_9_11_13_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_8_9_11_13_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_8_9_11_13_15_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_5_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_4_5_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 43,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_43/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 1,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 2,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 3,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 4,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20_21.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 5,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_19_20_21_22.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 6,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 7,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22_23.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 8,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 9,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_6_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 10,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_11_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 11,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_11_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 12,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_6_9_11_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 13,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_9_11_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 14,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_9_11_13_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 15,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 16,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/2_3_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 17,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_8_9_11_13_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 18,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 19,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_19_20_21_22_23_24.npz"
+    },
+    {
+      "method": "KL k=1",
+      "seed": 44,
+      "count": 20,
+      "source": "results/energy_sc_expansion_20261005/seed_44/outer_classifier/1_2_3_4_5_6_7_8_9_11_13_15_17_18_19_20_21_22_23_24.npz"
+    }
+  ],
+  "export_source_sha256": "32a7b79db8ef0a11f1538f43fca7c79e82254f4a2495aa32a69395eb21025858",
+  "artifact_sha256": {
+    "predictions.npz": "1a8bbce7631329bc9f033ac5cf003fab3848aef7868e5e762d051c50931556e3",
+    "metrics.csv": "e7dbc883d2c969603695b1e22e968057cc4eee7fd5eaaa8d457214fe7c16d88d",
+    "summary.csv": "9947c59a686e8c60a1caab8a4e70e9efb555f2c8467c697b96fbe8dc75fcc716"
+  },
+  "scope": "Saved binary predictions, split indices and targets; no training, new predictions or experiments."
+}

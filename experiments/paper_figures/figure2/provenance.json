@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "Historical saved-result verification and plotting only; not a v2 SC-CV simulation.",
+  "source_archive": "pss_gamma_tuning_diagnostic_paper_20260505_084533",
+  "paper_reference": "AISTATS2027_submission.pdf, Figure 2, page 5 (inspected 2026-10-07)",
+  "condition": {
+    "distribution": "Gamma",
+    "dimension": 5,
+    "copula_correlation": 0,
+    "sample_sizes": [
+      1000,
+      3000,
+      10000,
+      30000
+    ],
+    "repetitions_per_method_and_size": 30
+  },
+  "condition_evidence": "Companion archive replicates identify Gamma, dimension 5, correlation 0; all 120 Oracle estimates match the plotted replicate table.",
+  "limitations": [
+    "The exact original simulation/figure generator has not been recovered.",
+    "The archived PDF uses different typography/panel headings from the manuscript; the plotted numerical series match.",
+    "The stable coverage values violate the current v2 training-box rule; this bundle preserves the historical values.",
+    "Gamma shape/scale, full candidate grid, and original random seeds are not established by the bundled records.",
+    "The oracle is a stored selected reference; the full oracle search cannot be independently reconstructed from these files."
+  ],
+  "files": {
+    "replicates": {
+      "path": "data/gamma_stable_cv_smin099_rep30_replicates.csv",
+      "original_filename": "gamma_stable_cv_smin099_rep30_replicates.csv",
+      "sha256": "d77fb52e36780a24f5bc86e05579e6e04335b47dd1fb703b228a704e02e41aa2"
+    },
+    "summary": {
+      "path": "data/gamma_stable_cv_smin099_rep30_summary.csv",
+      "original_filename": "gamma_stable_cv_smin099_rep30_summary.csv",
+      "sha256": "8ed2cf091b52c2208758b3cb632b41cbd770a2dc3e53323a9b3a9c5b58fee683"
+    },
+    "condition_evidence": {
+      "path": "data/gamma_n_scaling_tuning_replicates_rep30.csv",
+      "original_filename": "gamma_n_scaling_tuning_replicates_rep30.csv",
+      "sha256": "ffac422813ae741f4cb2064f0722550edc0a047f5a0d9554253ebdd42b93c226"
+    },
+    "archived_figure": {
+      "path": "archive/gamma_stable_cv_smin099_rep30_3panel_revised.pdf",
+      "original_filename": "gamma_stable_cv_smin099_rep30_3panel_revised.pdf",
+      "sha256": "71fe90e16011cad89310238f2808fbb9e6837cf05c37a3dec36a3b04202432dd"
+    }
+  }
+}
